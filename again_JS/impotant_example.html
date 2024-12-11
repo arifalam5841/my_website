@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time</title>
+</head>
+<body>
+    <div id="timer">
+       00:00:00
+    </div>
+<button id="btn" onclick="stoptime()">Stop</button>
+<button id="btn" onclick="startime()">Run</button>
+<button id="btn" onclick="reset()">Reset</button>
+</body>
+<script>
+// let hr = 0;
+// let min = 0;
+// let sec = 0;
+let watch = document.getElementById('timer')
+let runtime = true; //it is just a Boolean it for making conditions
+function clock(){
+    if (runtime == false) {
+      let  time = new Date()
+         let hr = time.getHours();
+         let min = time.getMinutes();
+         let  sec = time.getSeconds();
+
+
+
+if(hr == 13){
+    hr = 1
+}
+if(hr == 14){
+    hr = 2
+}
+if(hr == 15){
+    hr = 3
+}
+if(hr == 16){
+    hr = 4
+}
+if(hr == 17){
+    hr = 5
+}
+if(hr == 18){
+    hr = 6
+}
+if(hr == 19){
+    hr = 7
+}
+if(hr == 20){
+    hr = 8
+}
+if(hr == 21){
+    hr = 9
+}
+if(hr == 22){
+    hr = 10
+}
+if(hr == 23){
+    hr = 11
+}
+if(hr == 24){
+    hr = 12
+}
+
+
+if(hr <12 ){
+    hr = '0'+ hr + 'am'
+}
+
+if(hr >12){
+    hr = hr + 'pm'
+}
+
+
+if (hr <10 || hr==0) {
+    hr = '0'+hr
+}
+if (min <10 || min==0) {
+    min = '0'+min
+}
+if (sec <10 || sec==0) {
+    sec = '0'+sec
+}
+watch.innerHTML =  hr+ ':'+min+':'+sec;
+
+// watch.innerHTML =  hr+ ':'+min+':'+sec;
+
+
+    }
+    
+
+}
+
+function  startime(){
+    if (runtime == true) {
+        runtime = false
+        clock();
+    }
+}
+function stoptime(){
+    if (runtime == false) {
+        runtime = true
+        
+    }
+}
+setInterval(clock, 1000)
+
+function reset(){
+watch.innerHTML = "00:00:00"
+setInterval(clock,1000)
+
+}
+
+</script>
+</html>

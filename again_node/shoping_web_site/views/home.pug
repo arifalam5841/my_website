@@ -1,0 +1,45 @@
+extends base.pug
+
+block title 
+       title Shopon
+        
+       
+block style_files 
+        style
+            include ../frontend_files/home_style.css
+block content 
+        nav 
+           span
+            img(src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/000000/external-dress-laundry-icongeek26-glyph-icongeek26.png", alt="image")
+            h1 Shopon 
+           
+           ul 
+            li #[a(href="/") Home]
+            li #[a(href="/order") Orders]
+            li #[a(href="/") Cart]
+            li #[a(href="/") Category]
+        
+        section#items_section
+        section#ordering_section
+            form(action="", method="post") 
+              div#uper_section 
+                img#item_image(src="https://freepngimg.com/thumb/dress/31612-1-dress-transparent-picture.png", alt="" name="item_image")
+                div#inputs
+                  input(type="text" name="names", placeholder="Name")
+                  input(type="text", name="City", placeholder="City")
+                  input(type="text", name="state", placeholder="state")
+                  input(type="text", name="sector", placeholder="sector,plot,house no.")
+                button#cut_btn 
+                  img(src="https://img.icons8.com/material-outlined/24/000000/multiply--v1.png", alt="image")
+
+              div#lower_sec
+                input(type="text", name="Building", placeholder="Building")
+                input(type="number", name="Items_number", placeholder="Number of items")
+                input(type="text", name="land_mark", placeholder="Land mark")
+              div#order_btn
+                input(type="submit", value="Order"  id="submit_btn")
+        span#popup_msg_ordered 
+            h2 Order Successfully !!
+block script_files  
+        script 
+            include ../frontend_files/home.js

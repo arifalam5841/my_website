@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X O</title>
+    <style>
+        #container {
+            margin: 4% auto;
+            width: fit-content;
+        }
+
+        #container .blocks-container {
+            display: flex;
+        }
+
+        #container .blocks-container span {
+            width: 70px;
+            height: 70px;
+            border: 1px solid black;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #rest-btn {
+            background-color: white;
+            padding: 10px 20px;
+            border: 1px solid black;
+            outline: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        #result-section {
+            font-family: cursive;
+            color: rgb(238, 118, 118);
+            position: absolute;
+            top: 40px;
+            left: 700px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="rest-btn">Reset</button>
+    <div id="container">
+        <div class="blocks-container"><span id="block1"></span><span id="block2"></span><span id="block3"></span></div>
+        <div class="blocks-container"><span id="block4"></span><span id="block5"></span><span id="block6"></span></div>
+        <div class="blocks-container"><span id="block7"></span><span id="block8"></span><span id="block9"></span></div>
+    </div>
+    <h3 id="result-section">START</h3>
+</body>
+<script>
+    let rest = document.getElementById('rest-btn')
+    let result_section = document.getElementById('result-section')
+
+    let block1 = document.getElementById('block1')
+    let block2 = document.getElementById('block2')
+    let block3 = document.getElementById('block3')
+    let block4 = document.getElementById('block4')
+    let block5 = document.getElementById('block5')
+    let block6 = document.getElementById('block6')
+    let block7 = document.getElementById('block7')
+    let block8 = document.getElementById('block8')
+    let block9 = document.getElementById('block9')
+
+    let turn_img = 'data:image/png;base64,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'
+
+
+    let turn_num = 1
+
+    let numof_blocks_clicked = 0
+
+    let block_num_1 = 55
+    let block_num_2 = 88
+    let block_num_3 = 65
+    let block_num_4 = 56
+    let block_num_5 = 89
+    let block_num_6 = 968
+    let block_num_7 = 89
+    let block_num_8 = 98
+    let block_num_9 = 556
+
+
+    rest.addEventListener('click', function () {
+        block_num_1 = 55
+        block_num_2 = 88
+        block_num_3 = 65
+        block_num_4 = 56
+        block_num_5 = 89
+        block_num_6 = 968
+        block_num_7 = 89
+        block_num_8 = 98
+        block_num_9 = 556
+
+        block1.innerHTML = ''
+        block2.innerHTML = ''
+        block3.innerHTML = ''
+        block4.innerHTML = ''
+        block5.innerHTML = ''
+        block6.innerHTML = ''
+        block7.innerHTML = ''
+        block8.innerHTML = ''
+        block9.innerHTML = ''
+
+        numof_blocks_clicked = 0
+    })
+
+
+
+    function click_event(block_id, block) {
+        // if (block == 0) {
+        // block = turn_num
+        numof_blocks_clicked++
+        // if(numof_blocks_clicked == 9){
+        //     console.log('Game over')
+        // }
+        if (turn_num == 1) {
+            win_or_lose('O won the match !!!', 'O won the match !!!', 'rgb(40, 189, 105)')
+        }
+
+        else {
+            win_or_lose('X won the match !!!', 'X won the match !!!', 'rgb(238, 118, 118)')
+        }
+        if (turn_num == 1) {
+            turn_num = 2
+        }
+        else {
+            turn_num = 1
+        }
+        console.log(block)
+
+
+        let image = document.createElement('img')
+        image.src = turn_img
+
+        block_id.append(image)
+
+        if (turn_img == 'data:image/png;base64,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') {
+            turn_img = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAErklEQVRoge2ZT2gcdRTHv29mbJJ2A+2hySahQqCFiihUlGCziRE8dGM2CJpDoYeahqqXCrZKQWhjBaGmFhX/ELHUQtHDXjRJ03oQ1yYxxmJFRAyk4EHSbKK0pVnJlt39PQ91oG5n5r2ZiSfzue383rz3vvy+836zu8Aaa/wnkNfFhZ7U1wC6Am66AYNdyfHJmdVsJt+daoOFCwxsDAjLNY1NPl590fKKZGBTUEEGNrJFZ5f6uhIhe/Vlqa8rwRadFUT49uYpBET9IJSCS/NWUyy/pexTxKyUTwK8VQirEGi/14KnkObRicsATkrFmbE/35PKyG0Gc7U7tYuBAbEeMNQ0NvG915r3jgAolOuPAvhFkfzUYm9boxTnx0K6YzNZOA2f5/UOZm8VnNf8Fn2FbDt//hYZ7ANQEQpsNmbdR0KMP7b5EEBSiDLGooHWXK7oF+ArBACS45MzIJyQu+HefKZ9nxz3b/KZjgGAnhazA2+2jExMBcUECgFCWIzpnaWezm1SnEs+09nKzOJzCMFSLqKQEBbbUIb5hPv6bCknD8JiNqcB1AuhoqVcRCGA3mIE7FxcufqKFLd4qeMwgMekOI2lXFRCgDBTjI4tZHY+4rc+39u5g4mPKkqqLOWiFhLCYg7YOvN736N11Qtz6XSNxeYMgHVCDrWlXNRCgH8sBmhO8/vuKTpvVF/cYC8fB+MB8W7CkNZSLqGEAEChUn8EqinGLy5k2tPu58UnU08QcEBRYra47AyG7Us6TT3Jd6fa2MIUgMAJRcB8qVR5sFxXY2rL5Z8A3CukNsaizrC7AUTYEUBvMQZabMd+r6ZU/gCyCAA4EUUEEFEIoLcYEXYTYbci5Wyx4GimmSeRhYSYYhpCT6lqIgsBQk2xYCJMqWpiCQH0Fgsg0pSqJraQmBaLbSmX2EKAGBZbBUu5rIqQ23D4M4mjnWNerEoi7QHpQeQDsJrYOzKXTtewhVMILwIALMvwx14vmKETxU2QsG++DuD+GCm2Oyt27KkVy1oxLFVNbItF3pGYlrqrj7gWiyxEaykGPmXGZ4qUsSz2/32ND2EpNgYDW76cvtb6ee4GgfoBGKmfqBYLLURrKWJ+u3l88oL7OTk28RURvasoEclioYTku1NtAL2kCP21tN68Wn1xuZw4DMLPivsPzfd2tIfpTf2MzKXTNQl7+QdIu0EoAaa9afTbS17L872dOyxjvoP8S8psua7y0Jbs9IqmP/WOJOzlY9BYCjjiJwIAWkYu/khgjXW2O0Vb/Y1RJeS2pXBQiiPGVGNt05AU1/jw1HEA34iFGS9rLSYKCTGl/rLsyl7KZsXvJTQIQ2Q9C+Cm1J92iolC1JZiHGgYmb4ixbkkRy/+RsSawaGyWODDrj34mPmL5nNTTymauouFnlQWwDNCmHhQ+u5ICEv9Ydvl54QYX5icFwDkhTDRYr5C1JYi9DeOzCxKcX40j+b+ZKa9AFgIDbSYp7XU71KM4eS5yefFbhXkM6lhZnj+9XwHvhbz3BFjYRiipeiKtd45pG1Uwqp1DgIkDQuLDL/vueB1kYDrQsLrZHhPQzZX0DSpoSGbK5DhPRBqE+HaatVcYw0FfwN2XPcyg9BcTQAAAABJRU5ErkJggg=='
+        }
+
+        else {
+            turn_img = 'data:image/png;base64,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'
+        }
+
+
+        // }
+    }
+
+    block1.addEventListener('click', function () {
+        if (block_num_1 > 5) {
+            block_num_1 = turn_num
+
+            click_event(block1, block_num_1)
+
+
+        }
+    })
+
+    block2.addEventListener('click', function () {
+        if (block_num_2 > 5) {
+            block_num_2 = turn_num
+
+            click_event(block2, block_num_2)
+
+        }
+    })
+
+    block3.addEventListener('click', function () {
+        if (block_num_3 > 5) {
+            block_num_3 = turn_num
+
+            click_event(block3, block_num_3)
+
+        }
+    })
+
+    block4.addEventListener('click', function () {
+        if (block_num_4 > 5) {
+            block_num_4 = turn_num
+
+            click_event(block4, block_num_4)
+
+        }
+    })
+
+    block5.addEventListener('click', function () {
+        if (block_num_5 > 5) {
+            block_num_5 = turn_num
+
+            click_event(block5, block_num_5)
+
+        }
+    })
+
+    block6.addEventListener('click', function () {
+        if (block_num_6 > 5) {
+            block_num_6 = turn_num
+
+            click_event(block6, block_num_6)
+
+        }
+    })
+
+    block7.addEventListener('click', function () {
+        if (block_num_7 > 5) {
+            block_num_7 = turn_num
+
+            click_event(block7, block_num_7)
+
+        }
+    })
+
+    block8.addEventListener('click', function () {
+        if (block_num_8 > 5) {
+            block_num_8 = turn_num
+
+            click_event(block8, block_num_8)
+
+        }
+    })
+
+    block9.addEventListener('click', function () {
+        if (block_num_9 > 5) {
+            block_num_9 = turn_num
+
+            click_event(block9, block_num_9)
+
+        }
+    })
+
+
+    function reseting_game_on_win() {
+        block_num_1 = 55
+        block_num_2 = 88
+        block_num_3 = 65
+        block_num_4 = 56
+        block_num_5 = 89
+        block_num_6 = 968
+        block_num_7 = 89
+        block_num_8 = 98
+        block_num_9 = 556
+
+        block1.innerHTML = ''
+        block2.innerHTML = ''
+        block3.innerHTML = ''
+        block4.innerHTML = ''
+        block5.innerHTML = ''
+        block6.innerHTML = ''
+        block7.innerHTML = ''
+        block8.innerHTML = ''
+        block9.innerHTML = ''
+
+        numof_blocks_clicked = 0
+    }
+
+    function win_or_lose(winner, result, text_color) {
+
+        if (block_num_1 === block_num_2 && block_num_2 === block_num_3) {
+
+            reseting_game_on_win()
+            console.log(winner)
+            result_section.innerHTML = result 
+            result_section.style.color = text_color
+
+        }
+        else if (block_num_1 === block_num_4 && block_num_4 === block_num_7) {
+
+            reseting_game_on_win()
+            console.log(winner)
+            result_section.innerHTML = result 
+            result_section.style.color = text_color
+            result_section.innerHTML(result)
+        }
+        else if (block_num_7 === block_num_8 && block_num_8 === block_num_9) {
+
+            reseting_game_on_win()
+            console.log(winner)
+            result_section.innerHTML = result 
+            result_section.style.color = text_color
+            result_section.innerHTML(result)
+        }
+        else if (block_num_3 === block_num_6 && block_num_6 === block_num_9) {
+
+            reseting_game_on_win()
+            console.log(winner)
+            result_section.style.color = text_color
+            result_section.innerHTML = result 
+        }
+
+        else if (block_num_1 === block_num_5 && block_num_5 === block_num_9) {
+
+            reseting_game_on_win()
+            console.log(winner)
+            result_section.style.color = text_color
+            result_section.innerHTML = result 
+        }
+        else if (block_num_3 === block_num_5 && block_num_5 === block_num_7) {
+
+            reseting_game_on_win()
+            console.log(winner)
+            result_section.style.color = text_color
+            result_section.innerHTML = result 
+        }
+        else if (block_num_2 === block_num_5 && block_num_5 === block_num_8) {
+
+            reseting_game_on_win()
+            console.log(winner)
+            result_section.style.color = text_color
+            result_section.innerHTML = result 
+        }
+
+
+
+        else {
+            if (numof_blocks_clicked == 9) {
+                result_section.innerHTML ='Draw match :(' 
+                result_section.style.color = 'black'
+                console.log('no one won ')
+
+                block_num_1 = 55
+        block_num_2 = 88
+        block_num_3 = 65
+        block_num_4 = 56
+        block_num_5 = 89
+        block_num_6 = 968
+        block_num_7 = 89
+        block_num_8 = 98
+        block_num_9 = 556
+
+        block1.innerHTML = ''
+        block2.innerHTML = ''
+        block3.innerHTML = ''
+        block4.innerHTML = ''
+        block5.innerHTML = ''
+        block6.innerHTML = ''
+        block7.innerHTML = ''
+        block8.innerHTML = ''
+        block9.innerHTML = ''
+
+        numof_blocks_clicked = 0
+            
+            }
+        }
+
+
+
+    }
+
+
+    result_btn.addEventListener('click', function () {
+        win_or_lose()
+    })
+    win_or_lose()
+</script>

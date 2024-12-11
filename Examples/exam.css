@@ -1,0 +1,252 @@
+body{
+    background-color: rgb(236, 236, 236);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* container */
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    'nav nav  nav'
+    'section section delevry'
+    ;
+}
+.navbar{
+   border: 1px solid rgb(211, 210, 210);
+   display: flex;
+   align-items: center;
+   height: 40px;
+   background-color: rgb(194, 194, 194);
+   border-radius: 10px;
+   margin: 5px 5px;
+   grid-area: nav;
+
+}
+
+.navbar ul{
+    display: flex;
+   
+    
+}
+
+.navbar ul li{
+    list-style: none;
+}
+.navbar ul li a{
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 18px;
+    color: white;
+
+}
+.navbar ul li:hover{
+text-decoration: underline;
+
+}
+.navbar ul li a:active{
+color: black;
+
+}
+
+/* Section */
+#contain{
+    background-color: black;
+    color: white;
+    margin: 10px  1px;
+    grid-area: section;
+ width: 1305px;
+ height: 271;
+}
+
+#contain p{
+    margin: 16px;
+}
+#contain h1{
+display: flex;
+justify-content: center;
+padding: 10px;
+margin: 10px;
+}
+
+#button{
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    left: 10px;
+    top: 300px;
+    
+}
+
+
+/* product */
+
+.product{
+    border: 1px solid black;
+    margin: 10px;
+    width: 100%;
+
+}
+
+.items img{
+/* width: 100px; */
+display: flex;
+
+}
+.items {
+
+display: flex;
+width: 100%;
+
+}
+.pitems{
+ 
+padding: 10px 10px;
+/* height: 100px; */
+height: 100px;
+margin-bottom: 50px;
+
+
+}
+
+.imgdiv{
+    background-color: white;
+    /* height: 150px;
+    width: 10001px; */
+ /* border-radius: 10px; */
+ border: 0.1px solid black;
+ border-radius: 5px;
+ height: 250px;
+ width: 200px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 0px 10px;
+}
+.rate{
+    position: relative;
+    top: 119px;
+    left: -135px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.rate img{
+   width: 30px;
+   position: relative;
+   top: -22px;
+   left: 151px;
+
+
+
+}
+
+
+
+
+
+
+
+
+/* Button */
+
+#btn{
+    background-color: tomato;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px 10px;
+    margin: 7px 7px;
+    width: 100px;
+    /* height: 50px; */
+    position: relative;
+    top: 1px;
+
+   
+}
+
+#btn:hover{
+
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+
+}
+#btn:active{
+
+    background-color: rgb(230, 230, 230);
+    color: rgb(0, 0, 0);
+
+}
+
+/* delevry */
+
+.delevry{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 1px;
+   grid-area: delevry;
+   width: 230px;
+
+}
+.delevry #address{
+    margin-top: 10px;
+}
+
+.delevry input{
+    height: 50px;
+    width: 110px;
+    /* margin: 10px 1px; */
+}
+
+.delevry #addcart{
+    margin-left: 6px;
+    background-color: rgb(53, 89, 122);
+    border: rgb(53, 89, 122);
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+}
+.delevry #addcart:hover{
+
+    background-color: rgb(31, 61, 90);
+    border: rgb(31, 61, 90);
+   
+}
+.delevry #buy{
+
+    background-color: rgb(32, 105, 107);
+    border: rgb(32, 105, 107);
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+
+}
+.delevry #buy:hover{
+
+    background-color: rgb(53, 120, 122);
+    border: rgb(53, 120, 122);
+    
+}
+
+.delevry h1{
+    font-size: 20px;
+}
+.delevry #pdiv{
+   border: 1px solid rgb(243, 243, 243);
+   background-color: rgb(243, 243, 243);
+   border-radius:10px ;
+   
+}
+
+#pdiv p{
+    margin: 6px;
+}
+
+#rate{
+    /* border: 1px solid red; */
+    margin: 10px;
+    font-size: 21px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+

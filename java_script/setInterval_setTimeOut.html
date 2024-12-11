@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInerval set time out</title>
+    <style>
+        #btn{
+            margin: 20px 5px;
+            background-color: rgb(44, 84, 136);
+            border: 1px solid rgb(44, 84, 136);
+            color: white;
+            padding: 5px 5px;
+            border-radius: 40px;
+            width: 89px;
+            height: 29px;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        #btn:hover{
+            background-color:rgb(27, 71, 129) ;
+        }
+    </style>
+</head>
+<body>
+    <div class="continer">
+        Live timing = <span id="time"></span>
+
+    </div>
+
+    <button id="btn">Stop</button>
+</body>
+<script>
+    // console.log('This is a tutorial');
+    // // setTimeout --> Allows us to run the function at once after the interval of time 
+    // // clearTimeout --> Allows us to run the function repeately after the interval of time
+    // function greet(name, bytext){
+    //     console.log("Kiya haal ba " + name+ " " + bytext);
+    // }
+    // setInterval(greet, 1000, "arif" ,"take");  //at every one second it will run again and again
+   
+//    timeOut = setTimeout(greet, 5000, "arif","take care");  //it wil print after 5 second  "arf " will set in name and "take care" will set in bytext
+//    console.log(timeOut) //it will print a id of the the settimeout
+
+//    clearTimeout(timeOut) //set timeout  will not work
+// function displaytime(){
+//     time = new Date();  //time is variable
+//     console.log(time)
+//     document.getElementById('time').innerHTML= time;
+// }
+// stoptime= setInterval(displaytime, 1000);
+// console.log(stoptime)
+// let btn = document.getElementById('btn')
+
+// btn.addEventListener('click', function run(){
+
+
+// });
+function displaytime(){
+   time = new Date();  //time is variable
+    console.log(time)
+    document.getElementById('time').innerHTML= time;
+}
+setInterval(displaytime,1000)
+ </script>
+
+</html>
+
+

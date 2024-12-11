@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth scroll</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+             scroll-behavior: smooth;  /*you set this scroll behavior in a div also where you want to make a smoth scrolling*/
+        }
+
+        #navbar {
+            background: rgb(119, 45, 45);
+            position: sticky;
+            top: 0;
+
+
+        }
+
+        #navbar nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #navbar nav ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style: none;
+        }
+
+        #navbar nav ul li {
+            list-style: none;
+            background: rgb(223, 145, 145);
+            border-radius: 10px;
+            margin: 10px 20px;
+            cursor: pointer;
+            padding: 10px;
+           background: rgb(223, 145, 145);
+            border-radius: 10px;
+            margin: 10px 20px;
+          
+        }
+
+        #navbar nav ul li:hover {
+            background: rgb(216, 118, 118);
+
+         
+        }
+
+        #navbar nav ul li a {
+            text-decoration: none;
+            color: #ffff;
+          
+        }
+
+        /* conatant----------------- */
+
+        .contant {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background-color: cornflowerblue;
+            height: 100vh;
+            padding-top: 60px;
+            color: white;
+        }
+
+
+      
+        #contact{
+            background-color: crimson;
+         }
+        #orders{
+            background-color: rgb(150, 220, 20);
+         }
+        #cars{
+            background-color: rgb(33, 58, 87);
+         }
+
+         #up-btn{
+             position: fixed;
+             bottom: 100px;
+             right: 100px;
+             background-color: white;
+             padding: 10px 20px;
+             border-radius: 10px;
+             text-align: center;
+             text-decoration: none;
+         }
+
+         #up-btn a{
+           color: black;
+             text-decoration: none;
+             font-size: 18px;
+           
+         }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <nav>
+            <ul>
+                <li> <a href="#home">home</a></li>
+                <li> <a href="#contact">contact</a></li>
+                <li> <a href="#orders">orders</a></li>
+                <li> <a href="#cars">cars</a></li>
+            </ul>
+        </nav>
+    </div>
+       <div id="up-btn"><a href="#home"> &UpArrow; Go up</a></div>
+
+       <div class="contant" id="home">   <!-- // you can make a btn if we click on that it take to up  script is below -->
+   
+        <h1>Home</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aperiam a hic, dignissimos error, esse
+            pariatur id praesentium similique enim sequi earum assumenda amet facere quibusdam soluta numquam doloribus
+            qui molestias. Rem iste est aut sunt voluptate et quidem doloremque asperiores ullam. Aspernatur possimus
+            dignissimos mollitia ipsa praesentium incidunt dolor! Minima nulla reprehenderit expedita perferendis
+            necessitatibus sapiente numquam quos doloribus impedit vitae eligendi, suscipit ducimus rerum assumenda odit
+            optio porro odio, iste minus qui, quo dicta quis quae perspiciatis. Distinctio sequi aperiam fugiat dolorem
+            accusantium veritatis, nesciunt aliquam labore incidunt vitae, assumenda voluptas et ad fugit soluta quia
+            adipisci velit pariatur sapiente possimus nisi quisquam quos! Ipsam suscipit odit animi molestiae,
+            dignissimos dolore officia optio, eaque id fugiat iusto. Natus, vitae minima? Asperiores doloremque ea
+            dolorem ducimus unde similique nisi voluptates quod quibusdam. Quibusdam neque non nostrum sed excepturi
+            odit esse, perferendis commodi libero deleniti! Iusto minima enim perspiciatis exercitationem explicabo
+            perferendis quis, veritatis harum dignissimos voluptates nam officiis odit officia tenetur consequatur aut
+            velit pariatur iste corrupti sapiente. In animi mollitia inventore ratione excepturi esse, incidunt beatae,
+            odio nesciunt qui quasi ad vitae minus. Dolorum consequuntur natus debitis temporibus accusamus aut corrupti
+            itaque illo tempora, molestias sequi ratione rerum sint incidunt. Eaque possimus voluptates, aspernatur
+            suscipit quo veritatis. Quibusdam aliquam vero placeat, numquam fuga, incidunt ducimus in error, velit quasi
+            at consequuntur a minima odio deserunt? Aliquid, at perferendis! Molestias ipsum, architecto libero hic
+            perspiciatis eveniet odio ut quasi, optio voluptatem repellat sed, odit ratione adipisci? Sed atque
+            doloribus placeat accusantium tempore adipisci veritatis, laboriosam id doloremque! Optio sequi doloribus
+            alias culpa dolores sint labore voluptates, facilis rerum, natus blanditiis beatae officia, ut neque
+            voluptas at! Sed tenetur amet delectus consectetur consequatur magnam aliquid reiciendis eius iure atque
+            optio voluptate autem, nesciunt vitae quos? Nulla porro eum a blanditiis natus, veniam voluptas vitae
+            laboriosam enim exercitationem reprehenderit quas commodi inventore perspiciatis, rem magnam eius provident
+            fugit illum! Odit sequi ipsa ratione magnam, voluptatibus ad facere eligendi blanditiis. Nam amet explicabo
+            quos autem ad mollitia natus corrupti voluptas quibusdam deserunt quia molestiae, quidem odio accusamus
+            numquam molestias consequuntur! Ducimus sit et explicabo eum, porro neque voluptatum consequuntur expedita?
+            Omnis dolorem deleniti minus, asperiores accusamus cupiditate neque corporis inventore recusandae placeat
+            accusantium voluptatum modi sunt illum temporibus velit, dolor culpa fuga ad, aliquid quia officiis vitae
+            suscipit? Blanditiis quis nemo porro totam quos ut debitis illo sapiente consectetur similique, autem
+            exercitationem!
+        </p>
+    </div>
+    <div class="contant" id="contact">
+        <h1>contact</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aperiam a hic, dignissimos error, esse
+            pariatur id praesentium similique enim sequi earum assumenda amet facere quibusdam soluta numquam doloribus
+            qui molestias. Rem iste est aut sunt voluptate et quidem doloremque asperiores ullam. Aspernatur possimus
+            dignissimos mollitia ipsa praesentium incidunt dolor! Minima nulla reprehenderit expedita perferendis
+            necessitatibus sapiente numquam quos doloribus impedit vitae eligendi, suscipit ducimus rerum assumenda odit
+            optio porro odio, iste minus qui, quo dicta quis quae perspiciatis. Distinctio sequi aperiam fugiat dolorem
+            accusantium veritatis, nesciunt aliquam labore incidunt vitae, assumenda voluptas et ad fugit soluta quia
+            adipisci velit pariatur sapiente possimus nisi quisquam quos! Ipsam suscipit odit animi molestiae,
+            dignissimos dolore officia optio, eaque id fugiat iusto. Natus, vitae minima? Asperiores doloremque ea
+            dolorem ducimus unde similique nisi voluptates quod quibusdam. Quibusdam neque non nostrum sed excepturi
+            odit esse, perferendis commodi libero deleniti! Iusto minima enim perspiciatis exercitationem explicabo
+            perferendis quis, veritatis harum dignissimos voluptates nam officiis odit officia tenetur consequatur aut
+            velit pariatur iste corrupti sapiente. In animi mollitia inventore ratione excepturi esse, incidunt beatae,
+            odio nesciunt qui quasi ad vitae minus. Dolorum consequuntur natus debitis temporibus accusamus aut corrupti
+            itaque illo tempora, molestias sequi ratione rerum sint incidunt. Eaque possimus voluptates, aspernatur
+            suscipit quo veritatis. Quibusdam aliquam vero placeat, numquam fuga, incidunt ducimus in error, velit quasi
+            at consequuntur a minima odio deserunt? Aliquid, at perferendis! Molestias ipsum, architecto libero hic
+            perspiciatis eveniet odio ut quasi, optio voluptatem repellat sed, odit ratione adipisci? Sed atque
+            doloribus placeat accusantium tempore adipisci veritatis, laboriosam id doloremque! Optio sequi doloribus
+            alias culpa dolores sint labore voluptates, facilis rerum, natus blanditiis beatae officia, ut neque
+            voluptas at! Sed tenetur amet delectus consectetur consequatur magnam aliquid reiciendis eius iure atque
+            optio voluptate autem, nesciunt vitae quos? Nulla porro eum a blanditiis natus, veniam voluptas vitae
+            laboriosam enim exercitationem reprehenderit quas commodi inventore perspiciatis, rem magnam eius provident
+            fugit illum! Odit sequi ipsa ratione magnam, voluptatibus ad facere eligendi blanditiis. Nam amet explicabo
+            quos autem ad mollitia natus corrupti voluptas quibusdam deserunt quia molestiae, quidem odio accusamus
+            numquam molestias consequuntur! Ducimus sit et explicabo eum, porro neque voluptatum consequuntur expedita?
+            Omnis dolorem deleniti minus, asperiores accusamus cupiditate neque corporis inventore recusandae placeat
+            accusantium voluptatum modi sunt illum temporibus velit, dolor culpa fuga ad, aliquid quia officiis vitae
+            suscipit? Blanditiis quis nemo porro totam quos ut debitis illo sapiente consectetur similique, autem
+            exercitationem!
+        </p>
+    </div>
+    <div class="contant" id="orders">
+        <h1>orders</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aperiam a hic, dignissimos error, esse
+            pariatur id praesentium similique enim sequi earum assumenda amet facere quibusdam soluta numquam doloribus
+            qui molestias. Rem iste est aut sunt voluptate et quidem doloremque asperiores ullam. Aspernatur possimus
+            dignissimos mollitia ipsa praesentium incidunt dolor! Minima nulla reprehenderit expedita perferendis
+            necessitatibus sapiente numquam quos doloribus impedit vitae eligendi, suscipit ducimus rerum assumenda odit
+            optio porro odio, iste minus qui, quo dicta quis quae perspiciatis. Distinctio sequi aperiam fugiat dolorem
+            accusantium veritatis, nesciunt aliquam labore incidunt vitae, assumenda voluptas et ad fugit soluta quia
+            adipisci velit pariatur sapiente possimus nisi quisquam quos! Ipsam suscipit odit animi molestiae,
+            dignissimos dolore officia optio, eaque id fugiat iusto. Natus, vitae minima? Asperiores doloremque ea
+            dolorem ducimus unde similique nisi voluptates quod quibusdam. Quibusdam neque non nostrum sed excepturi
+            odit esse, perferendis commodi libero deleniti! Iusto minima enim perspiciatis exercitationem explicabo
+            perferendis quis, veritatis harum dignissimos voluptates nam officiis odit officia tenetur consequatur aut
+            velit pariatur iste corrupti sapiente. In animi mollitia inventore ratione excepturi esse, incidunt beatae,
+            odio nesciunt qui quasi ad vitae minus. Dolorum consequuntur natus debitis temporibus accusamus aut corrupti
+            itaque illo tempora, molestias sequi ratione rerum sint incidunt. Eaque possimus voluptates, aspernatur
+            suscipit quo veritatis. Quibusdam aliquam vero placeat, numquam fuga, incidunt ducimus in error, velit quasi
+            at consequuntur a minima odio deserunt? Aliquid, at perferendis! Molestias ipsum, architecto libero hic
+            perspiciatis eveniet odio ut quasi, optio voluptatem repellat sed, odit ratione adipisci? Sed atque
+            doloribus placeat accusantium tempore adipisci veritatis, laboriosam id doloremque! Optio sequi doloribus
+            alias culpa dolores sint labore voluptates, facilis rerum, natus blanditiis beatae officia, ut neque
+            voluptas at! Sed tenetur amet delectus consectetur consequatur magnam aliquid reiciendis eius iure atque
+            optio voluptate autem, nesciunt vitae quos? Nulla porro eum a blanditiis natus, veniam voluptas vitae
+            laboriosam enim exercitationem reprehenderit quas commodi inventore perspiciatis, rem magnam eius provident
+            fugit illum! Odit sequi ipsa ratione magnam, voluptatibus ad facere eligendi blanditiis. Nam amet explicabo
+            quos autem ad mollitia natus corrupti voluptas quibusdam deserunt quia molestiae, quidem odio accusamus
+            numquam molestias consequuntur! Ducimus sit et explicabo eum, porro neque voluptatum consequuntur expedita?
+            Omnis dolorem deleniti minus, asperiores accusamus cupiditate neque corporis inventore recusandae placeat
+            accusantium voluptatum modi sunt illum temporibus velit, dolor culpa fuga ad, aliquid quia officiis vitae
+            suscipit? Blanditiis quis nemo porro totam quos ut debitis illo sapiente consectetur similique, autem
+            exercitationem!
+        </p>
+    </div>
+    <div class="contant" id="cars">
+        <h1>cars</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aperiam a hic, dignissimos error, esse
+            pariatur id praesentium similique enim sequi earum assumenda amet facere quibusdam soluta numquam doloribus
+            qui molestias. Rem iste est aut sunt voluptate et quidem doloremque asperiores ullam. Aspernatur possimus
+            dignissimos mollitia ipsa praesentium incidunt dolor! Minima nulla reprehenderit expedita perferendis
+            necessitatibus sapiente numquam quos doloribus impedit vitae eligendi, suscipit ducimus rerum assumenda odit
+            optio porro odio, iste minus qui, quo dicta quis quae perspiciatis. Distinctio sequi aperiam fugiat dolorem
+            accusantium veritatis, nesciunt aliquam labore incidunt vitae, assumenda voluptas et ad fugit soluta quia
+            adipisci velit pariatur sapiente possimus nisi quisquam quos! Ipsam suscipit odit animi molestiae,
+            dignissimos dolore officia optio, eaque id fugiat iusto. Natus, vitae minima? Asperiores doloremque ea
+            dolorem ducimus unde similique nisi voluptates quod quibusdam. Quibusdam neque non nostrum sed excepturi
+            odit esse, perferendis commodi libero deleniti! Iusto minima enim perspiciatis exercitationem explicabo
+            perferendis quis, veritatis harum dignissimos voluptates nam officiis odit officia tenetur consequatur aut
+            velit pariatur iste corrupti sapiente. In animi mollitia inventore ratione excepturi esse, incidunt beatae,
+            odio nesciunt qui quasi ad vitae minus. Dolorum consequuntur natus debitis temporibus accusamus aut corrupti
+            itaque illo tempora, molestias sequi ratione rerum sint incidunt. Eaque possimus voluptates, aspernatur
+            suscipit quo veritatis. Quibusdam aliquam vero placeat, numquam fuga, incidunt ducimus in error, velit quasi
+            at consequuntur a minima odio deserunt? Aliquid, at perferendis! Molestias ipsum, architecto libero hic
+            perspiciatis eveniet odio ut quasi, optio voluptatem repellat sed, odit ratione adipisci? Sed atque
+            doloribus placeat accusantium tempore adipisci veritatis, laboriosam id doloremque! Optio sequi doloribus
+            alias culpa dolores sint labore voluptates, facilis rerum, natus blanditiis beatae officia, ut neque
+            voluptas at! Sed tenetur amet delectus consectetur consequatur magnam aliquid reiciendis eius iure atque
+            optio voluptate autem, nesciunt vitae quos? Nulla porro eum a blanditiis natus, veniam voluptas vitae
+            laboriosam enim exercitationem reprehenderit quas commodi inventore perspiciatis, rem magnam eius provident
+            fugit illum! Odit sequi ipsa ratione magnam, voluptatibus ad facere eligendi blanditiis. Nam amet explicabo
+            quos autem ad mollitia natus corrupti voluptas quibusdam deserunt quia molestiae, quidem odio accusamus
+            numquam molestias consequuntur! Ducimus sit et explicabo eum, porro neque voluptatum consequuntur expedita?
+            Omnis dolorem deleniti minus, asperiores accusamus cupiditate neque corporis inventore recusandae placeat
+            accusantium voluptatum modi sunt illum temporibus velit, dolor culpa fuga ad, aliquid quia officiis vitae
+            suscipit? Blanditiis quis nemo porro totam quos ut debitis illo sapiente consectetur similique, autem
+            exercitationem!
+        </p>
+    </div>
+ 
+</body>
+<script>
+
+    // you can make a btn if we click on that it take to up 
+    let up_btn = document.getElementById('up-btn')
+
+    window.addEventListener("scroll", function(){
+
+       if(window.scrollY > 200){  
+           up_btn.style.display = "block"
+      
+
+       }
+  
+  
+       else{
+        up_btn.style.display = "none"
+       
+
+
+       }
+    })
+    
+</script>
+</html>

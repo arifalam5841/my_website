@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creatng items in HTML by js</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <style>
+        #list-container {
+            background-color: rgb(218, 218, 218);
+            width: 270px;
+            height: 500px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 5px;
+            overflow: auto;
+            /* overflow-y: auto; */
+        }
+
+        #list-container :first-child {
+            margin-top: 0px;
+        }
+
+        #list-container li {
+            list-style: none;
+            background-color: rgb(155, 213, 247);
+            width: 270px;
+            height: 60px;
+            border-radius: 5px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        #list-container li div {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            font-family: 'Varela Round', sans-serif;
+            font-size: 15px;
+            cursor: pointer;
+            color: white;
+        }
+
+        #list-container li div img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 0 10px;
+        }
+
+        #list-container li a {
+            color: white;
+            text-decoration: none;
+            background-color: rgb(155, 153, 153);
+            width: 50px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            transition: all 0.5s;
+            font-weight: 900;
+
+        }
+
+        #list-container li a:hover {
+            color: rgb(0, 0, 0);
+            background-color: white;
+
+        }
+
+        /* sing in form ------------------------- */
+    </style>
+</head>
+
+<body>
+    <div id="list-container">
+        <li>
+            <div>
+                <img src="https://cdn.vox-cdn.com/thumbor/wvdW8UyL2dIAsXrfwNBy3xKIGe4=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19744155/Amazon_Go_Grocery_3.jpg"
+                    alt="">
+                <h2>Kirana store</h2>
+            </div>
+            <a href="">Order</a>
+        </li>
+    </div>
+
+    <button id="btn">add</button>
+    <input type="text" name="" id="name">
+</body>
+
+<script>
+    let singin_bt = document.getElementById("sing_btn")
+
+
+    let stores_list = [ // this is the array from this we will make the list
+        "",
+        { name: 'Bhagwanti', store_img: "https://images.newindianexpress.com/uploads/user/imagelibrary/2020/7/3/w1200X800/grocery_store-_Odisha-_EPS.jpg", bg_color: "rgb(200, 248, 200)" },
+        { name: 'lakshmi', store_img: "https://img.etimg.com/thumb/width-1200,height-900,imgsize-1520275,resizemode-1,msid-69707009/industry/services/retail/indias-ubiquitous-kirana-stores-are-finding-themselves-in-great-demand.jpg", bg_color: "rgb(255, 167, 167)" }
+    ]
+
+
+    a = 0
+
+
+    // for (i = 0; i < stores_list.length; i++) { // like this you also do this by aplying for loop and remove the click event
+
+    document.getElementById("btn").addEventListener("click", function () { // remove this and "a++" "if"  condition
+    // and set "i" in the place of "a" in head.innerhtml and all to use above "for" loop 
+
+        // stores_list.push({ name: document.getElementById("name").value, store_img: "https://images.newindianexpress.com/uploads/user/imagelibrary/2020/7/3/w1200X800/grocery_store-_Odisha-_EPS.jpg", bg_color: "rgb(200, 248, 200)" })
+        if (a == stores_list.length) {
+            a = 0
+        }
+        a++
+        let list_contianer = document.getElementById("list-container")
+        let list_item = document.createElement("li") // "CreateElement" is use to create elelment in html
+        let div = document.createElement("div")
+        let img = document.createElement("img")
+        let heading = document.createElement("h2")
+        let order_btn = document.createElement("a")
+
+        list_contianer.appendChild(list_item) // "appendchild" is use to set element in the created element
+        list_item.appendChild(div)
+        div.appendChild(img)
+        div.appendChild(heading)
+        list_item.append(order_btn)
+
+        heading.innerHTML = stores_list[a].name // here we are just giving the values in the elementsla
+        order_btn.innerHTML = "Order"
+        img.src = stores_list[a].store_img
+        list_item.style.backgroundColor = stores_list[a].bg_color
+
+
+    })
+
+ // }
+
+</script>
+
+</html>

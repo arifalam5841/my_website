@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on selectors</title>
+    <style>
+        h1{
+            background-color: red;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+        /* div p{                      all paragaraph that are in all div  
+            color: yellow;
+            font-weight: bold;
+            background-color: black;
+        }   */
+         /* div > p{                 all paragaraph that is exectaly in the div not in any ul or li or heading or anywhere it should be in the div only   
+            color: yellow;
+            font-weight: bold;
+            background-color: black;
+        } */
+
+              div + p{                 /*all paragaraph that is after the div not in div*/
+            color: yellow;
+            font-weight: bold;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <p>This is a paragaraph</p>
+            <ul>
+                <li class="item"><p>this is para that is in the li </p></li>
+                <li><p>thi also a para that is also in a li</p></li>
+            </ul>
+        </div>
+        <p>This is another paragaraph</p>
+    </div>
+    <p>This is outer most paragaraph</p>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replace attributes</title>
+</head>
+<body>
+<div >
+
+    <h1>this replace</h1>
+</div>
+
+<p id="para">this is a para</p>
+
+<div id="box2">
+<h2>this is will replace</h2>
+</div>
+</body>
+<script>
+    let box = document.querySelector("div")
+    let button = document.createElement("button")
+    button.textContent = "this  is created"
+    // in this we replace a created item 
+    box.replaceWith(button, "this is replace ") // we use "replacewith" to replace element in element you can replace multiple element 
+
+
+  // here we replace a html element in a html element
+
+    let box2 = document.getElementById("box2")
+    let para= document.getElementById("para")
+  box2.replaceWith(para)
+    
+</script>
+</html>

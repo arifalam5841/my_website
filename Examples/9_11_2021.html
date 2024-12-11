@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Example</title>
+        <link rel="stylesheet" href="exam.css">
+
+        <style>
+
+
+        </style>
+
+</head>
+
+<body>
+        <div class="container">
+                <nav class="navbar">
+                        <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Delivry</a></li>
+                                <li><a href="#">about us</a></li>
+                        </ul>
+                </nav>
+                <!-- contain -->
+                <div id="contain">
+
+                        <h1>This is a Web site</h1>
+                        <p id="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, esse
+                                eligendi
+                                dolorem quidem illo doloremque hic ipsum quia, sit deleniti in, reprehenderit autem eum
+                                optio
+                                aspernatur officia quo odit quod possimus repellat? Nesciunt blanditiis impedit
+                                perspiciatis
+                                quisquam, expedita officiis iste tempora quae ea. Natus non explicabo blanditiis nam
+                                recusandae
+                                laborum voluptatibus ex eum, eveniet autem quo nihil ratione perferendis iste dolor
+                                voluptas,
+                                distinctio ut aliquam debitis quos provident accusantium? Molestiae quaerat quae nobis
+                                porro cum
+                                placeat, quisquam totam laborum praesentium ex enim animi natus excepturi labore
+                                accusantium ut
+                                repellat culpa quo perspiciatis alias temporibus. Repellat neque, in consequatur maxime
+                                natus
+                                temporibus quaerat, unde eveniet repudiandae est modi illum obcaecati necessitatibus non
+                                veniam
+                                dolorum, exercitationem cumque. Commodi dolorum excepturi, adipisci officiis veritatis
+                                nemo
+                                nihil maiores ex vel unde labore dolorem ut velit, nobis tempora nesciunt. Magni quis
+                                officia,
+                                commodi consectetur reiciendis beatae sit ducimus aut, doloremque molestiae animi,
+                                tempore
+                                consequatur error fugit accusamus consequuntur hic. Deserunt impedit nihil placeat
+                                voluptatem,
+                                ducimus fuga perferendis! Id odit, ad unde, sint laboriosam deleniti eaque consectetur
+                                voluptate
+                                accusamus ratione ipsa sed! Accusamus distinctio natus minus. Velit inventore
+                                perferendis sint
+                                ratione ducimus officia earum odio ad, natus minus pariatur incidunt iusto. Autem hic
+                                sapiente
+                                ut nostrum.</p>
+                        <div id="button">
+                                <input id="btn" type="button" value="Show">
+                        </div>
+                </div>
+                <!-- delevry -->
+                <div class="delevry">
+
+                        <input id="buy" type="button" value="Buy">
+                        <input id="addcart" type="button" value="Add to cart">
+
+                        <div id="address">
+                                <h1>Adress</h1>
+                                <div id="pdiv">
+                                        <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+                                                voluptatem iste odit non, exercitationem nulla natus corporis animi
+                                                dicta consectetur libero atque voluptates praesentium, esse nihil
+                                                delectus ratione. Dolore, dignissimos?
+                                </div>
+                                </p>
+                        </div>
+                        <div id="rate">
+                                Rs- 300/-
+                        </div>
+
+
+
+                </div>
+
+                <div class="product">
+                        <div class="items">
+                
+
+                                <div class="imgdiv"><img src="shirt.png" alt="" class="pitems"> 
+                                        <div class="rate">
+                                                $100 
+                                                <img id="cart" src="img/shopping.png" alt="" >
+                                        </div>
+                                </div>
+                                <div class="imgdiv"><img src="img/pan.png" alt="" class="pitems">
+                                       <div class="rate">
+                                               $100 
+                                               <img id="cart" src="img/shopping.png" alt="" >
+                                       </div> 
+                                </div>
+                                <div class="imgdiv"><img src="img/smartphone.png" alt="" class="pitems">
+                                        <div class="rate">
+                                                $100 
+                                                <img id="cart" src="img/shopping.png" alt="" >
+                                        </div>
+                                </div>
+                                <div class="imgdiv"><img src="img/jeans.png" alt="" class="pitems">
+                                        <div class="rate">
+                                                $100 
+                                                <img id="cart" src="img/shopping.png" alt="" >
+                                        </div>
+                                </div>
+                                <div class="imgdiv"><img src="img/dress.png" alt="" class="pitems">
+                                        <div class="rate">
+                                                $100 
+                                                <img id="cart" src="img/shopping.png" alt="" >
+                                        </div>
+                                </div>
+                                <div class="imgdiv"><img src="img/fan.png" alt="" class="pitems">
+                                        <div class="rate">
+                                                $100 
+                                                <img id="cart" src="img/shopping.png" alt="" >
+                                        </div>
+                                </div>
+                                
+                        </div>
+
+                </div>
+
+
+
+
+</body>
+
+<script>
+        let para = document.getElementById('paragraph')
+        let btn = document.getElementById('btn')
+
+        btn.addEventListener('click', function run() {
+                if (para.style.display != 'none') {
+                        para.style.display = 'none'
+                        btn.style.padding="10px"
+                }
+                else {
+                        para.style.display = 'block'
+                        btn.style.padding="8px"
+
+                       
+
+                }
+        });
+
+</script>
+
+</html>

@@ -1,0 +1,748 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* we have to use position relative so that it will not fixed */
+
+
+a{
+    color: #000000;
+    text-decoration: none;
+}
+
+img{
+    cursor: pointer;
+}
+
+.flex-div{
+    display: flex;
+    align-items: center;
+ 
+}
+nav{
+    padding: 10px 0.5%;
+    justify-content: space-between;
+    position:  sticky;
+    top: 0px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 4545;
+}
+
+#first-nav{
+grid-area: first-nav;
+}
+
+.nav-left{
+    font-family: 'Oswald', sans-serif;
+}
+.nav-left img{
+width: 30px;
+}
+.nav-left h1{
+padding: 0 1px;
+font-size: 20px;
+}
+.nav-left p{
+font-size: 10px;
+position: relative;
+bottom: 10px;
+color: gray;
+padding: 0 20px 0 2px;
+}
+.nav-left #menu-img{
+width: 24px;
+padding:  0 0px ;
+margin: 0 20px 0  15px;
+
+}
+.nav-left #small-menu-img{
+width: 30px;
+padding:  0 0px ;
+margin: 0 20px 0  15px;
+
+display: none;
+
+}
+
+.nav-right img{
+    width: 24px;
+    padding: 0 15px;
+} 
+
+.nav-right {
+    padding: 0 10px;
+  
+    margin: 0 25px 0  0;
+} 
+.nav-right #profile{
+    width: 30px;
+    border-radius: 50%;
+} 
+
+/* nav small right desing */
+.small_nav_right img{
+    width: 24px;
+    margin: 10px;
+}
+
+
+
+.small_nav_right {
+    padding: 0 0px;
+   
+    display: none;
+} 
+
+.small_nav_right #profile_small{
+  border-radius: 50%;
+} 
+
+
+.nav-middle .search-box input{
+    width: 530px;
+    border: 1px solid rgb(199, 199, 199);
+    box-shadow: inset 1px 1px 1px  rgb(230, 230, 230);  /*inset is use to set the shadow inside the box   */
+    outline: 0;
+    padding:10px 8px;
+border-radius: 2px;
+    background: transparent;
+ font-family:  'Bold', sans-serif;
+
+    font-size: 16px;
+
+}
+.nav-middle .search-box input:focus{
+
+    border: 1px solid rgb(84, 107, 172);
+    box-shadow: inset 1px 1px 1px  rgb(209, 208, 208);  /*inset is use to set the shadow inside the box   */
+  
+
+}
+
+.nav-middle button img{
+ width: 23px;
+}
+.nav-middle button{
+    padding:6px 15px;
+    background: rgb(243, 243, 243);
+    width: 65px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-top: 1px solid rgb(199, 199, 199);
+    border-right: 1px solid rgb(199, 199, 199);
+    border-bottom: 1px solid rgb(199, 199, 199);
+    border-left: none;
+
+}
+.nav-middle button:hover{
+    background: rgb(230, 230, 230);
+    
+}
+
+.nav-middle img{
+width: 25px;
+
+}
+.nav-middle .mic_icon{
+    background: rgb(243, 243, 243);
+
+padding: 7px;
+border-radius: 50%;
+}
+.nav-middle .mic_icon:hover{
+    background: rgb(230, 230, 230);
+
+padding: 7px;
+border-radius: 50%;
+}
+
+.hover-text{
+    background-color: rgb(146, 145, 145);
+    padding: 9px 5px;
+    font-family: 'Bold', sans-serif;
+    border-radius: 2px;
+    color: white;
+    position: fixed;
+    font-size: 13px;
+    cursor: pointer;
+    display: none;
+    top: 70px;
+
+    opacity: 0;
+}
+
+#create_text{
+    right: 215px;
+}
+#apps_text{
+    right: 150px;
+}
+#notification_text{
+    right: 90px;
+}
+
+
+#mic_text{
+    right: 470px;
+}
+#search_btn_text{
+   
+    right: 575px;
+}
+
+
+
+
+
+/* ---------------------scroll bar desing---------- */
+.sidebar::-webkit-scrollbar{
+    width: 8px;
+    display: block;
+    opacity: 10;
+}
+.sidebar::-webkit-scrollbar-track{
+    background-color: rgb(255, 255, 255);
+}
+.sidebar::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 10px;
+}
+
+/* ---------------------/scroll bar desing---------- */
+.sidebar{
+    width: fit-content;  /* "fit-content"  will width accorrding to the element in that element   */
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    
+    overflow: hidden;
+    /* height: 100%;  don't set height when the item's position is fixed or skicky */
+    overflow-y: auto;
+    position: fixed;
+    z-index: 4;
+    left: 0px;
+    top: 60px;
+    bottom: 0;
+
+    background-color: white;
+    transition-property: all;
+    transition-duration: 0.5s;
+    
+    }
+
+
+ 
+
+.short-cut-links a img{
+    width: 20px;
+    padding: 10px 30px 10px 25px;
+}
+
+.short-cut-links a{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 230px;
+    font-family: 'Roboto', sans-serif;
+
+font-size: 14px;
+font-weight: 100;
+    flex-wrap: wrap;
+}
+.short-cut-links a p{
+padding: 0 0 0  0;
+
+}
+.short-cut-links a:hover{
+    background-color: rgb(230, 230, 230);
+}
+
+.menu-bar{
+    height: 1px;
+    width: 230px;
+    margin: 10px 0;
+    background-color: rgb(221, 221, 221);
+}
+
+
+
+#menu_list_of_secondary_items{
+    display: block;
+}
+
+#upper_show_more_less{
+       font-size: 15px;
+       font-family: 'Roboto', sans-serif;
+       font-weight: 100;
+
+}
+
+/* -------------playlist---------- */
+#playlist a img{
+    width: 16px;
+    
+    padding: 12px 30px 12px 25px;
+    
+    
+}
+
+/* -------------/playlist---------- */
+
+/* subcribe list _____________________________------------*/
+
+
+.subcribehead{
+    /* border: 1px solid black; */
+    /* border: 1px solid black; */
+    margin:  0 0 10px 0;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    display: block;
+ font-family:    ' Bold', sans-serif;
+ color: #606060;
+    letter-spacing: 0.5px;
+}
+.subcribehead h1{
+    font-size: 14px;
+
+}
+
+
+
+
+
+#subribelist a img{
+    width: 25px;
+    border-radius: 50%;
+}
+
+
+/* more from you  tube----------------------------------- */
+
+#more_from_yt a img{
+    width: 24px;
+}
+
+#discription{
+    padding: 0px 25px;
+    font-size: 12px;
+    font-family:  'Bold', sans-serif;
+    font-weight: 700;
+    color: gray;
+    width:150px;
+    margin: 10px;
+}
+
+#discription p{
+   padding: 5px 0 ;
+}
+
+/* small side bar condition------------------------ */
+
+
+.small-sidebar a{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 8px;
+flex-direction: column;
+    width: 50px;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+.small-sidebar .menu-bar{
+    display: none;
+
+}
+
+.small-sidebar a img{
+    padding:0 0 5px 0 ;
+    margin: 0;
+
+}
+
+.small-sidebar a p{
+display: block;
+font-size: 9px;
+
+}
+
+
+
+.small-sidebar #main_menu_item{
+    display: none;
+}
+
+
+.small-sidebar{
+  padding-left: 1px;
+}
+
+
+.large-container{
+padding: 5%;
+}
+/* ------------------------- Main container -------------------------- */
+
+
+#container{
+    padding-left: 15%;
+  
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-right: 2%;
+
+
+}
+
+
+
+
+#container #second_nav_bar{
+    padding: 18px 0 18px 10px;
+    overflow: auto;
+    white-space: nowrap;
+    border-top: 1px solid #d7d7d8;
+    border-bottom: 1px solid #d7d7d8;
+    transition-property: all;
+    transition-duration: 0.5s;
+    
+}
+
+#container #second_nav_bar a{
+    text-decoration: none;
+    padding: 6px 10px;
+    width: 100%;
+    border: 1px solid black;
+    background-color: #ededee;
+    border-radius: 20px;
+    border: 1px solid #d7d7d8;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    transition: all;
+    transition-duration: 0.5s;
+    margin: 0 5px;
+
+
+}
+#container #second_nav_bar a:hover{
+   
+    background-color: #dfdfdf;
+   
+
+}
+#container #second_nav_bar #all{
+   
+    background-color: #000000;
+    border-color: black;
+    color: white;
+   
+
+}
+
+
+#container #second_nav_bar #explore {
+border-radius: 1px;
+background: white;
+font-weight: 500;
+display: none;
+padding: 10px 10px;
+
+border: 2px solid black;
+}
+#container #second_nav_bar  #explore img {
+    position: relative;
+
+    z-index: 54;
+top: 7px;
+right: 5px;
+}
+/* main nav scroll bar desing */
+
+#container #second_nav_bar::-webkit-scrollbar{
+    height: 5px;
+    display: none;
+}
+#container #second_nav_bar::-webkit-scrollbar-track{
+    background-color: white;
+}
+#container #second_nav_bar::-webkit-scrollbar-thumb{
+    background-color: rgb(136, 136, 136);
+    border-radius: 10px;
+}
+
+
+/* banner desinging --------------- */
+
+
+
+
+#banner {
+background-color: black;
+width: 100%;
+height: fit-content;
+margin-bottom: 10px;
+}
+
+#banner img{
+width: 100%;
+height: 100%;
+}
+/* bottom menu desing --------------------------- */
+
+#bottom_menu_container{
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+width: 100%;
+padding: 0 10px;
+   bottom: 0px;
+background-color: white
+
+
+  }
+
+#bottom_menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+width: 100%;
+background-color: white;
+padding: 10px 0px;
+font-family: 'Roboto', sans-serif;
+margin:  0 0px;
+}
+#bottom_menu .bottom_menu_items {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+flex-direction: column;
+font-size: 12px;
+padding:0 10PX 0 0;
+
+
+}
+#bottom_menu .bottom_menu_items img {
+   width: 24px;
+   padding: 2px 0;
+}
+
+
+#create_bottom img{
+    width: 30px;
+}
+
+/* media quary --- - ---------- */
+
+@media (max-width: 554px) {
+ 
+    /* .nav-middle .search-box{
+        display:none;
+    }
+    .nav-middle #search_btn{
+        display:none;
+    } */
+    .nav-middle{
+        display:none;
+    }
+
+    #container #second_nav_bar #explore {
+        display: inline;
+    }
+
+    #bottom_menu_container{
+        display:block;
+ 
+      }
+    .nav-left #menu-img{
+    display: none;
+}
+    .sidebar{
+        display: none;
+    }
+.left-condition-sidebar{
+    left: 0px;
+}
+    .nav-left p{
+        display: none;
+    }
+
+    .nav-right{
+        display: none;
+    }
+
+
+    .small_nav_right {
+        
+        display: block;
+    } 
+    #container{
+        padding-left: 10px;
+        padding-right: 10px;
+  padding-top: 1px;
+
+    }
+    nav{
+        padding: 6px 10px;
+
+    }
+
+    .vid-list .flex-div  .vid-info a{
+        /* font-weight:400; */
+        /* font-weight:400; */
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        
+        }
+        .vid-list .flex-div  .vid-info p{
+        font-size: 11px;
+        padding-top: 5px;
+        color: gray;
+        }
+    }
+
+ /*------------------- media quary upto 554px */
+
+
+ @media (min-width: 554px) and (max-width: 1262px)  {
+
+    #container{
+     padding-left: 10px;
+     padding-top: 1px;
+     padding-right: 10px;
+     padding-bottom: 10px;
+    }
+
+
+
+    .nav-left #menu-img{
+        display: none;
+        
+        }
+        .nav-left #small-menu-img{
+        display: block;
+        
+        }
+
+        .sidebar{
+            left: -250px;
+            
+        }
+
+  /* ------------- small bar desing -----------------*/
+
+
+  .small-sidebar a{
+    display: flex;
+    align-items: center;
+flex-direction: row;
+    width: 230px;
+font-weight: 100;
+flex-wrap: wrap;
+height: fit-content;
+    font-size: 14px;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+
+.small-sidebar .menu-bar{
+    display: block;
+
+}
+
+
+
+.small-sidebar a img{
+    margin: 0;
+    padding: 5px 30px 5px 12px;
+}
+
+.small-sidebar a p{
+    display: block;
+    font-size: 14px;
+    font-weight: 200;
+    
+    }
+
+    
+.small-sidebar #main_menu_item{
+    display: block;
+}
+
+
+.small-sidebar{
+  padding-left: 1px;
+}
+
+  /* ------------- /   small bar desing -----------------*/
+
+
+
+
+ }
+ /*------------------- //media quary upto 554px */
+
+ @media (min-width:1262px ){
+    .sidebar{
+        left: 0px;
+    }
+ }
+
+/* lis video colom------------------------- */
+
+
+.list-container{
+   display:grid;
+   grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+   grid-column-gap: 16px;
+   grid-row-gap: 30px;
+   margin-top: 15px;
+}
+
+.vid-list .thumbnail{
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+
+
+.vid-list .flex-div{
+ align-items: flex-start;
+ margin-top: 7px;
+ font-family: 'Roboto', sans-serif;
+}
+.vid-list .flex-div  img{
+width: 35px;
+border-radius: 50%;
+margin-right: 10px;
+
+}
+.vid-list .flex-div  .vid-info a{
+font-weight: 600;
+font-family: 'Roboto', sans-serif;
+
+}
+.vid-list .flex-div  .vid-info p{
+font-size: 12px;
+padding-top: 5px;
+color: gray;
+}
+.vid-list .flex-div  .vid-info img{
+float: right;
+width: 15px;
+margin:  5px 0 0 0;
+display: none;
+transition: 0.5s;
+}
+
+
+
+
+

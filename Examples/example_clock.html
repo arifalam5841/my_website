@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stop watch by me</title>
+    <style>
+        #num {
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            margin: 0px;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btns button {
+            padding: 10px 25px;
+            margin: 10px;
+            background-color: black;
+            border: none;
+            color: white;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="num">
+        00:00:00
+    </div>
+
+    <div class="btns">
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="reset()">Reset</button>
+    </div>
+</body>
+<script>
+
+    const timer = document.getElementById('num')
+
+
+    let hr = 0;
+    let min = 0;
+    let sec = 0;
+    let startime = true;
+
+  
+
+    function stop() {
+        if (startime == false) {
+            startime = true
+        }
+    }
+
+
+    function clock() {
+        if (startime == false) {
+            
+            hr = parseInt(hr)
+            min = parseInt(min)
+            sec = parseInt(sec)
+
+            sec = sec + 1
+
+            if (sec == 60) {
+                min = min + 1
+                sec = 0
+            }
+
+            if (min == 60) {
+                hr = hr + 1
+
+                sec = 0
+                min = 0
+            }
+
+            //------------------
+             if(hr <10 || hr == 0){
+                 hr = '0'+hr
+             }
+             if(min <10 || min == 0){
+                 min = '0'+min
+             }
+             if(sec <10 ||sec == 0){
+                sec = '0' +sec
+             }
+            
+            
+
+            timer.innerHTML = hr + ':' + min + ':' + sec
+            setTimeout(clock, 1000)
+        }
+
+    }
+    
+    function start() {
+        if (startime == true) {
+            startime = false;
+     
+            clock()
+        }
+    }
+    function reset() {
+        // timer.innerHTML = '00:00:00'
+        hr = 0
+        min = 0
+        sec= 0
+    
+    }
+</script>
+
+</html>

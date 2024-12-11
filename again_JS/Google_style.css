@@ -1,0 +1,644 @@
+*{
+    margin: 0;
+   padding: 0;
+ 
+}
+
+body{
+    overflow-x: hidden;
+    background-color: black;
+}
+
+/* tab section style -----------------------  */
+
+#tabs_section{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    /* width: 100%; */
+    padding: 0px 1px 0 10px ;
+
+}
+
+#tabs_section #add_tabs_btn{
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+#tabs_section #add_tabs_btn img{
+    width: 12px;
+}
+
+
+#tabs_section #add_tabs_btn:hover{
+    background-color: rgb(41, 41, 41);
+
+}
+#tabs_section #tabs{
+    display: flex;
+    align-items: center;
+    background: transparent;
+    width: fit-content;
+    max-width: 1000px;
+    margin-top: 10px;
+   transition-property: all;
+   transition-duration: 0.5s;
+   overflow-x: hidden;
+
+ 
+}
+
+#tabs_section #tabs a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    /* background-color: rgb(48, 47, 47); */
+    background-color: transparent;
+    border-radius: 8px 8px 0 0;
+    padding: 6px 4px;
+    width: 220px;
+    justify-content: space-between;
+    cursor: default;
+    transition: all 0.2s;
+   
+}
+
+
+#tabs_section #tabs div p{
+    text-align: left;
+    max-width: 165px;
+    overflow: hidden;
+}
+
+#tabs_section #tabs a:hover{
+    background-color: rgb(20, 20, 20);
+}
+#tabs_section #tabs a:focus{
+    background-color: rgb(56, 56, 56);
+}
+
+#tabs_section #tabs a div{
+    display: flex;
+    align-items: center;
+}
+
+#tabs_section #tabs a img{
+    width: 25px;
+    margin: 0 3px;
+}
+
+
+#tabs_section #tabs a p img{
+    width: 13px;
+    
+    border-radius: 50%;
+    padding: 1px;
+    transition: all 0.3s;
+}
+
+
+
+#tabs_section #tabs a p img:hover{
+    background-color: rgb(80, 79, 79);
+}
+
+
+
+
+/* search section design --------------------- */
+
+#search_section{
+    display: flex;
+    align-items: center;
+    background-color: rgb(56, 56, 56);
+    justify-content: space-between;
+    padding: 1px 13px;
+ 
+}
+
+
+#search_section #pre_next_reload{
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+    font-weight: 900;
+}
+
+#search_section #pre_next_reload img{
+    width: 20px;
+    background-color: transparent;
+    padding: 4px;
+    border-radius: 50%;
+    transition: all 0.2s;
+    
+}
+
+#search_section #pre_next_reload img:hover{
+    background-color: rgb(82, 82, 82);
+}
+
+#search_section #search_bar{
+    display: flex;
+    align-items: center;
+   background-color: rgb(82, 82, 82);
+   padding: 0 8px;
+   border-radius: 50px;
+}
+
+#search_section #search_bar img{
+    width: 15px;
+    border-radius: 50%;
+    padding: 2px;
+
+}
+
+#search_section #search_bar input{
+    width: 1270px;
+    outline: none;
+    padding: 1px 6px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+height: 27px;
+    
+}
+
+
+
+
+#search_section #search_bar #share_rank_container{
+    display: flex;
+    align-items: center;
+}
+#search_section #search_bar #share_rank_container img{
+    padding: 5px 5px;
+    margin: 1px;
+    transition: all 0.2s;
+}
+
+#search_section #search_bar #share_rank_container img:hover{
+    background-color: gray;
+
+}
+
+
+#search_section #profile_managment{
+display: flex;
+align-items: center;
+}
+
+#search_section #profile_managment img{
+    width: 23px;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+#search_section #profile_managment img:hover{
+    background-color: gray;
+}
+
+
+/* apps section style ------------------------------- */
+
+#apps_section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 10px;
+    background-color: rgb(56, 56, 56);
+}
+
+#apps_section a{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding: 3px 5px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 50px;
+    margin: 0 1px;
+    transition: all 0.2s;
+}
+
+#apps_section a:hover{
+    background-color: rgb(70, 69, 69);
+}
+
+#apps_section a img{
+    width: 22px;
+   
+}
+
+#apps_section a p{
+    margin: 0 5px 0 5px   ;
+}
+
+#apps_section #apps{
+    display: flex;
+    align-items: center;
+}
+
+#apps_section #list{
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+
+/* profile and apps list style ----------------------- */
+
+#profile-and-apps{
+    display: block;
+    align-items: center;
+ width: 100%;
+
+    float: right;
+    padding: 0 10px;
+    padding: 10px 10px ;
+}
+
+
+#profile-and-apps div{
+    display: flex;
+    align-items: center;
+ /* width: 100%; */
+
+    float: right;
+    padding: 0 10px;
+    padding: 10px 10px ;
+}
+#profile-and-apps a{
+color: white;
+font-family: 'Roboto', sans-serif;
+font-size: 13px;
+margin: 0 5px;
+text-decoration: none;
+}
+
+
+#profile-and-apps a:hover{
+ text-decoration: underline;
+}
+
+
+#profile-and-apps img{
+    width: 23px;
+    padding: 5px;
+    margin: 0 5px;
+    transition: all 0.2s;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#profile-and-apps img:hover{
+background-color: rgb(61, 61, 61);
+}
+
+#profile-and-apps #profile{
+    padding: 0;
+    margin: 5px;
+    width: 35px;
+}
+
+/* appps list style ---------------- */
+
+#apps_list{
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 400px;
+    width: 290px;
+    background-color: rgb(41, 40, 40);
+    padding: 10px; 
+    border-radius: 10px;
+overflow: hidden;
+overflow-y: auto;
+
+}
+
+#apps_list::-webkit-scrollbar{
+    width: 8px;
+  
+}
+
+#apps_list::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+#apps_list::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 10px;
+}
+#apps_list a{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.1s;
+
+}
+
+#apps_list a:hover{
+    background-color: rgb(27, 27, 27);
+
+}
+
+ #apps_list a img{
+ width: 40px;
+ margin: 10px;
+}
+
+#main_app_list{
+    position: absolute;
+
+    right: 8px;
+    top: 160px;
+    margin: 10px 0;
+    height: 100vh;
+    width: fit-content;
+    background-color: transparent;
+    transition: all 0.5s;
+    display: none;
+    z-index: 10;
+    
+}
+
+#customize_btn{
+    background: rgb(71, 67, 67);
+    width: fit-content;
+  
+    color: #52A4E9;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+font-family: 'Roboto', sans-serif;
+padding: 6px 5px;
+border-radius: 20px;
+font-size: 13px;
+position: fixed;
+right: 20px;
+bottom: 27px;
+
+}
+
+#customize_btn img{
+    width: 18px;
+    margin:  0 10px;
+}
+#customize_btn:hover{
+
+    background: rgb(51, 51, 51);
+
+}
+
+#middle_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    /* background-color: white; */
+    width:fit-content;
+    height:fit-content;
+}
+
+#middle_section #google-logo{
+    width: 320px;
+    margin: 20px 0;
+}
+
+#middle_section #search_bar_container{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+#middle_section #search_bar_container #google-mic{
+    width: 24px;
+}
+
+#middle_section #search_bar_container input{
+    border: none;
+    outline: none;
+    width: 430px;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+#middle_section #search_bar_container #search-icon{
+    width: 22px;
+}
+
+/* short cut apps style */
+
+#shortcut_apps_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  padding: 10px;
+  
+  width: fit-content;
+  height: fit-content;
+
+}
+
+#shortcut_apps_container a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(104, 104, 104);
+    text-decoration: none;
+    font-size: 13px;
+font-family: 'Roboto', sans-serif;
+background-color: black;
+padding: 10px;
+border-radius: 5px;
+/* max-height: 100px; */
+}
+
+#shortcut_apps_container a div{
+    display: flex;
+    align-items: center;
+   
+}
+
+#shortcut_apps_container a:hover{
+    background-color: rgb(56, 56, 56);
+}
+
+#shortcut_apps_container a div #short_cut_img{
+    margin-left: 25px;
+    margin-bottom: 25px;
+    width: 30px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: white;
+    display: block;
+}
+
+
+
+
+#shortcut_apps_container a div button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    bottom: 33px;
+    left: 8px;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+}
+
+#shortcut_apps_container a div button:hover{
+   background-color: rgb(80, 80, 80);
+}
+
+
+#shortcut_apps_container a div span{
+    margin-left: 25px;
+    margin-bottom: 25px;
+     padding: 10px;
+    border-radius: 502px;
+    background-color: white;
+    align-items: center;
+    display: none;
+    
+}
+
+#shortcut_apps_container a div span p{
+ display: flex;
+ align-items: center;
+ padding: 10px 13px;
+ border-radius: 50%;
+ background-color: rgb(113, 198, 247); 
+ color: white;
+}
+#shortcut_apps_container a #small_menu{
+    display: none;
+    flex-direction:column;
+    align-items: center;
+    background-color: rgb(27, 27, 27);
+    padding: 5px 0;
+    border-radius: 3px;
+    position: absolute;
+    margin-bottom: 200px;
+    margin-right: -220px;
+    /* display: none; */
+  
+}
+
+#shortcut_apps_container a #small_menu p{
+    width: 120px;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+}
+
+#shortcut_apps_container a #small_menu p:hover{
+    background-color: gray;
+
+}
+
+/* menu items style ------------------ */
+
+#main_menu_container{
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background-color: rgb(34, 34, 34);
+    border: 0.1px solid rgb(105, 105, 105);
+}
+
+#main_menu_container div{
+width: fit-content;
+height: fit-content;
+padding: 5px 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+border-bottom: 0.1px solid rgb(105, 105, 105);
+  
+}
+
+#main_menu_container div a{
+    display: flex;
+    color: white;
+font-family: 'Roboto', sans-serif;
+font-size: 12px;
+text-decoration: none;
+width: 250px;
+justify-content: space-between;
+padding: 3px 20px  3px 30px;
+align-items: center;
+
+}
+
+
+#main_menu_container div a:hover span{
+    color: white;
+    display: flex;
+    align-items: center;
+}
+#main_menu_container div a span{
+color: gray;
+}
+
+
+#main_menu_container div a:hover{
+    background-color: rgb(83, 83, 83);
+
+}
+
+#main_menu_container div a span img{
+    width: 10px;
+}
+
+#main_menu_container #tools_section a:hover{
+background-color: transparent;
+}
+
+#main_menu_container #tools_section a p{
+    width: fit-content;
+    height: fit-content;
+}
+
+#main_menu_container #tools_section a p img{
+    width: 20px;
+}

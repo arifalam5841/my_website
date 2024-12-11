@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+
+     <link rel="icon" href=https://img.icons8.com/color/48/000000/google-logo.png type="image/x-icon"> <!--icon on the tan -->
+    <!-- adding img in tab  -->
+    <link rel="stylesheet" href="Google_style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&family=Varela+Round&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- tabs bar section -->
+    <section id="tabs_section">
+        <section id="tabs">
+            <a href="#">
+                <div>
+                    <img src="https://img.icons8.com/color/48/000000/youtube-play.png" />
+                    <p>You tube</p>
+                </div>
+                <p>
+                    <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAzklEQVRIie3S0QqCMBTGce0Bs0Txwp69wMgKewOFfzcTlLaxc9Qg2ne7nfPj7CxJYmL+JkAJvIAbcBDUHYE70AGFFE1N4ZgeqALqKnN3TCeCTZMn83hxCwrw0MC5pZEVd6A9kIth07CwNByA0+RO6bhTq9AQfDN0grueMmgVS3Hb5NtMKsDF6E5op8ozfRwf6ePDrY1+/3M5Jh2A2rHz5ZP70MmddXEgC31KzyoyDXyV7M+BNxq4DUU9eKuBM6ABzpInM3UXU7sXwzExP5s3um/syN1W7JQAAAAASUVORK5CYII=">
+                </p>
+            </a>
+
+
+        </section>
+        <button id="add_tabs_btn"><img src="Google_img/add (3).png" alt=""> </button>
+
+    </section>
+
+
+    <!-- search bar section -->
+
+    <section id="search_section">
+        <div id="pre_next_reload">
+            <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAb0lEQVRIie2Uuw2AMAwFnxEFYzERMEqomIfFOIpQRBQRSsRP8rVW7jmWZcn5BYABVvK2uSKXFCQtpSFZOTAT2YD+Tvng8kflVaTe85qiOzl+EZIRjR7yiZCqU9HmimYGMCluVydpLew1DxXn2nmfHZYyF6HUbyBbAAAAAElFTkSuQmCC">
+            <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAYElEQVRIie2UsQ2AMAwEP0zGNqwTKpg2R5EmFJESZEdC8tXWX2H7peCXAAlII7Pbl3BJWdI1KpkV7EChcnpJjkZyh8ROgg0vyfSZLsd1DxHeC/etCmqTZrfHaiQ+4YE5Dx6YHYxmU1WfAAAAAElFTkSuQmCC">
+            <img id="reload"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABaUlEQVRIid2Vzy5DQRSHz+2lG40nwANod94AYaclTR+iocUL1Mq/t5AI676GsFJBsZLUWmpTkn4WzsS4pnNvb1lwkslZzDm/79wzc8+I/GsDskAFOAFugBegC1wDx0AZGHfk7SQRXwMeiLc2ULTyGgA+4QxwaAlcAnUgD0zoygObQEtj+sCuEY8DGPEeUAUyntgQqAGv0c/ytcWIz8f28TPvKBagB2p6Xh1CvBEVHwSoWD0PRxEfBDjVvVrS6ocy4FYBs78F6Cog95O6risYpBUDJrXIZxego346LUBEZtQ/uQDn6pdGACyrP/u2Y13TVtJrGskPgSvVKLsCssC9BqynANQ1t41jwpqgVQ3qAQtDiC/yMY/6wEpc8IEF2fC1CxjTys2w20tSTcaCmDPZAgpATlcB2LZ63gf28UxeF6gE3A2aNZZ9eXCi5v2p9LCKIlISkTkRmdKtRxG5EJGmiDSDIHhLXPmfs3dzRlIRIV9kIAAAAABJRU5ErkJggg==">
+        </div>
+
+        <div id="search_bar">
+            <img src="data:image/png;base64,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"
+                alt="">
+            <input type="text" placeholder="Search Google or type a URL" onfocus="main_search_bar()" ondrag="drag()">
+            <div id="share_rank_container">
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAA/0lEQVRIieXTMU7DQBCF4RihSEg0QQKBKChzCcgROEREA1dIH+5CRU1HTwVFSA2hBkH/UWSCjLO2EhtLkXiNrXne949ndzudfy9c4qCt8CtzPbUCwT4eAzLB0eZDsIchbvGML79VD4IdjPChWhMcpgJASfgxHnIhd7hAHyeFES2HVwEi/CXsKQY5rzj/dHgZIMay6PwevYK/+jEtAYxynfdK1q120YoA89PyHuVB1dqVlAAMFxvaJHerwjuP500TwI8SfzCNUr8twGeUdtsCJO/FujnbZR9mWZat3+ay8pv8Fh2c1g3DWbzOUua1v9M4BegGZNYg+BVjdOtOYfP0DWpJOTPM8b5vAAAAAElFTkSuQmCC">
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAACRUlEQVRYhe2Wz0sUYRjHv28kFovRVha7mASdWqEoKE8KRVR4DISim7eiupn0FxR0sy4VdOuUdBPSc4eyQxlWB4vIbEVCC6E1EPt08GuOW62zM8sK0QMPM/Pu99c8s+/OSv8rRQFtQNt6BrgL3Fkv82ag5G5OqrMhRYYLkja7z6fQqb6ARmCKlZoGNtUzQI+NR9wAPfUMMGrTM8BZn48BoR7mp2w4CTQAG4EPXjtZjwBDNuuNrF3x2qNq9SqODNgmKS9pt6ScpL2Srkr6Jqk1hPDFuKykCUkZSdckvZM0JemjpGIIYbZiAGCrpF5Jre6cpBYtbbE/1a0QwqWysDclXfwLfl7SpENNuG+EEL7+mgBwWtJ9SdHtNGdi0b0s8iCEMF0WYJek7kj4vLtF0pYI9LukcyGEh7/FBDqAWT/PJx5tqgKy1sLaHWsRCsCECa+A1hTmeeCFtYrAgWqIL038BOxPYL4vsj3fVH0jHt3j2KNbzW0HPkd+LZO9rIAMMGihUpwQ/h6VzBkEMonMI4INwLgFu2Lgu4wdBxpSmUcClIAfwI4Y+O3GztcqwKHlO6qC89acg2th4/whOeLjszKTAkvvhSGgUMYZ8bG9lgGe2jgLXJf0XNIJ9yhwG9hZFuBwDP3KxdJ7HqATuAzM+HoB6HcveG3GmE5fj6U1bwIWLfaelRqOjt2PYzjy+TJ2EWhKE+AYq2sc6K6APw68LuMcTROgzyJzPm+MwWk0ds7cvjQBBoB7QC4BN2fuQJoAexKTa6jxb9dPGnbIgmhd3wIAAAAASUVORK5CYII=">
+
+            </div>
+        </div>
+        <div id="profile_managment">
+            <img "
+                src="
+                data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAA2klEQVRIie2UOw7CMBBEHzRRGrgBXIMThEThwkAqPhLnIKRHgiZVKJCALGvHiQOiYCQXtmZnvF6NwQ1TIAOuwBqYONY5IwOql7Xq26AUBqVr4cCRV3WtHYp9Cpyo31YTR+HkQNJkmCuFbdZRCso2Tbdtg5qmfKLe8XWD3acNAUJgARR0H3aJQ+JjD4NH4m1hGQNn98ZVXGxDnnmKAxy0wwCYcw+NzwyWKDPYe4iq38rPJLkAImDE8/k6wdR2KniRhWuF6TcNBS8w8Bo7SxSTjYG7VcTjJoM/3nADpRSV+DJEPW8AAAAASUVORK5CYII=" />
+            <img src="
+                https://lh3.googleusercontent.com/a-/AOh14Gixa2_FMgmFtmG1gOst85PP28hs3lDQFbj0Odqsew=s96-c-rg-br100"
+                alt="">
+            <img id="main_menu_btn"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAAK0lEQVQ4jWNgGN7g////R////38YnxomAmb8Y2Bg+E89J9EdjIbBaBgQCwAE+hyE571DdwAAAABJRU5ErkJggg==">
+        </div>
+    </section>
+
+    <section id="apps_section">
+        <section id="apps">
+            <!-- <a href="#">
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAACPUlEQVRIia2WPWzTQBiGn3NSD3bSTgwVEQoFIYQq9jIiIWiBNCMTKmWgC2FuFgQLXWHrULWwIDFRaAEhMTMj8bOVSlRlbvMztAkvg+30bIckEN7Jfr+757vzne87Qw9JOgHMAleBIlAIQzvANrABrBtjfvTidAMfl7QsqaX+akt6Iak4KLwsqTYAOKl9SaV+8HvhiP5VbUmVXiMfBm4n6czEhPAC8A3IAbzbfs/q56c0W00AvKzH/OQcl4uXgl4/V2BrEdr7wXtmFCaWYHw+4taAs8aYXSc0HkZwIAYHaLaarH5ZO5quDYfg+fui/UHywAMAR8FWvGlHbXikxqHl2fBIrb2kc0tSwQHKQCbdY2hlgFkHmE5GvKyXau2PWF5mNI3LjnVLMuMAp5Pu/ORcDOiPBIvc0cRSHJgdC7y0ThlJNawF/s+qO/3bDKVfWWAXOGO7z78e8ujjAfUDAZBzDdUplxvnRgBobb7kYPkJajYAMJ6Pu1AhO1NOJtg1kt4CV2z3/EqjA4+Udw2fbvsANEsXO/BIxs/hrX9IJnjjAJtJNwkHqFleEg6gRj3lARsOsA60u0WHVAt47YTFYs2O5FyTap23POP5qbjxUxtxxRizE+2i+wQHFADVKTcGzLuG6gW38+4uVGJA4+dw78RO6X3Cs6gjSdMarIINclxfT00xTFLR8AXnble4laSkoPz9rfYkXesJt5Ick/RY0uGAo34mabwbK71d4okKHF1bThK/tmwR/EOvjDE7f2L8BpEyokl6IIV7AAAAAElFTkSuQmCC">
+                    <p>Apps</p>
+            </a> -->
+        </section>
+        <div id="list">
+            |
+            <a href="">
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAd0lEQVRIie2V0QnAIAxEk9I1uo+TdHAd5PWnllYsaqBYxPen5HI5AioyHIADAu14wNUYeEPzy6TGAABD8qxuaW3UyucGa6kgxlZVvZ8j8f6N/gnSCUsTp/RPMHfQP8HcwZiPXRCRzfInnNoHuQR7rrCy+W7Q/ZwDUlOuSbYCC1EAAAAASUVORK5CYII=">
+                <p>Reading list</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- <div> -->
+    <section id="profile-and-apps">
+        <div>
+            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl">Gmail</a>
+            <a href="https://www.google.co.in/imghp?hl=en&tab=ri&ogbl">Images</a>
+
+            <img id="app_list_btn"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAg0lEQVRIie2TwQ2AIAxFiwvAdI5gXE1nEndwAb8XGkysEgQ9aN8N3qGE9BEpX8dIlwAcEbXhOBhjlppeBIADMCPiAdha/mpwjyNdLc80wuw1cVfqZcJX+d1rJ+Erb3vmbLksxeUYheUp8v9EO9aOsztNeUY7fg3tWDvO7jTlGe1YeYwNsLHAWdOrxdEAAAAASUVORK5CYII=">
+
+            <img id="profile"
+                src="https://lh3.googleusercontent.com/a-/AOh14Gixa2_FMgmFtmG1gOst85PP28hs3lDQFbj0Odqsew=s96-c-rg-br100"
+                alt="">
+        </div>
+    </section>
+
+
+    <section id="main_app_list">
+        <section id="apps_list">
+
+
+
+        </section>
+
+    </section>
+
+    <a href="" id="customize_btn">
+        <!-- <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-pencil-interface-kiranshastry-solid-kiranshastry.png"/> -->
+        <img src="Google_img/pencil.png" alt="">
+        <p>Customize Chrome</p>
+    </a>
+
+
+    <section id="middle_section">
+
+
+        <img id="google-logo" src="https://www.festisite.com/static/partylogo/img/logos/google.png" alt="">
+
+        <div id="search_bar_container">
+            <!-- <img  id="search-icon" src="https://img.icons8.com/ios-glyphs/30/000000/search--v1.png" /> -->
+            <img id="search-icon" src="https://img.icons8.com/fluency-systems-regular/48/000000/search--v1.png" />
+            <input id="middle_search_bar" type="text" placeholder="Search google or type a URL">
+            <img id="google-mic" src="Google_img/google-voice (1).png" alt="">
+        </div>
+
+        <section id="shortcut_apps_container">
+            <a href="">
+                <div id="small_menu">
+                    <p>Edit</p>
+                    <p>Remove</p>
+                </div>
+                <div>
+                    <span>
+                        <p>A</p>
+                    </span>
+
+                    <img id="short_cut_img" src="https://img.icons8.com/color/48/000000/youtube-play.png" />
+
+                    <button><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAAK0lEQVQ4jWNgGN7g////R////38YnxomAmb8Y2Bg+E89J9EdjIbBaBgQCwAE+hyE571DdwAAAABJRU5ErkJggg=="
+                            alt=""></button>
+                </div>
+                <p>Youtube</p>
+            </a>
+
+        </section>
+    </section>
+
+    <section id="main_menu_container">
+        <div id="new_menu">
+            <a href="">
+                <p>New tabs</p>
+                <span>
+                    <p>Ctrl + T</p>
+                </span>
+            </a>
+            <a href="">
+                <p>New Window</p>
+                <span>
+                    <p>Ctrl + N</p>
+
+
+                </span>
+            </a>
+            <a href="">
+                <p>New Incognito Windows</p>
+                <span>
+                    <p>Ctrl + shift + N</p>
+
+                </span>
+            </a>
+        </div>
+
+        <div>
+            <a href="">
+                <p>History</p>
+                <span><img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABmJLR0QA/wD/AP+gvaeTAAAFAElEQVR4nO2dW4hVVRyHv39ZQVkJBUIhTUyIEZjEUIhQGhLHSi0robB6qKSXCHsZqMcweo2gsHzJoAfNyCCLygsRSNN08UZKlE0OUXZzsBpzGH89LA6dhrmcvc7eZ6299/re99q/M7/znT1n7bXXAU8kXSNps6RhSaOSDkl6WtLFvmMmPJHUkHRKkzMkaXnojLVB0pWSRqYoo8lZSS9KujB03sojaeMMZbRyVNLi0JkrjaRdGQqRpHFJL0i6IHT2SiJ38fZhv6TrQ+ePnXM8jjHPcy0EPpP0vKTzPMdITETSYU9DWvlU0oLQryVGfAzJgxuBLyT1SwqVoRrkZEgrn0jqDf26YiGGd+cSnC3rQweJgRgKAbgE2CTpPUlXhA4TklgKadIADktaFzpIKGIrBGAO8LqkrZIuCx2m28RYSJP7cLasCh2km8RcCMBcYIekLarJtH7shTR5EDggaWnoIEVTlkIAeoDdkjapwtP6ZSoE3DzaemBQUl/oMEVQtkKaXAvsk5uoPD90mDzxKeTS3FP4MQvox80gLwodJi98Crk89xSdsRBnS7+kc0OH6ZTM9zYknQZivfu3D3jYzL4JHcSXsl5DpmIxsF/Sk5J8b6QFpWqGtPIB8IiZDYcOkoWqGdLKbcBRSY+HDpKFKhvSysfAvWb2S+ggM1FlQ1q5GRiSdH/oIDNRF0Na2YOz5ffQQSajLoa0sgxny+rQQSajjoUAzAbelrRd0uzQYVqpayFN1gDHY5rWr3sh4G4Z75H0miJYf1zHi/p0/AzcaWaDoQIkQ/7PXGBA0ksKtP44GTI13wMrzOxIN0+aDJmaHuCQ3ANKXfs7JUPa4wju2vJt0SdKhrTHAuBrSRuKPlEyJDuDwGoz+7GIwZMh2ekDjkl6tIjBkyGdsRc3UflbXgMmQzpjKW6i8p68BkyFdM5FwJuS3s1j/XEqJD9uB35Qh9uKpELyZQ7woaRXfb9Mpot6cbxvZiuyHpQMKY6GpLVZD0qGFMsBM8u0nUgypFh6sh6QComMVEixHMt6QCqkWDZmPSAVUhw7zWxb1oNSIcWwGVjpc+CsnIPUnRFgjZnt9h0gGZIfbwHzOikDkiF58BfwgJm9k8dgqZDO2AWszXMlffrI8uM08JCZLc/7sQYfQ+pu1QBukcNPRQzuY0hdrRoDnjCzm4oqA/ze7aV83LhDDgIrzWyo6BPV9d3eLuPAc8CibpQB6XowHWmxdSQIeBmY3+0yIBkykfTATkRsAa4KWQYkQwBOAneb2d7QQSAZsh03IRhFGVBfQ/4E1pnZjtBBJlLHQtLWGpEwipsmvzXWMqA+hqTtmSJhDNhgZreUoQyotiFf4SYE0xZ/gRkHngFuKFsZUD1DvgMaaZvY8JzFTZPPL3MZ4GfIP8T1OMIwsMrMvgwdJA/KbIiAV4DeqpQB5b2GnMD9BzUQOkjelNGQrcDVVSwDymXICO7b9kehgxRJWQzZiZsmr3QZEH8hf+OsuMPMToUO0w1i/sjKfWOXMhCjIWeAx8xsWd3KgPgM+Rz3Ja+QzcHKQCyGjAFPmVlfncuAOAzp2gaTZSCkIc11s9elMv4jlCFB1s2WgW4bEnTdbCWRNCo/hqv0i5zRIOmERxlR/BREJZH7VZp2+VXSktCZK42keZLG2ijjDVX4d8+jQtJd05RyUlIjdMbaIalX0jZJf0g6I+m4pGeVw961deZfSzcVAsBO47kAAAAASUVORK5CYII="></span>
+            </a>
+
+            <a href="">
+                <p>Downloads</p>
+                <span>
+                    <p>Ctrl + j</p>
+
+                </span>
+            </a>
+
+            <a href="">
+                <p>Bookmarks</p>
+                <span><img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABmJLR0QA/wD/AP+gvaeTAAAFAElEQVR4nO2dW4hVVRyHv39ZQVkJBUIhTUyIEZjEUIhQGhLHSi0robB6qKSXCHsZqMcweo2gsHzJoAfNyCCLygsRSNN08UZKlE0OUXZzsBpzGH89LA6dhrmcvc7eZ6299/re99q/M7/znT1n7bXXAU8kXSNps6RhSaOSDkl6WtLFvmMmPJHUkHRKkzMkaXnojLVB0pWSRqYoo8lZSS9KujB03sojaeMMZbRyVNLi0JkrjaRdGQqRpHFJL0i6IHT2SiJ38fZhv6TrQ+ePnXM8jjHPcy0EPpP0vKTzPMdITETSYU9DWvlU0oLQryVGfAzJgxuBLyT1SwqVoRrkZEgrn0jqDf26YiGGd+cSnC3rQweJgRgKAbgE2CTpPUlXhA4TklgKadIADktaFzpIKGIrBGAO8LqkrZIuCx2m28RYSJP7cLasCh2km8RcCMBcYIekLarJtH7shTR5EDggaWnoIEVTlkIAeoDdkjapwtP6ZSoE3DzaemBQUl/oMEVQtkKaXAvsk5uoPD90mDzxKeTS3FP4MQvox80gLwodJi98Crk89xSdsRBnS7+kc0OH6ZTM9zYknQZivfu3D3jYzL4JHcSXsl5DpmIxsF/Sk5J8b6QFpWqGtPIB8IiZDYcOkoWqGdLKbcBRSY+HDpKFKhvSysfAvWb2S+ggM1FlQ1q5GRiSdH/oIDNRF0Na2YOz5ffQQSajLoa0sgxny+rQQSajjoUAzAbelrRd0uzQYVqpayFN1gDHY5rWr3sh4G4Z75H0miJYf1zHi/p0/AzcaWaDoQIkQ/7PXGBA0ksKtP44GTI13wMrzOxIN0+aDJmaHuCQ3ANKXfs7JUPa4wju2vJt0SdKhrTHAuBrSRuKPlEyJDuDwGoz+7GIwZMh2ekDjkl6tIjBkyGdsRc3UflbXgMmQzpjKW6i8p68BkyFdM5FwJuS3s1j/XEqJD9uB35Qh9uKpELyZQ7woaRXfb9Mpot6cbxvZiuyHpQMKY6GpLVZD0qGFMsBM8u0nUgypFh6sh6QComMVEixHMt6QCqkWDZmPSAVUhw7zWxb1oNSIcWwGVjpc+CsnIPUnRFgjZnt9h0gGZIfbwHzOikDkiF58BfwgJm9k8dgqZDO2AWszXMlffrI8uM08JCZLc/7sQYfQ+pu1QBukcNPRQzuY0hdrRoDnjCzm4oqA/ze7aV83LhDDgIrzWyo6BPV9d3eLuPAc8CibpQB6XowHWmxdSQIeBmY3+0yIBkykfTATkRsAa4KWQYkQwBOAneb2d7QQSAZsh03IRhFGVBfQ/4E1pnZjtBBJlLHQtLWGpEwipsmvzXWMqA+hqTtmSJhDNhgZreUoQyotiFf4SYE0xZ/gRkHngFuKFsZUD1DvgMaaZvY8JzFTZPPL3MZ4GfIP8T1OMIwsMrMvgwdJA/KbIiAV4DeqpQB5b2GnMD9BzUQOkjelNGQrcDVVSwDymXICO7b9kehgxRJWQzZiZsmr3QZEH8hf+OsuMPMToUO0w1i/sjKfWOXMhCjIWeAx8xsWd3KgPgM+Rz3Ja+QzcHKQCyGjAFPmVlfncuAOAzp2gaTZSCkIc11s9elMv4jlCFB1s2WgW4bEnTdbCWRNCo/hqv0i5zRIOmERxlR/BREJZH7VZp2+VXSktCZK42keZLG2ijjDVX4d8+jQtJd05RyUlIjdMbaIalX0jZJf0g6I+m4pGeVw961deZfSzcVAsBO47kAAAAASUVORK5CYII="></span>
+            </a>
+
+        </div>
+
+        <div id="tools_section">
+            <a href="">
+                <!-- like this you can close the window -->
+                <p>Zoom</p>
+                <p>100</p>
+                <p><img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAX0lEQVRIie2VMQ6AQAgEia/z/P8LwH+M/Z1wohaaMDXshAIQKTIAG2B0BPU9BrRIMIQnBQAaCcLAGWf9y92wq/xfUBQvU5v8CcEuMp5hr9mpM9cGNEAf/AMF1sSAhcgBcl7Ng3s+8wUAAAAASUVORK5CYII=">
+                </p>
+            </a>
+
+        </div>
+
+        <div>
+            <a href="" onclick="window.close()  ">
+                <p>Exit</p>
+
+            </a>
+        </div>
+
+    </section>
+</body>
+
+<script src="Google_script.js"></script>
+
+</html>

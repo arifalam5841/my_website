@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow</title>
+</head>
+<body>
+    <div class="container">
+This is arrow funtion tutorial 
+</div>
+
+</body>
+<script>
+    //arrow is an short cut of funtion
+    
+    // function greet(){ // it is long cut 
+    //     console.log("Good morning")
+    // }
+    // greet()    //to print funtion you have to write only the name of the function
+
+    // to this in short cut we use arrow function 
+   let  greet = ()=>{                 //   first we have to write funtion name then ()  then => then write what you want to do in the function
+        console.log("good morning")
+    } 
+    greet()
+
+    // second example
+    // let sum8 = (a,b) => {  
+    //     return a+b; 
+    // }
+ 
+  
+
+// short cut of return
+    let sum6 = (a,b) => a+b ;  ///short cut of return we direct write a+b
+    let sum7 = () => console.log("hii") ;  ///short cut of return we direct write a+b
+    let half = a => a/2;  ///short cut 
+   
+     
+
+
+    setTimeout(() => {
+        console.log("we inside the settimeout after 3 second")  //it will print after 3 second
+    }, 2000);
+
+
+    let obj1={
+        greet: "good moring",
+        names:['arif', 'alam', 'ayan'],
+        speak(){
+            this.names.forEach((student)=>{
+                console.log(this.greet+" hi "+ student)
+            })
+        }
+    }
+    obj1.speak()
+</script>
+</html>

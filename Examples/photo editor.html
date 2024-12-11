@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo editor</title>
+    <link rel="stylesheet" href="photo editor style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400&family=Roboto&family=Sansita:wght@700&family=Signika+Negative:wght@500&family=Ubuntu&family=Varela+Round&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+<div id="image_container">
+<h1 id="head">This is a Drone</h1>
+    <img src="img/drone.png" alt="" id="image" style="">
+</div>
+    <div id="tools_container">
+        <div id="primery_tools_container">
+
+            <div class="tools">
+                <!--tools  -->
+                <p class="discribe_text">Border</p>
+                <div id="increas_decrease_sec">
+                    <img src="img/up_arrow.png" class="up_arrow arrows" id="border_increase">
+                    <p id="border_para">5</p>
+                    <img src="img/down_arrow.png" class="down_arrow arrows" id="border_decrease">
+                </div>
+            </div>
+
+
+
+            <div class="tools">
+                <p class="discribe_text">Shadow</p>
+                <div id="increas_decrease_sec">
+                    <img src="img/up_arrow.png" class="up_arrow arrows" id="shadow_increase">
+                    <p id="shadow_para">5</p>
+                    <img src="img/down_arrow.png" class="down_arrow arrows" id="shadow_decrease">
+                </div>
+            </div>
+
+            <div class="tools">
+                <p class="discribe_text">Width</p>
+                <div id="increas_decrease_sec">
+                    <img src="img/up_arrow.png" class="up_arrow arrows" id="width_increase">
+                    <p id="width_para">5</p>
+                    <img src="img/down_arrow.png" class="down_arrow arrows" id="width_decrease">
+                </div>
+            </div>
+
+            <div class="tools">
+                <p class="discribe_text">Height</p>
+                <div id="increas_decrease_sec">
+                    <img src="img/up_arrow.png" class="up_arrow arrows" id="height_increase">
+                    <p id="height_para">5</p>
+                    <img src="img/down_arrow.png" class="down_arrow arrows" id="height_decrease">
+                </div>
+            </div>
+
+            <div class="tools">
+                <p class="discribe_text">Font size</p>
+                <div id="increas_decrease_sec">
+                    <img src="img/up_arrow.png" class="up_arrow arrows" id="font_s_increase">
+                    <p id="font_s_para">0</p>
+                    <img src="img/down_arrow.png" class="down_arrow arrows" id="font_s_decrease">
+                </div>
+            </div>
+
+            <div class="tools">
+                <p class="discribe_text">Font colour</p>
+                <div id="increas_decrease_sec">
+                    <img src="img/down_arrow.png" class="down_arrow arrows" id="font_color_btn">
+                </div>
+            </div>
+
+            <div id="font_color_options">
+                <div class="tools fontfamily" id="red_font">
+                    <p class="discribe_text">red</p>
+                </div>
+
+                <div class="tools fontfamily" id="blue_font" >
+                    <p class="discribe_text">blue</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- secondary tools contianer below -->
+        <div id="secondary_tools_container">
+
+
+
+
+            <div class="tools fontfamily">
+                <p class="discribe_text">Font family</p>
+                <div class="singal_arrow " id="increas_decrease_sec">
+                    <img src="img/down_arrow.png" class="down_arrow arrows" id="font_family_opt_btn">
+                </div>
+
+            </div>
+            <div id="font_family_options">
+                <div class="tools fontfamily" id="bold">
+                    <p class="discribe_text">bold</p>
+                </div>
+
+                <div class="tools fontfamily"  id="cursive">
+                    <p class="discribe_text">Cursive</p>
+                </div>
+            </div>
+
+
+            <div class="tools">
+                <!--tools  -->
+                <p class="discribe_text">Rotate</p>
+                <div id="increas_decrease_sec">
+                    <img src="img/up_arrow.png" class="up_arrow arrows" id="rotate_increase">
+                    <p id="rotate_para">5</p>
+                    <img src="img/down_arrow.png" class="down_arrow arrows"  id="rotate_decrease">
+                </div>
+            </div>
+
+            <div class="tools">
+                <!--tools  -->
+                <p class="discribe_text">Margin</p>
+                <div id="increas_decrease_sec">
+                    <img src="img/up_arrow.png" class="up_arrow arrows" id="margin_increase">
+                    <p id="margin_para">5</p>
+                    <img src="img/down_arrow.png" class="down_arrow arrows" id="margin_decrease">
+                </div>
+            </div>
+
+            <div class="tools">
+                <!--tools  -->
+                <p class="discribe_text">padding</p>
+                <div id="increas_decrease_sec">
+                    <img src="img/up_arrow.png" class="up_arrow arrows" id="padding_increase">
+                    <p id="padding_para">5</p>
+                    <img src="img/down_arrow.png" class="down_arrow arrows" id="paddign_decreas">
+                </div>
+            </div>
+
+            <div class="tools">
+                <!--tools  -->
+                <p class="discribe_text">Background color</p>
+                <div id="increas_decrease_sec">
+             
+                    <img src="img/down_arrow.png" class="down_arrow arrows" id="bg_color_opt_btn">
+                </div>
+            </div>
+<div id="bg_color_options">
+    <div class="tools fontfamily" id="black_color">
+        <p class="discribe_text">black</p>
+    </div>
+
+    <div class="tools fontfamily" id="red_color">
+        <p class="discribe_text">red</p>
+    </div>
+</div>
+        
+
+
+
+
+        </div>
+    </div>
+</body>
+<script src="photo editor script.js"></script>
+
+</html>

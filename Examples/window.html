@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+    <link rel="stylesheet" href="window_stylesheet.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400&family=Roboto&family=Sansita:wght@700&family=Signika+Negative:wght@500&family=Ubuntu&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="task_bar">
+        <div id="left_side">
+            <div id="window">
+                <img src="https://img.icons8.com/material-sharp/24/000000/windows8.png " class="left_items"
+                    id="start_icon">
+            </div>
+            <!-- <img src="img/window.png" alt="" style="width: 22px;" class="left_items"> -->
+            <!-- <img src="img/search (3).png" alt="" class="left_items"> -->
+            <img src="https://img.icons8.com/windows/100/000000/search--v1.png" class="left_items" id="search_icon" />
+
+            <img src="img/settings.png" alt="" class="left_items" id="setting">
+
+            <img src="https://winaero.com/blog/wp-content/uploads/2018/12/file-explorer-folder-libraries-icon-18298.png"
+                class="left_items" id="files_explorers">
+            <img src="img/word.png" alt="" class="left_items" id="word_ms">
+            <img src="img/excel.png" alt="" class="left_items" id="excel_ms">
+
+            <a href="https://www.youtube.com/c/MACHINEXGAMERml" id="ms_edge"><img src="img/microsoft (1).png" alt=""
+                    class="left_items"></a>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/PowerShell_5.0_icon.png" alt=""
+                id="ms_power_shell">
+            <img src="https://winaero.com/blog/wp-content/uploads/2018/05/Windows-Notepad-Icon.png?ezimgfmt=rs:134x134/rscb8/ng:webp/ngcb8"
+                class="left_items" id="ms_notepad">
+            <img src="https://winaero.com/blog/wp-content/uploads/2017/12/snipping-tool-icon-256.png" id="ms_spinning">
+
+            <a href="https://google.com" id="chrome"> <img src="img/chrome.png" class="left_items"></a>
+            <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_vscode_icon_130084.png"
+                class="left_items" id="vs_code_ms">
+
+            <P></P>
+
+        </div>
+        <div id="right_side">
+            <img class="right_items" src="ytimg/bottomarrow.png" alt="" id="more_apps">
+            <img class="right_items" src="img/wifi.png" alt="" id="internets">
+            <img class="right_items" src="img/volume.png" alt="" id="sound">
+            <a href="#" id="lang">ENG </a>
+            <div id="timing_section">
+
+            </div>
+
+            <img src="img/comment.png" alt="" id="notification">
+            <div id="close_evrything"></div>
+        </div>
+    </div>
+
+
+    <!-- -------------- ON HOVER TEXT ------------  -->
+
+    <p id="start" class="on_hover_text">start</p>
+    <p id="search" class="on_hover_text">Type here to search </p>
+    <p id="settings" class="on_hover_text">settings</p>
+    <p id="file_explorer" class="on_hover_text">File explorer</p>
+    <p id="word" class="on_hover_text">microsoft word</p>
+    <p id="excel" class="on_hover_text">microsoft excel</p>
+    <p id="edge" class="on_hover_text">Edge</p>
+    <p id="power_shell" class="on_hover_text">power shell</p>
+    <p id="note_pad" class="on_hover_text">note pad</p>
+    <p id="spinning_tool" class="on_hover_text">spinning tool</p>
+    <p id="Chorome" class="on_hover_text">Chorome</p>
+    <p id="vs_code" class="on_hover_text">Visual studio code</p>
+    <p id="more_icons" class="on_hover_text">show hidden icons</p>
+    <p id="internet" class="on_hover_text">connect to internet</p>
+    <p id="volume" class="on_hover_text">speaker/headphone</p>
+    <p id="language" class="on_hover_text">language</p>
+    <p id="date" class="on_hover_text"></p>
+    <p id="notifications" class="on_hover_text">notifications</p>
+
+
+    <!-- main menu ------------------------ -->
+
+    <div id="main-menu">
+        <div id="side_bar" class="side_bar_element">
+            <a id="menu_icon" href=""><img
+                    src="https://img.icons8.com/material-two-tone/24/000000/menu--v1.png" />START</a>
+            <div id="bottom_content">
+
+                <a href="" class="side_bar_element"><img
+                        src="https://img.icons8.com/windows/32/000000/person-male.png" />Profile</a>
+
+                <a href="" class="side_bar_element"><img
+                        src="https://img.icons8.com/windows/32/000000/file.png" />Document</a>
+
+                <a href="" class="side_bar_element"><img src="img/setting.png" />Setting</a>
+                <a href="" class="side_bar_element"><img
+                        src="https://img.icons8.com/windows/32/000000/shutdown.png" />Power</a>
+
+            </div>
+        </div>
+
+        <div id="recent_add">
+            <!-- items will be insert from script -->
+        </div>
+
+
+        <div id="main_apps_section">
+
+            <section id="first_section">
+                <!-- firs section -->
+
+
+                <section class="apps menu_bar menu_full_bar">
+                    <p>Name group</p>
+                    <section class="menu_bar_menu_icon">
+                        <img src="https://img.icons8.com/ios/50/000000/menu--v1.png" />
+
+                    </section>
+                </section>
+
+                <!-- apps------------ -->
+                <div class="apps">
+                    <img src="https://img.icons8.com/color/48/000000/paint-palette.png" />
+
+                    <p>Paint</p>
+                </div>
+                <div class="apps">
+                    <img
+                        src="https://store-images.s-microsoft.com/image/apps.11647.13510798887921945.b4d17ced-760f-4185-836d-696d4956374b.57a27f11-1ad1-4698-a4c0-36ce8beb6c1e" />
+                    <p>Agoda.com</p>
+                </div>
+                <div class="apps">
+                    <img src="https://www.logolynx.com/images/logolynx/44/44b6091bb6093641c282a6d21a9a9900.jpeg" alt="">
+                    <p>WildTanget</p>
+                </div>
+                <section class="apps menu_bar menu_full_bar">
+                    <p>Name group</p>
+                    <div class="menu_bar_menu_icon">
+                        <img src="https://img.icons8.com/ios/50/000000/menu--v1.png" />
+                    </div>
+                </section>
+
+
+
+                <div class="apps">
+                    <img src="img/microsoft (1).png" alt="">
+                    <p> Microsoft Edge</p>
+                </div>
+                <div class="apps ">
+                    <img alt="svgImg"
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNTAiIGhlaWdodD0iNTAiCnZpZXdCb3g9IjAgMCAxNzIgMTcyIgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTg2LjcwNTQ3LDYuOTA2ODhsLTE3LjM4ODEyLDQ4LjEzMzEzaDExLjE1OTg0YzcuMjkyOCwwIDExLjIyNTEsNS42MTM5MiA4LjcyNzY2LDEyLjQ3NjcybC0xOC43MTE3Miw0OS40NWwtMTMuNDc3ODEsLTAuMDA2NzJsMTkuMTgyMDMsLTUxLjZoLTEwLjk1ODI4bC0xOS4xODIwMyw1MS42aC0xNC41Nzk2OWw0MC4wNzA2MiwtMTA4LjcyMjgxYy0xLjYyMDI0LDAuMjk5MjggLTMuMjI4MjIsMC42MzU2NSAtNC44MTA2MiwxLjAzNDY5Yy0zNC4zNDQ5Niw4LjYyNDA4IC01OS44NTA2MywzOS43NTE0IC01OS44NTA2Myw3Ni43MzQ4NGMwLDM1LjcxMDY0IDIzLjc4MDU2LDY1Ljk1MzE5IDU2LjMzNjcyLDc1Ljc2MDYzYzEuMTA0MjQsMC4zMzM2OCAyLjIyMTA2LDAuNjU1MSAzLjM0NTk0LDAuOTQwNjJsMi4zNzg0NCwtNi41Nzc2NWwxMy44NDczNCwtMzguMjgzNDRoMC4wMDY3MmwyMi40MjcxOSwtNjIuODA2ODdoMjYuODQxNGM3LjI5OTY4LDAgMTEuMjI4MzgsNS42MTM5MiA4LjczNDM4LDEyLjQ3NjcybC0xNi4zMzMyOCw0My42NDVjLTEuMTYyNzIsMy4xODg4OCAtNC44ODg5NCw1Ljc5ODI4IC04LjI4NDIyLDUuNzk4MjhoLTE5LjM1bC0xNC44NzUzMSw0MS4wNzg0NGwtMi40NTkwNiw2Ljc5OTM4YzEuMDA0NDgsMC4wODI1NiAyLjAwODY0LDAuMTYwMjggMy4wMjM0NCwwLjIwMTU2YzEuMTU1ODQsMC4wNTE2IDIuMzE0MTUsMC4wODczNSAzLjQ4MDMxLDAuMDg3MzVjNDMuNjI2MDgsMCA3OS4xMiwtMzUuNDkwNDggNzkuMTIsLTc5LjEyYy0wLjAwMzQ0LC00Mi42Mjg0OCAtMzMuODk2OTYsLTc3LjQ3MDU3IC03Ni4xNDM1OSwtNzkuMDQ2MDljLTAuNzU2OCwtMC4wMjc1MiAtMS41MTc0MiwtMC4wNDY4NyAtMi4yNzc2NiwtMC4wNTM3NXpNMTE2LjgzOTA2LDY1LjM2bC0xNS41MTM2LDQxLjI4aDEwLjk1ODI4bDE1LjUxMzYsLTQxLjI4eiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+" />
+                    <p>HP welcome</p>
+                </div>
+                <div class="apps">
+                    <img alt="svgImg" src="https://miro.medium.com/max/990/0*k7E15YAb5tRNTZWJ.png" />
+                    <p>Trip adviser
+
+                    </p>
+
+                </div>
+                <section class="apps menu_bar discribe_menu">
+
+                    <p>Play and explore</p>
+                    <section class="menu_bar_menu_icon"> <img src="https://img.icons8.com/ios/50/000000/menu--v1.png" />
+                    </section>
+
+                </section>
+
+            </section> <!-- firs section -->
+
+
+            <section id="second_section">
+                <!-- second section-->
+
+                <!-- <div id="consoles">
+                    <img alt=""
+                        src="https://store-images.s-microsoft.com/image/apps.24628.9007199266252719.c52cc28d-6325-4f19-9817-8b64ff50ebe6.753dac8d-0d90-46d2-8da2-967cae51ca9b" />
+                    <p> Xbox console </p>
+
+                    <section id="size_options">
+                        <span>Medium</span>
+                        <span>Wide</span>
+                        <span>Large</span>
+                    </section>
+                </div>
+
+                <div>
+                    <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAACjUlEQVR4nO2aTWtTQRSG36kpCNbPILXQQqGLorgWxFiomH8gikTFhbgRXYiuiiD4C1z6tRHRlUu3guDWhUJd1K9lN6JYKxYUHxeZwOR6k9zYyb35OA9cbu6cM3fOe2bmBCaRDMMwDMMwDMMwDMMwDMMwDMMwjNHAxXoRUJa0s4PbZ+fcWqwx+wbgHPCHzvwEDhUdb8hYpPfMK9tq2irpcKQxo1CK9J5bkpYlTSTapyTdkLQl0jjRiZIA59yGpMdhGzAp6bn6WLwUbws0AUxJeiHpgG960otx+hJgElgOCt89oBw8Xyk6xp6RIv4+MAbsDtouFx1nTwD2pYn3tj1DnQAv/m2aeG8vD20CgGlgJRB4B3AJn3ALXCoq1kwAE8C2jL7TwLt24gPfZ8AqMB834ogAC8A34AtwpINvUvzdVuIHAqACrAWC1oHFFr4zCfFNe37g8DO/7sX88hfAd2Ah4TsDvB/Wmf8N1IATQRJ+AMe8b1L8YM+8JCVm/mTQftonpLEdzgIfEjP/j3jqFX8ROJ649uerLCNp4gNbLUhCSKp432clxR/q5wVHe6+oSxrLvo39VLAdAB60W/YtxDc43xsVmyBt5lN8zlD/arzdTrz3bfDQL/1aXycgNoHYm/55tp8TMNgVPAIjn4DMR2JAVdLVlD4bkpacc29iBpYX3ZwJXpdUbWFblXRx8+HkTzcJGPf3r5Je+c8V1Y+6x1N7DAD/cyr82jlXlSTgk6TZuCHly8gXQUtA0QEUTQnYJWlJ0o6EDUmPnHMv8w8rP0qSLki61sJekXQwv3Dyp6TmHzQ/+vteSdslZTocHWSaaoBzbs45NyfpaUHx5M7IF0FLQNEBFE3UBADJf4j0PX8BgPMIJ3VNQXMAAAAASUVORK5CYII=">
+                    <p>money </p>
+
+                </div>
+ -->
+
+            </section> <!-- second section-->
+
+            <section id="third_section">
+                <!--third section -->
+                <section class="apps menu_bar discribe_menu">
+
+                    <p>Life at a glace</p>
+                    <section class="menu_bar_menu_icon"> <img src="https://img.icons8.com/ios/50/000000/menu--v1.png" />
+                    </section>
+
+                </section>
+
+                <div class="apps">
+                    <img src="https://techcommunity.microsoft.com/t5/image/serverpage/image-id/172269iB16D1070FD2F4AB3/image-size/large?v=v2&px=999"
+                        alt="">
+                    <p>Calender</p>
+                </div>
+                <div class="apps">
+                    <img src="https://winaero.com/blog/wp-content/uploads/2019/09/MSN-Weather-icon.png" alt="">
+                    <p>Weather</p>
+                </div>
+                <div class="apps game">
+                    <!-- element is from css -->
+                </div>
+                <div class="apps image_sec" id="Images_box">
+                    <!-- ------------- content is from script ----------- -->
+                </div>
+                <div class="apps">
+                    <img src="https://store-images.s-microsoft.com/image/apps.28355.9007199266248608.6a399a57-b260-4ce9-b265-c47558f755e1.b4124129-26e8-401d-9989-f8689f69fa3a"
+                        alt="">
+                    <p>Mail</p>
+                </div>
+                <div class="apps">
+                    <img src="https://archive.org/download/microsoft-store-icon/Microsoft_Store_icon.png" alt="">
+                    <p>Microsoft store</p>
+
+
+                </div>
+            </section>
+            <!--third section -->
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+<script>
+
+    function time() {
+        let timing = new Date()
+
+        let hour = timing.getHours()
+        let min = timing.getMinutes()
+        let sec = timing.getSeconds()
+
+        // date
+        let date = timing.getDate()
+        let month = timing.getMonth()
+        let year = timing.getFullYear()
+        let day = timing.getDay()
+
+        let timing_section = document.getElementById('timing_section')
+        if (hour < 10) {
+            hour = '0' + hour
+        }
+        if (min < 10) {
+            min = '0' + min
+        }
+        if (sec < 10) {
+            sec = '0' + sec
+        }
+
+        timing_section.innerHTML = hour + '&#x0003A;' + min + '&#x0003A;' + sec + '<br>' + date + '-' + month + '-' + year
+
+
+
+        console.log(month)
+        let display_date_box = document.getElementById('date')
+        display_date_box.innerHTML = timing
+    }
+
+    setInterval(time, 1000);
+
+    // on hover condition ------------------
+
+    var set_or_clear; //this for for making a golobal variable 
+    function side_bar_con() {
+        //  document.querySelectorAll('#side_bar>a').style.display = "none"
+        document.getElementById("side_bar").style.width = "250px"
+        document.getElementById("side_bar").style.backgroundColor = "rgb(54, 54, 54)"
+        document.getElementById("side_bar").style.boxShadow = "0px 2px 10px rgb(0,0,0)"
+
+
+    }
+
+    document.querySelector('.side_bar_element').addEventListener("mouseover", function () {
+        set_or_clear = setInterval(side_bar_con, 1000);
+    })
+    document.querySelector('.side_bar_element').addEventListener("mouseout", function () {
+        document.getElementById("side_bar").style.width = "55px"
+        document.getElementById("side_bar").style.boxShadow = "0px 2px 5px rgb(39, 39, 39)"
+        document.getElementById("side_bar").style.backgroundColor = "rgb(39, 39, 39)"
+        clearInterval(set_or_clear)
+    })
+
+    // ----------- start button condition ------------
+
+    let start = document.getElementById("start_icon")
+    let maibox = document.getElementById('main-menu')
+    start.addEventListener("click", function () {
+        if (maibox.style.top == "44px") {
+            maibox.style.top = "-600px"
+        }
+
+        else {
+            maibox.style.top = "44px"
+        }
+    })
+
+    //  on the tast bar icon hover display block text --------------------------------
+
+    let set_or_clear_interval;// it will become variable of setinterval and we can use this in any funtions to clearinterval it can also use for setimeuot 
+
+    function main_hover_func(btn_id, text_id) {    // this funtion will use in setinterval
+
+        function hover_func() {
+            document.getElementById(text_id).style.display = "inline-block"
+
+        }
+        function hover_func_none() { // this funtion is to set the display none of the text when the cursor will be on the element for five second
+            document.getElementById(text_id).style.display = "none"
+            clearInterval(set_or_clear_interval)
+        }
+
+        document.getElementById(btn_id).addEventListener("mouseover", function () {
+            set_or_clear_interval = setInterval(hover_func, 1000);
+            setTimeout(hover_func_none, 5000)   //it will run the funtion after 5s it will make the element display none after 5s 
+
+        })
+        document.getElementById(btn_id).addEventListener("mouseout", function () {
+            document.getElementById(text_id).style.display = "none"
+            clearInterval(set_or_clear_interval)
+        })
+    }
+
+    main_hover_func('window', 'start')
+    main_hover_func('search_icon', 'search')
+    main_hover_func('setting', 'settings')
+    main_hover_func('files_explorers', 'file_explorer')
+    main_hover_func('word_ms', 'word')
+    main_hover_func('excel_ms', 'excel')
+    main_hover_func('ms_edge', 'edge')
+    main_hover_func('ms_power_shell', 'power_shell')
+    main_hover_func('ms_notepad', 'note_pad')
+    main_hover_func('ms_spinning', 'spinning_tool')
+    main_hover_func('chrome', 'Chorome')
+    main_hover_func('vs_code_ms', 'vs_code')
+    main_hover_func('more_apps', 'more_icons')
+    main_hover_func('internets', 'internet')
+    main_hover_func('sound', 'volume')
+    main_hover_func('timing_section', 'date')
+    main_hover_func('notification', 'notifications')
+    main_hover_func('lang', 'language')
+
+
+
+    //  to print array items in a html element --------------------
+    // ,"Adobe Acrobat Distilet DC","#","3D Viewer","Adobe Acrobat DC","Adobe Distiled DC","Adobe creative cloud","Adobe reader X","Agoda.com","Alarm & Clock"
+    let recent_items = ["Recent added", "Adobe Acrobat DC", "Adobe Acrobat Distilled DC", "#", "3D viewer", "A", "Adobe Acrobat DC", "Adobe Acrobat Distilled DC", "Adobe creative cloud", "Adobe Reader X", "Agdo.com", "Alarm & Clock", ""]
+    let recent_items_imgs = ['', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM2o8ELvVNhjphQRAODECrmFMD6nvysslpfw&usqp=CAU', "https://png.pngtree.com/png-clipart/20200709/original/pngtree-adobe-acrobat-icon-logo-png-image_3571064.jpg", '', "https://cdn.imgbin.com/5/8/17/3d-icon-cube-icon-PxALtcUR.jpg"]
+    // "https://image.flaticon.com/icons/png/512/84/84583.png"
+    let content = "";
+
+    for (i = 0; i < recent_items.length; i++) {
+
+        if (recent_items_imgs[i] == '') { // if the the content of the array is nothing the it do the below funtion that you given in the if condintion
+            content += `<a href="">  <p>${recent_items[i]}</p> </a> `  // it will not add image in the 'a' tag
+
+        }
+        else { // else it will do this
+            content += `<a href=""> <img src="${recent_items_imgs[i]}"> <p>${recent_items[i]}</p> </a> `  // it will now add the string in 'content' variable 
+
+        }
+
+    }
+    document.getElementById('recent_add').innerHTML = content
+    // How do you check if an array has an empty string in JavaScript?
+    // To check if an array contains an empty string, call the includes() method passing it an empty string - includes('') . The includes method returns true if the provided value is contained in the array and false otherwise.
+
+
+
+
+    // to change the images in the div every one second------------------------
+
+
+
+    //first we have give the images in a array like this
+    let images = ["https://media-cdn.tripadvisor.com/media/photo-s/05/9f/1d/ea/florida-backcountry-adventures.jpg", "https://thumbs.dreamstime.com/b/chita-1206872.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpuvBOoYhI4h0ANC9X-7_GMTjbrqAGFAeRYQ&usqp=CAU", "https://static.wikia.nocookie.net/animalplanetsthemostextreme/images/4/4a/7284f57ab185f5242b531edb43f951b7-sailfish.jpg/revision/latest?cb=20210217201155"]
+
+    a = 0;
+    function change_img() {
+
+        let img_box = document.getElementById('Images_box')
+
+        img_box.innerHTML = ` <img  src="${images[a]}" alt="">` // it will change the index value at every 2 secod becuse we give the "a" a++
+        if (a >= images.length) { // if the "a" value is == to image.lenght then it will make the value of the a again 0
+            a = 0
+        }
+
+        a++; // add 1 in the a every 2 second
+    }
+
+    setInterval(change_img, 2000) // run the funtion at every 2 sec
+
+
+    // Program of  inserting items in the  second section
+
+    let second_section = document.getElementById("second_section")
+    let items_list = [
+
+        { image: "https://store-images.s-microsoft.com/image/apps.24628.9007199266252719.c52cc28d-6325-4f19-9817-8b64ff50ebe6.753dac8d-0d90-46d2-8da2-967cae51ca9b", name: "Xbox console" },
+        { image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAACjUlEQVR4nO2aTWtTQRSG36kpCNbPILXQQqGLorgWxFiomH8gikTFhbgRXYiuiiD4C1z6tRHRlUu3guDWhUJd1K9lN6JYKxYUHxeZwOR6k9zYyb35OA9cbu6cM3fOe2bmBCaRDMMwDMMwDMMwDMMwDMMwDMMwjNHAxXoRUJa0s4PbZ+fcWqwx+wbgHPCHzvwEDhUdb8hYpPfMK9tq2irpcKQxo1CK9J5bkpYlTSTapyTdkLQl0jjRiZIA59yGpMdhGzAp6bn6WLwUbws0AUxJeiHpgG960otx+hJgElgOCt89oBw8Xyk6xp6RIv4+MAbsDtouFx1nTwD2pYn3tj1DnQAv/m2aeG8vD20CgGlgJRB4B3AJn3ALXCoq1kwAE8C2jL7TwLt24gPfZ8AqMB834ogAC8A34AtwpINvUvzdVuIHAqACrAWC1oHFFr4zCfFNe37g8DO/7sX88hfAd2Ah4TsDvB/Wmf8N1IATQRJ+AMe8b1L8YM+8JCVm/mTQftonpLEdzgIfEjP/j3jqFX8ROJ649uerLCNp4gNbLUhCSKp432clxR/q5wVHe6+oSxrLvo39VLAdAB60W/YtxDc43xsVmyBt5lN8zlD/arzdTrz3bfDQL/1aXycgNoHYm/55tp8TMNgVPAIjn4DMR2JAVdLVlD4bkpacc29iBpYX3ZwJXpdUbWFblXRx8+HkTzcJGPf3r5Je+c8V1Y+6x1N7DAD/cyr82jlXlSTgk6TZuCHly8gXQUtA0QEUTQnYJWlJ0o6EDUmPnHMv8w8rP0qSLki61sJekXQwv3Dyp6TmHzQ/+vteSdslZTocHWSaaoBzbs45NyfpaUHx5M7IF0FLQNEBFE3UBADJf4j0PX8BgPMIJ3VNQXMAAAAASUVORK5CYII=", name: "Money" },
+        { image: "https://img.icons8.com/color/48/000000/ms-one-note.png", name: "One note" },
+        { image: "https://store-images.s-microsoft.com/image/apps.42948.9007199266246227.c596c546-6fcb-4260-935c-19bc24b971ef.cec5a73c-7fd6-47f0-ab61-acd640c99280", name: "Film  & Videos" },
+        { image: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Microsoft_Groove_logo_%282020%29.png", name: "Groove music" },
+        { image: "https://icon-library.com/images/feed-icon/feed-icon-20.jpg", name: "News" },
+    ]
+
+
+    for (i = 0; i < items_list.length; i++) {
+        let item = document.createElement("div")
+        let item_image = document.createElement("img")
+        let item_name = document.createElement("p")
+        item_image.src = items_list[i].image
+        item_name = items_list[i].name
+
+
+        // sizing section
+        let sizing_box = document.createElement("section")
+        let medium = document.createElement("span")
+        let wide = document.createElement("span")
+        let large = document.createElement("span")
+
+        medium.textContent = "medium"
+        wide.textContent = "wide"
+        large.textContent = "large"
+
+        medium.setAttribute("id", "medium_btn")
+        wide.setAttribute("id", "wide_btn")
+        large.setAttribute("id", "large_btn")
+
+        sizing_box.append(medium, wide, large)
+
+        item.append(item_image, item_name, sizing_box)
+
+        second_section.append(item)
+
+
+        item.addEventListener("click", function(){
+            
+            if(sizing_box.style.display = "flex"){
+                sizing_box.style.display = "none"
+            }
+            else{
+               sizing_box.style.display = "flex"
+            }
+        })
+
+    }
+</script>
+
+</html>

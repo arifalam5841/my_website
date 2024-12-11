@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive</title>
+    <style>
+        html{ 
+            font-size: 20px; 
+        }
+        .container{
+             font-size: 10px;  /*parent font  size */
+            border: 2px solid red;
+            /* vh and vw is use to make the width and height as web site size  */
+             width: 100vw;      /* vw is use in width: ; */
+            height: 100vh;     /*   vh is use in height */
+            /* we % also */
+        }
+        h1{
+            text-align: center;
+        }
+        #first{
+             font-size: 10em; /* given value of em multiply by parent's font sixe pixle */
+             padding: 3px; /* in padding em multipy by given  font size em */
+        }
+        #second{
+            font-size: 2rem; /* rem multiply by html's font-size that is pxel */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="first">This is first heading</h1>
+        <h1 id="second">This is second heading</h1>
+        <h1 id="third">This is third heading</h1>
+    </div>
+</body>
+</html>

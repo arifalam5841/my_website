@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+       :root{
+           --second: 5s;
+       }
+        #head {
+            background-color: black;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            top: 1px;
+            bottom: 1px;
+            display: inline-block;
+
+            left: 161px;
+            right: 1px;
+            border-radius: 60px;
+            animation-name: head;
+            animation-duration:var(--second);
+            animation-iteration-count: 2;
+
+
+        }
+
+        #head img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        /* 
+        @keyframes head{
+            from{
+                left:161px;
+            }
+            to{
+                left:261px;
+            }
+        } */
+
+        @keyframes head {
+            0% {
+                left: 161px;
+
+            }
+
+            20% {
+                left: 161px;
+
+
+
+            }
+
+            40% {
+                left: 261px;
+
+
+
+            }
+
+            60% {
+                left: 350px;
+            }
+
+            80% {
+                left: 450px;
+            }
+
+        }
+
+        #body {
+            background-color: black;
+            width: 100px;
+            height: 133px;
+            position: relative;
+            top: 135px;
+            bottom: 1px;
+            display: inline-block;
+            left: 57px;
+            right: 1px;
+            border-radius: 10px;
+            animation-name: body;
+            animation-duration: var(--second);
+            animation-iteration-count: 2;
+            z-index: 1;
+        }
+
+        @keyframes body {
+            0% {
+                left: 57px;
+
+            }
+
+            20% {
+                left: 57px;
+
+
+
+            }
+
+            40% {
+                left: 153px;
+
+
+
+            }
+
+            60% {
+                left: 250px;
+
+
+
+            }
+
+            80% {
+                left: 350px;
+        
+
+
+
+            }
+
+        }
+
+        #righthand {
+            background-color: rgb(197, 196, 196);
+            width: 27px;
+            height: 124px;
+            position: relative;
+            top: 125px;
+            bottom: 1px;
+            display: inline-block;
+            left: 54px;
+            right: 1px;
+            border-radius: 10px;
+            animation-name: righthand;
+            animation-duration: var(--second);
+            animation-iteration-count: 2;
+        }
+
+        @keyframes righthand {
+            0% {
+                left: 54px;
+                transform: rotate(0deg);
+            }
+
+            20% {
+                left: 90px;
+                transform: rotate(-45deg);
+
+
+            }
+
+            40% {
+                left: 100px;
+                transform: rotate(45deg);
+
+
+            }
+
+            60% {
+                left: 280px;
+                transform: rotate(-45deg);
+
+
+
+            }
+
+            80% {
+                left: 300px;
+                transform: rotate(45deg);
+
+
+
+            }
+
+        }
+        #lefthand {
+            background-color: rgb(197, 196, 196);
+            width: 27px;
+            height: 125px;
+            display: inline-block;
+            position: relative;
+            top: 130px;
+            bottom: 1px;
+            left: -106px;
+            right: 1px;
+            border-radius: 10px;
+            animation-name: lefthand;
+            animation-duration: var(--second);
+            animation-iteration-count: 2;
+            z-index: 2;
+
+        }
+
+
+        @keyframes lefthand {
+            0% {
+                left: -106px;
+                transform: rotate(0deg);
+            }
+
+            20% {
+                left: -140px;
+                transform: rotate(45deg);
+
+
+            }
+
+            40% {
+                left: 30px;
+                transform: rotate(-45deg);
+            }
+
+            60% {
+                left: 50px;
+                transform: rotate(45deg);
+            }
+
+            80% {
+                left:225px;
+                transform: rotate(-45deg);
+            }
+
+        }
+
+
+        #rightleg {
+            background-color: rgb(197, 196, 196);
+            width: 27px;
+            height: 125px;
+            display: inline-block;
+            position: relative;
+            top: 261px;
+            bottom: 1px;
+            left: -108px;
+            right: 1px;
+            border-radius: 10px;
+            animation-name: rightleg;
+            animation-duration: var(--second);
+            animation-iteration-count: 2;
+        }
+
+        @keyframes rightleg {
+            0% {
+                left: -108px;
+                transform: rotate(0deg);
+            }
+
+            20% {
+                left: -108px;
+                transform: rotate(0deg);
+            }
+            40% {
+                left: -45px;
+                transform: rotate(45deg);
+
+
+            }
+
+            60% {
+                left: 85px;
+                transform: rotate(0deg);
+
+
+
+            }
+
+            80% {
+                left: 140px;
+                transform: rotate(45deg);
+
+
+
+            }
+
+        }
+
+        #leftleg {
+            background-color: rgb(197, 196, 196);
+            width: 27px;
+            height: 125px;
+            display: inline-block;
+            position: relative;
+            top: 261px;
+            bottom: 1px;
+            left: -72px;
+            right: 1px;
+            border-radius: 10px;
+            animation-name: leftleg;
+            animation-duration: var(--second);
+            animation-iteration-count: 2;
+            
+       }
+
+
+        @keyframes leftleg {
+            0% {
+                left: -72px;
+                transform: rotate(0deg);
+            }
+
+            20% {
+                left: -30px;
+                transform: rotate(-45deg);
+
+
+            }
+
+            40% {
+                left: 25px;
+                transform: rotate(0deg);
+
+
+            }
+
+            60% {
+                left: 155px;
+                transform: rotate(-45deg);
+
+
+
+            }
+
+            80% {
+                left:225px;
+              
+                transform: rotate(0deg);
+
+
+
+            }
+
+        }
+    </style>
+</head>
+<html>
+
+<body>
+    <div class="anime">
+
+        <div id="head"><img src="img/tharabhaiii.PNG" alt=""></div>
+        <!-- <div id="body"></div> -->
+        <img src="img/salman bhaiii.PNG" alt="" id="body">
+        <!-- <div id="righthand"></div> -->
+        <img src="img/leflt hand.PNG" alt="" id="righthand">
+        <!-- <div id="lefthand"></div> -->
+        <img src="img/right hand.PNG" alt="" id="lefthand">
+        <!-- <div id="rightleg"></div> -->
+        <img src="img/rightlegs.PNG" alt="" id="rightleg">
+        <img src="img/leftleg.PNG" id="leftleg" alt="">
+        <!-- <div id="leftleg"></div> -->
+
+    </div>
+
+    <html style="background-color: pink;">
+        <H1 style="font-size: 100px; margin: 230px 0 0 300px; color: white;">Welcome to chaprii world</H1>
+     
+            <audio autoplay src="img/thara_audio.mp3"></audio>
+    </html>
+</body>
+
+</html>

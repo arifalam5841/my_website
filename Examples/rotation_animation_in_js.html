@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rotation animation</title>
+    <style>
+        #container {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        #run {
+            padding: 10px 20px;
+            border: none;
+            background-color: rgb(165, 165, 165);
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #stop {
+            padding: 10px 20px;
+            border: none;
+            background-color: rgb(165, 165, 165);
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <img id="fan"
+            src="https://img.icons8.com/external-flat-juicy-fish/60/000000/external-fan-vehicle-mechanics-flat-flat-juicy-fish-2.png" />
+        <button onclick="stop()" id="run">Stop</button>
+        <button onclick="run()" id="stop" >Start</button>
+    </div>
+    <p id="para"></p>
+</body>
+<script>
+    let fan = document.getElementById('fan')
+    let run_btn = document.getElementById('run')
+    let state = false;
+
+    let a = 0;
+    let rotate_interval;
+
+
+
+    //  function ------------------
+
+
+
+
+function rotation(){
+    a++
+    fan.style.transform = `rotate(${a}deg)`
+}
+
+rotate_interval = setInterval(rotation,  2);
+
+
+function stop(){
+    clearInterval(rotate_interval)
+}
+
+function run(){
+    rotate_interval = setInterval(rotation, 2);
+} 
+
+
+fan.addEventListener("mouseover", function(){
+    clearInterval(rotate_interval)
+})
+fan.addEventListener("mouseout", function(){
+    rotate_interval = setInterval(rotation, 2)
+})
+</script>
+
+</html>

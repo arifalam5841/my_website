@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settime interval</title>
+</head>
+<body>
+    <div class="container">
+        This java sctipt tutorial
+
+    </div>
+    <div id="times"></div>
+</body>
+<script>
+
+    // setTimeout and setInterval will always work on function so what ever you want to do Do this in a function then give name of func to 
+    //setimeout and setinterval
+    console.log("This java tut")
+    function  greet(name, name2){
+        console.log("after 5 second"+' ' + name+" "+' '+name2)
+    } 
+        //  first value- func name and second is time
+        let a = 1
+    // setTimeout and clearTimeout
+
+        // to set the vale of the funtion parameters  
+  setimeoutid =  setTimeout(greet ,5000, "arif" ,"atif");  //it will log this after 5 sec and only for once
+  console.log(setimeoutid) // it will log a unique id of the variable
+//   setimeoutid =  setTimeout(greet() ,5000);  //this is wrong syntax you can't type '()' afer the name of funtion
+
+// you can make conditon that afer this clearTimeout
+
+// you make like this conditons also below
+if(a>2){
+    clearTimeout(setimeoutid) //it will  stop the seTimeout 
+}
+
+else{
+    setimeoutid =  setTimeout(greet ,5000, "arif" ,"atif");  //it will log this after 5 sec
+
+}
+
+
+// setInterval and clearInterval
+
+
+function run(a,b){
+    console.log(a+b)
+}
+setIntervalid = setInterval(run,1000,8,9) //it will log this after every 1s because time is giver 1000
+b= 0;
+
+if(b == 0){
+
+    setIntervalid = setInterval(run,1000,8,9) //it will log this after every 1s because time is giver 1000
+
+
+    
+
+}
+
+else{
+    clearInterval(setIntervalid)  //clearinterval is also like cleartimeout it stop setinterval
+
+}
+
+// a clock
+
+function showtime(){
+    time = new Date();
+    // console.log(time)
+    document.getElementById('times').innerHTML = time;
+}
+
+
+setInterval(showtime,1000)
+
+
+
+</script>
+</html>

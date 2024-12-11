@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evet listenig</title>
+    <style>
+        #btn {
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 30px;
+            padding: 5px;
+            width: 100px;
+            cursor: pointer;
+            
+        }
+        #btn:hover{
+            background-color: rgb(236, 236, 236);
+            border: 1px solid rgb(236, 236, 236);
+
+        }
+        #btn:active{
+            color: white;
+
+        }
+        #para {
+
+            transition-property: all;
+            transition-duration: 1s;
+        }
+    </style>
+</head>
+<body>
+    <!-- browser events:
+    click
+    contextmenu - this event will work when we right click
+    mouseover -this event will work while mouse is on the element
+    mousedown - this event will work while mouse is press 
+    mousemove 
+    and ect
+
+    submit
+    focus - when the mouse is focus on the element 
+    DOMcontentLoaded - when the page will load all its element then the  event will work
+    transitionend  -->
+<div class="container">
+    <h1>This is a heading </h1>
+    <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim ut provident, dolorum tenetur dicta qui! Provident hic expedita vero ad numquam voluptatem doloribus ipsam harum facilis similique, ea temporibus aspernatur corrupti magni libero optio autem exercitationem fugit, minus velit illo sunt voluptas, quo placeat? Optio esse similique harum sit, quo illo necessitatibus ab, quibusdam vero aperiam debitis. Quae distinctio itaque praesentium aliquid nihil fugiat omnis facilis eos. Soluta ullam doloremque neque molestiae vero iure quibusdam tempora incidunt, unde nulla facere natus quis optio quae dicta necessitatibus impedit! Placeat in provident facere omnis nostrum aliquam odit sint est amet, quae beatae corrupti fugiat quas, sed, vel totam repellendus? Beatae dolores iste perferendis cum odio assumenda? Expedita accusamus facilis quam, harum ut ipsam voluptate labore veniam vero doloribus. Distinctio deleniti aliquid aut voluptate recusandae sint itaque quas, hic delectus atque? Ullam ipsam impedit, totam dolore nisi excepturi aspernatur facere recusandae, fugiat laborum ut rem! Vero animi cupiditate deserunt eveniet omnis natus dignissimos ratione, ad numquam enim officiis nam id maiores quis soluta optio molestias non distinctio exercitationem autem nostrum dolore? Mollitia, maiores nam, fugiat quibusdam reprehenderit fugit omnis voluptas quam placeat ea odio magni deleniti reiciendis ex maxime beatae, illo veritatis atque?</p>
+</div>
+<button id="btn" onclick="togglehide()">Show/ hide</button>
+</body>
+
+<script>
+let para = document.getElementById('para')
+para.addEventListener('mouseover', function run(){  // mouseover is property when you add this it will work 
+  console.log('this is mouseover')
+});
+para.addEventListener('mouseout', function run(){  // mouseout is property when you add this it will work  
+  console.log('this is mouse out')
+});
+   
+
+function togglehide(){
+    let btn = document.getElementById("btn")
+    let para = document.getElementById("para")
+    if(para.style.display!='none'){
+     para.style.display= 'none' 
+    }
+    else{
+     para.style.display= 'block'
+
+    }
+}
+</script>
+</html>

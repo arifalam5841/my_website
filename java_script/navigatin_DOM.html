@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navgating the DOM</title>
+</head>
+<body>
+    <div  id="main" class="container">
+        <ul>
+            <li>Home</li>
+            <li>services</li>
+            <li>about</li>
+            <li>more about us</li>
+        </ul>
+    </div>
+
+    <div class="container">
+      another container       
+    </div>
+   
+</body>
+<script>
+    let main  = document.getElementById("main"); //in the bracket we have to write the id or class of the element 
+    console.log(main)
+    main.innerHTML="<li> hiii</li>  <li> hello</li> <li> by</li>"    //to change the Element of the id or class you set the element in the " " qots
+    
+    let containers = document.getElementsByClassName("container")
+    console.log(containers) 
+    console.log(containers[0]) //you also use like Arrays that you can set index value if you set 0 then it will print the class that is on the 0 index 
+
+    let cssselct = document.querySelector(".container") //you also select the class or id like how to select in css "." for class and "#" for id
+    console.log("the element is ", cssselct)
+
+    let cssselct2 = document.querySelector("#main>li") //you also select the perticular item in class and id by help of >
+    console.log("the first li of nav is ", cssselct2)
+
+    let cssselct3 = document.querySelectorAll("#main>li") //you also select the ALL item that match in class and id by help of querySelectorAll
+    console.log("the first li of nav is ", cssselct3)
+
+    let cssselct4 = document.querySelectorAll("#main>li") //you also select the ALL item that match in class and id by help of querySelectorAll
+    cssselct4[0].innerHTML="Hiiiiiii" // you can change the element of the class or id by using index value
+
+    
+</script>
+</html>

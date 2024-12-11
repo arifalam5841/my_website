@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiply rows and colums</title>
+    <style>
+        input {
+            width: 100px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="table">
+        <!-- <table>
+            <td>
+                <tr><input type="text"></tr>
+                <tr><input type="text" name="" id=""></tr>
+                <tr><input type="text" name="" id=""></tr>
+                <tr><input type="text" name="" id=""></tr>
+            </td>
+        </table> -->
+
+    </div>
+    <div style="display: flex; align-items: center; margin: 10px;">
+        <button onclick="row_sub()" style="padding:1.5px 8px; ">-</button>
+        <p style="margin: 10px;" id="row_num"></p>
+        <button onclick="row_add()">+</button>
+
+    </div>
+    <div style="display: flex; align-items: center; margin: 10px;">
+        <button onclick="column_sub()" style="padding:1.5px 8px; ">-</button>
+        <p style="margin: 10px;" id="column_num"></p>
+        <button onclick="column_add()">+</button>
+
+    </div>
+
+
+    <button onclick="click()" id="click">click me to add</button>
+</body>
+
+<script>
+    let row_num = document.getElementById('row_num')
+    let columm_num = document.getElementById('column_num')
+    let r = 0
+    let c = 0
+    if (c == 0 || c == null) {
+            c = 10
+        }
+        if (r == 0 || r == null) {
+            r = 10
+        }
+    // column
+
+    function row_sub() {
+
+        r--
+      
+        row_num.innerHTML = r
+
+        if (r < 1) {
+            r = 1
+        }
+    }
+    function row_add() {
+        r++
+        row_num.innerHTML = r
+        if (r>= 19) {
+            r = 20
+        }
+    }
+
+    // column
+    function column_sub() {
+
+        c--
+       
+        column_num.innerHTML = c
+
+        if (c < 1) {
+            c = 1
+        }
+       
+    }
+    function column_add() {
+        c++
+        column_num.innerHTML = c
+        if (c >= 19) {
+            c = 20
+        }
+    }
+    
+    
+    function multiplying_rows_column(rows, cols) {
+        var j = 1;
+        var output = "<table border='1' width='500' cellspacing='5'cellpadding='5'>";
+        for (i = 1; i <= rows; i++) {
+            output = output + "<tr>";
+            while (j <= cols) {
+                output = output + "<td>" + `<input type="text">` + "</td>";
+                j++;
+            }
+            output = output + "</tr>";
+            j = 1;
+        }
+        output = output + "</table>";
+        document.getElementById('table').innerHTML = output;
+    }
+   document.getElementById('click').addEventListener('click', function(){
+       multiplying_rows_column(r,c)
+   })
+    
+
+   
+ 
+</script>
+
+</html>

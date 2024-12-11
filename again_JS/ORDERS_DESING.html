@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@300&family=Open+Sans:wght@500&family=Quicksand&family=Red+Hat+Mono:wght@600&family=Roboto&family=Source+Sans+Pro&family=Ubuntu:wght@300&family=Varela+Round&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #order-main-container{
+            width: 300px;
+            height: fit-content;
+            margin:  50px auto;
+            border-radius: 5px;
+            box-shadow: 1px 1px 4px rgb(203, 203, 203);
+            overflow: hidden;
+            transition: all 0.5s;
+        }
+
+        /* -----------------upper container design ---------------------- */
+        #order-main-container #upper-container{
+            padding: 2px 0;
+        }
+        #order-main-container #user-profile-cont{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 5px;
+        }
+
+        #order-main-container #user-profile-cont #user-profile{
+            display: flex;
+            align-items: center;
+        }
+        #order-main-container #user-profile-cont #user-profile h3{
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+        }
+
+        #order-main-container #user-profile-cont #user-profile #img-cont img{
+            width: 100%;
+            height: 100%;
+        }
+
+        #order-main-container #user-profile-cont #user-profile #img-cont{
+            width: 25px;
+            height: 25px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            margin: 5px;
+        }
+
+        #order-main-container #user-profile-cont #date{
+            display: flex;
+            flex-direction: column;
+
+        }
+        #order-main-container #user-profile-cont #date span{
+            font-family: 'Roboto', sans-serif;
+            font-size: 11px;
+        }
+
+        /* --------------------------- Address container ------------------------- */
+        #order-main-container #address-cont{
+           background-color: rgba(251, 159, 159, 0.818);
+           font-family: 'Roboto', sans-serif;
+           font-size: 13px;
+           padding: 5px;
+           text-align: left;
+           word-break: break-all;
+           margin: 2px 8px;
+           color: rgb(255, 255, 255);
+           border-radius: 2px;
+        }
+
+        #order-main-container #address-cont span{
+            white-space: nowrap;
+            width:fit-content ;
+            height:fit-content ;
+            float: left;
+            padding-right: 2px ;
+            color: rgb(249, 47, 47);
+
+        }
+
+       
+        #order-main-container #partition-line{
+           margin-left: 140px;
+
+        }
+
+
+        /* --------------------- Items design ------------------------------ */
+
+        
+        #items-container{
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid black;
+            margin: 5px;
+        }
+
+       
+        #items-container .item .item-detail{
+            display: flex;
+            align-items: center;
+        }
+        #items-container .item .item-rate-qty{
+            display: flex;
+            justify-content: space-between;
+            /* background-color: red; */
+            width: 120px ;
+            align-items: center;
+        }
+        #items-container .item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            border-left: 1px solid black;
+            padding: 3px;
+        }
+       
+        #items-container .item h3{
+           font-family: 'Roboto', sans-serif;
+           font-size: 14px;
+           margin-left: 2px;
+        }
+
+        #items-container .item .item-rate-qty span{
+           font-family: 'Roboto', sans-serif;
+          color: gray;
+          font-size: 13.5px;
+        }
+
+         #more-btn{
+            width: 100%;
+            outline: none;
+            background-color: rgba(81, 173, 82, 0.943);
+            border: none;
+            color: white;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        /* total sectio design ------------------------- */
+
+        #total-section{
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 8px;
+            display: none;
+            align-items: center;
+        }
+
+        #total-section button{
+            outline: none;
+            border: none;
+            background-color:#205c6e;
+            color: #feeaa5;
+            padding: 5px 8px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        #total-section p{
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        #items-container #extra{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="order-main-container">
+
+        <div id="upper-container">
+            <div id="user-profile-cont">
+                <div id="user-profile">
+                    <span id="img-cont">
+                        <img src="https://media.istockphoto.com/photos/millennial-male-team-leader-organize-virtual-workshop-with-employees-picture-id1300972574?b=1&k=20&m=1300972574&s=170667a&w=0&h=2nBGC7tr0kWIU8zRQ3dMg-C5JLo9H2sNUuDjQ5mlYfo=" alt="">
+                    </span>
+                    <h3>Arif alam</h3>
+                </div>
+                            
+                <p id="partition-line">|</p>
+
+                <div id="date">
+                    <span id="year">2022</span>
+                    <span id="month-date">SEP - 9</span>
+                </div>
+          
+            </div>
+
+            <div id="address-cont">
+               <span>Address :</span> Taloja Phase 1 , sector - 9, plor - 15-18, panchanand heights , C-wing 802
+            </div>
+        </div>
+
+
+        <div id="items-container">
+            <div class="item">
+                <div class="item-detail">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABmJLR0QA/wD/AP+gvaeTAAABe0lEQVRIie2VT07CQBSHf2/EGxikFcOCBXoHNwqNR5CEC1SaaKJxiYms1RgS5U9cGgnegFhYeQWRDRuEKvEI2j4XRAMlLdOy5dvNvN9732QmaYElAaDJhfqsv4AQX3gqY2BplZ2/ZcSljEPQkQPRCztfwEnC4dLkXsQdciB6n3u3r2ElsbYBAXtqb0bih9IyEiBnjWz7y9Jqfdk+KYli6jkCCmA7BQZAAmpL7wJctNLV+rx+MS+wYeo3BDwASE0VGFtgelTMw6uFJIqp5xg49ssQ+EQ19WxoCQEFv/oE56EkSstIwH1F3myrzfxmYAkzRyUF4zzZ64Elgn9GQSTEK555T4ml1fogdCUdHWv/7j2wZAwXZQzEuPCr+0qsdLXOoGv/c9DlUKs8hZYAwEemfApwFsCbq9QhxoGllc/mzZD6rFiZagNAQ23mN3mVo4K+R8Pd+4FMr7TkXzZ+XM8HlpYIOMlY2wg6Z6rfX8IYwOGS+38QGIb0VS6Z4RdS9nWtHBHPNgAAAABJRU5ErkJggg==">
+                    <h3>Pizza</h3>
+                </div>
+                <div class="item-rate-qty">
+                    <span>Qty - 12</span>
+                    <span>&#x20B9; 300</span>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="item-detail">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABmJLR0QA/wD/AP+gvaeTAAABfklEQVRIie3Vv07CUBQG8O+0DBDrZnCBMDCoD1BJiIlAwjNI4jtoonHERGY1hmcwEnwHqCQu0DCKLCzIQhwp6QDtcagooC23ZdRvu3/O+eXem7TAf3yE5gdaSnkGU2z9rjzINo2D2TC0sMgUYwknsLgXGJApSTaV56dCPzZZ3MvpxktQo64qAC1c0C+IR2rpcIIsacua8nu+bfZF64QQTd04BlERU+wAQEgGtJTSJeZSpjWurKqXVgPKHYjuAQf4CmOXQQ9P+5s3ayHOCXDqtYfBZ1pKKQRGQFT0XP+WLgMhtXQ4geUrcs9eQ43EfSPyRIoKAgAAm2jbNzKxeegHkdh9vyuSb5t9ELoiAAGdQ918840AADGXRBCbceW17olkWuMKgW49BabrnG48BkYcaHQORgHA6/w8AR1mHGX10cWqHkKflaxuVAFUG2okbkkUJfAw0zQHIrXCyCyfj+v6wOKITMm6qvjts1AP2wshHpBN5eX/ga/YTp/gDf58PgBPhXa4iVNikAAAAABJRU5ErkJggg=="/>
+                    <h3>Mutton biryani</h3>
+                </div>
+                <div class="item-rate-qty">
+                    <span>Qty - 1/2</span>
+                    <span>&#x20B9; 4000</span>
+                </div>
+            </div>
+
+            <div class="item" id="extra">
+                <div class="item-detail">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABmJLR0QA/wD/AP+gvaeTAAABfklEQVRIie3Vv07CUBQG8O+0DBDrZnCBMDCoD1BJiIlAwjNI4jtoonHERGY1hmcwEnwHqCQu0DCKLCzIQhwp6QDtcagooC23ZdRvu3/O+eXem7TAf3yE5gdaSnkGU2z9rjzINo2D2TC0sMgUYwknsLgXGJApSTaV56dCPzZZ3MvpxktQo64qAC1c0C+IR2rpcIIsacua8nu+bfZF64QQTd04BlERU+wAQEgGtJTSJeZSpjWurKqXVgPKHYjuAQf4CmOXQQ9P+5s3ayHOCXDqtYfBZ1pKKQRGQFT0XP+WLgMhtXQ4geUrcs9eQ43EfSPyRIoKAgAAm2jbNzKxeegHkdh9vyuSb5t9ELoiAAGdQ918840AADGXRBCbceW17olkWuMKgW49BabrnG48BkYcaHQORgHA6/w8AR1mHGX10cWqHkKflaxuVAFUG2okbkkUJfAw0zQHIrXCyCyfj+v6wOKITMm6qvjts1AP2wshHpBN5eX/ga/YTp/gDf58PgBPhXa4iVNikAAAAABJRU5ErkJggg=="/>
+                    <h3>Cold drink</h3>
+                </div>
+                <div class="item-rate-qty">
+                    <span>Qty - 4</span>
+                    <span>&#x20B9; 250</span>
+                </div>
+            </div>
+
+            <div class="item" id="extra">
+                <div class="item-detail">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABmJLR0QA/wD/AP+gvaeTAAABfklEQVRIie3Vv07CUBQG8O+0DBDrZnCBMDCoD1BJiIlAwjNI4jtoonHERGY1hmcwEnwHqCQu0DCKLCzIQhwp6QDtcagooC23ZdRvu3/O+eXem7TAf3yE5gdaSnkGU2z9rjzINo2D2TC0sMgUYwknsLgXGJApSTaV56dCPzZZ3MvpxktQo64qAC1c0C+IR2rpcIIsacua8nu+bfZF64QQTd04BlERU+wAQEgGtJTSJeZSpjWurKqXVgPKHYjuAQf4CmOXQQ9P+5s3ayHOCXDqtYfBZ1pKKQRGQFT0XP+WLgMhtXQ4geUrcs9eQ43EfSPyRIoKAgAAm2jbNzKxeegHkdh9vyuSb5t9ELoiAAGdQ918840AADGXRBCbceW17olkWuMKgW49BabrnG48BkYcaHQORgHA6/w8AR1mHGX10cWqHkKflaxuVAFUG2okbkkUJfAw0zQHIrXCyCyfj+v6wOKITMm6qvjts1AP2wshHpBN5eX/ga/YTp/gDf58PgBPhXa4iVNikAAAAABJRU5ErkJggg=="/>
+                    <h3>Mutton biryani</h3>
+                </div>
+                <div class="item-rate-qty">
+                    <span>Qty - 1/2</span>
+                    <span>&#x20B9; 400</span>
+                </div>
+            </div>
+        </div>
+
+       <div id="total-section">
+           <button>Confirm</button>
+           <p>Total - &#x20B9; 4550</p>
+           
+       </div>
+        <button id="more-btn">MORE</button>
+
+
+    </div>
+</body>
+<script>
+    let more_btn = document.getElementById("more-btn")
+    let total_section = document.getElementById("total-section")
+    let extra_items = document.getElementById("extra")
+    more_btn.addEventListener("click", function(){
+        more_btn.style.display = "none"
+        total_section.style.display = "flex"
+        extra_items.style.display = "flex"
+        
+    })
+</script>
+</html>

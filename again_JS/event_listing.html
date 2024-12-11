@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event listing</title>
+
+    <style>
+        h1{
+            background-color: black;
+            color: rgb(182, 182, 182);
+            border-radius: 10px;
+        padding: 5px;
+        transition-property: all;
+        transition-duration: 0.5s;
+        }
+
+        #para{
+            transition-property: all;
+            transition-duration: 0.5s;
+        padding: 5px;
+        border-radius: 10px;
+        border: 1px solid black;
+            
+        }
+
+        #btn{
+            background-color: cadetblue;
+            color: white;
+            padding: 10px 30px;
+            border: 1px solid black;
+            margin: 10px;
+            border-radius: 5px;
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+    </style>
+
+</head>
+<body>
+     <!-- browser events:
+    click
+    contextmenu - this event will work when we right click
+    mouseover -this event will work while mouse is on the element
+    mousedown - this event will work while mouse is press 
+    mousemove 
+    and ect
+
+    submit
+    focus - when the mouse is focus on the element 
+    DOMcontentLoaded - when the page will load all its element then the  event will work
+    transitionend  -->
+
+    <h1 id="head">This is  a heading</h1>
+    <p id="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas velit dignissimos, maiores eos nemo consequuntur sed ab quae excepturi nam laboriosam fugit provident id, aliquid, maxime cumque optio quisquam tenetur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eaque quisquam perferendis cum magnam numquam explicabo fuga nam omnis repellendus, doloribus incidunt, pariatur quas quo consequatur quod esse soluta maiores, cupiditate laborum tempore nulla. Temporibus facilis aspernatur a expedita pariatur in aliquam eveniet recusandae necessitatibus dolore, vitae quia obcaecati natus odio beatae sunt quo harum, dolor suscipit minus, hic accusantium libero dolorum? Suscipit, voluptatum ad. Aliquid suscipit in fuga magni itaque id? Neque ut, commodi ex, veniam fugiat obcaecati necessitatibus assumenda dolor sequi ipsum at ipsam iste sapiente voluptatum molestiae recusandae omnis eius, impedit eveniet inventore aut officia earum? In alias dignissimos possimus eius hic fugit ducimus magnam sit obcaecati! Obcaecati molestiae laudantium dolorem? Ad eum, animi deleniti aspernatur cupiditate optio quis, illo eveniet et placeat doloribus itaque doloremque reiciendis nostrum delectus laboriosam hic accusantium, blanditiis voluptatum maxime aut necessitatibus! Quos ex tempore aperiam fugiat omnis nisi harum illo, sed dolorem maiores iste cumque molestiae, autem nesciunt rerum, ad sapiente. Minus possimus accusamus harum architecto libero incidunt iste fuga eum iure, quia, blanditiis saepe nihil inventore eligendi! Hic dignissimos et inventore magnam quia, harum perspiciatis aliquam asperiores ullam unde rerum praesentium voluptas adipisci commodi sequi architecto voluptate, beatae incidunt doloribus? Animi rem laboriosam rerum facere a sed temporibus voluptatibus. Magni laborum ad exercitationem dignissimos incidunt similique optio nihil rem libero sit minima deserunt consequatur illum dolor fugiat consectetur est non atque impedit quae esse nemo, quia error. Aperiam velit culpa asperiores, adipisci iste ipsa maiores tempore tempora eligendi beatae? Quia debitis atque numquam nobis aperiam distinctio dolorum eius. Rerum nulla aliquam delectus molestiae fugiat optio praesentium distinctio id magni, itaque eos blanditiis consectetur explicabo quo, provident perspiciatis corrupti numquam esse natus sapiente non voluptatibus obcaecati? Neque perferendis corporis corrupti ducimus, quasi, omnis quod explicabo, sapiente magni rem error. Laborum natus, in id rerum, totam qui distinctio veniam architecto tenetur molestiae blanditiis, quasi quo veritatis. Atque repellendus nostrum sint aspernatur iste aut voluptates sunt tenetur. Voluptates voluptatum veniam fugit animi reiciendis quos dolorem harum cupiditate nostrum illo. Sed vitae, repellat repellendus nobis est temporibus esse molestiae magnam illum, odio deserunt ducimus sunt praesentium harum corrupti modi corporis saepe ad veniam. Exercitationem placeat ex id natus praesentium pariatur dolor dolorum accusamus et quidem ab rem quas quae distinctio voluptas, aperiam consectetur sint adipisci soluta, minus nostrum commodi reiciendis reprehenderit! Culpa ea illo necessitatibus rerum doloribus hic nostrum harum dolor quas minus modi cumque impedit, ratione voluptatum vel ullam quos nulla rem distinctio, tenetur veritatis nihil ipsam! Non quis, porro vel aut fugit explicabo hic odit quos est. Suscipit eligendi sapiente distinctio, officiis mollitia alias iste, a, perferendis ea possimus laudantium unde adipisci dicta doloribus velit eius? Corrupti neque voluptate cum tempore, dicta quisquam? Omnis.
+    </p>
+                      <!-- onlick funtion name -->
+    <button id="btn" onclick="hide()">hide</button>
+</body>
+<script>
+
+    // evet listing will   only work on id
+
+let para = document.getElementById('para')
+let head = document.getElementById('head')
+
+    function hide(){
+   let para = document.getElementById('para')
+   let btn = document.getElementById('btn')
+   if(para.style.display == "block"){
+
+para.style.display = 'none'
+btn.innerHTML = 'show'  //this how you change the text  of element
+   }
+
+   else{
+ para.style.display = 'block'  //this how to set condition of the element's style
+btn.innerHTML = 'hide'  //this how you change the text  of element
+
+
+   }
+    }
+
+
+    let num = 0;
+    // how to write addEventListener syntax below
+// para.addEventListener('mouseover', function run(){  });  
+para.addEventListener( 'mouseover',function run(){
+    num++
+    console.log(num)
+});  
+para.addEventListener( 'mouseout',function run(){
+    
+    console.log("hello")
+});  
+
+head.addEventListener('mouseover', function hide(){
+    head.innerHTML = "Mouse is on me"
+    head.style.height = "20px"
+    head.style.fontSize = "18px"
+    
+})
+head.addEventListener('mouseout', function hide(){
+    head.innerHTML = "Mouse is outside"
+    head.style.height = "40px"
+    head.style.fontSize = "35px"
+})
+    
+</script>
+</html>

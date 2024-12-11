@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> on scroll funtion</title>
+</head>
+<style>
+    #example_div {
+        width: 200px;
+        height: 300px;
+        overflow: hidden;
+        overflow-y: auto;
+
+        transition-property: all;
+        transition-duration: 0.5s;
+    }
+
+    h1 {
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        display: none;
+        color: aquamarine;
+    }
+
+    #example_div::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    #head_main{
+        font-size: 30px;
+        font-family: 'Courier New', Courier, monospace;
+       
+        color: rgb(31, 49, 43);
+    }
+</style>
+
+<body>
+   <p id="head_main"> "Scroll it and see the result"</p>
+
+
+
+    <!--              now call this func in script as you call on click func and give the value the will inert when the element will scroll -->
+    <!--                     "onscroll funtion"                                          -->
+    <div id="example_div" onscroll="scrollfunc()">
+        
+
+        <h1 id="head">This is a paragraph</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dolore quia explicabo quo repudiandae fugit
+            magnam ipsam voluptatibus, nisi quos eos commodi culpa, ipsum in vero? Fugiat odit possimus consequatur ab,
+            quae, quo nostrum maiores minima in placeat nisi aut eaque, autem a accusamus velit deleniti delectus? Quo
+            deleniti debitis alias, culpa voluptas esse mollitia itaque maiores quos nemo quia asperiores quam nihil vel
+            et odio ipsam iusto, laudantium ullam excepturi voluptatibus ratione fugit. Modi, placeat deserunt? Quam,
+            obcaecati error impedit magnam repellendus voluptates repudiandae natus nobis eum iste doloribus est cumque
+            ea suscipit optio placeat exercitationem, consectetur sit nemo dicta libero id ipsam! Aliquid voluptas ab,
+            eum fugiat fuga at! Doloribus, earum. Enim nemo cum quasi numquam rem quos, repellat soluta illum facilis ab
+            accusantium velit ipsam aperiam totam ea alias eaque asperiores porro harum voluptatibus officia? Corporis
+            nulla nisi ullam id eos commodi officiis est! Saepe pariatur possimus laboriosam totam nesciunt quam
+            laudantium rem facere quia id, eum, consequuntur reprehenderit, cum consectetur! Odit officiis quas
+            consequuntur reiciendis. Debitis quia accusamus ad a, possimus architecto ut alias odit laudantium quasi
+            dolorum repudiandae repellendus dolores rerum minus vel modi sint suscipit. Perferendis illum, sed mollitia
+            saepe dignissimos velit laboriosam corporis sunt officiis quae error temporibus fuga, aliquam, dolorem totam
+            eos amet praesentium consequatur! Recusandae blanditiis, soluta eaque unde iste, non, minima magni at vitae
+            doloremque distinctio ipsam quaerat laudantium? Assumenda totam, laudantium accusamus eveniet est iure quia
+            ducimus consequuntur soluta, molestias, aut beatae incidunt atque impedit nesciunt ullam excepturi possimus
+            pariatur! Fuga possimus hic quod sint nobis nesciunt, incidunt facilis expedita minus vitae enim quisquam
+            voluptatem numquam impedit, voluptas odio tenetur obcaecati! Harum totam exercitationem unde dolorem
+            voluptatum repellendus ipsam, corporis iusto incidunt dicta neque? Totam excepturi incidunt vel rerum rem
+            deserunt sed, beatae quam fuga veritatis suscipit, repudiandae consequuntur praesentium unde libero illum
+            soluta possimus nobis porro et harum pariatur animi voluptatem quia. Omnis, enim quia optio atque fugiat
+            assumenda quisquam et? Ut at fuga aspernatur, aliquid consequuntur debitis minima ad laborum quod quaerat
+            ratione neque nesciunt fugit, quibusdam et. Nostrum quos minus rem distinctio sapiente necessitatibus
+            voluptas vero, quae quidem deserunt? Omnis architecto tenetur ipsam ut. At veniam maiores, dicta voluptatem
+            dolorem fugiat beatae voluptatibus aliquam nostrum amet! Eum incidunt quibusdam maxime asperiores deleniti
+            provident repellat dolor neque error? Velit harum eveniet aut, voluptatem, soluta possimus eaque unde illum
+            dignissimos, quo deleniti. Reprehenderit sed quas voluptatum aliquam ullam.</p>
+    </div>
+</body>
+
+<script>
+    function scrollfunc() {  // this func will run when the element will scroll
+        let box = document.getElementById("example_div")
+        box.style.backgroundColor = "rgb(28, 79, 83)"
+        box.style.color = "white"
+        box.style.padding = "10px"
+        box.style.borderRadius = "10px"
+        box.style.textAlign = "center"
+        document.getElementById("head").style.display = "block"
+
+    }
+</script>
+
+</html>

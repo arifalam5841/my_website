@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on load event</title>
+    <style>
+        img{
+            width: 200px;
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <form>     
+        <img id = "myimg" src = "drone.png" />     
+            <div>
+           <p>Click the below button to move the image right</p>     
+        <input type = "button" value = "Click Me to go right" onclick =  "moveRight()"; />    
+        <input type = "button" value = "Click Me to go left" onclick = "moveLeft()"; />    
+    </div>
+     </form>  
+</body>
+<script >
+
+var img = null;     
+function init(){      
+   img = document.getElementById('myimg');    
+   img.style.position = 'relative';         
+   img.style.left = '50px';   
+moveRight()    
+}         
+function moveRight(){      
+   img.style.left = parseInt( img.style.left) + 100 + 'px';      
+}      
+function moveLeft(){      
+   img.style.left = parseInt( img.style.left) - 100 + 'px';      
+}     
+
+
+
+window.onload = init; /// this is onload attribute you can set the funtion that  will run when the page will reload
+ 
+
+//parseInt = // is use her
+</script>
+</script>  
+</html>

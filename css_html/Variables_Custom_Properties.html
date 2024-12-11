@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>varisbles and custom properties</title>
+    <style>
+        :root{
+             --colour:red; /*to set the variable gobal  */
+             
+             
+        }
+        .box{
+            /* we can use this variable the element where you have set variable out of the element you can't use that variable we  can see how to use the same variable out of the element in container  */
+
+            /* to set variable */
+
+            --color: blue;     /*to set variable first we have to write -- two sunbrection sign then set your name of your varible then set  what value you want to set in that variable */
+            --marginvalue: 2px;
+            width: 200px;
+            height: 200px;
+            background-color:var(--color);  /* to use the variable you have to set first var() then inside the var set the varible's name  */
+            border: 2px solid red;
+            margin: var(--marginvalue);
+        }
+
+        .container{
+            display: flex;
+            --color: blue;   /*this is the example  */
+            background-color: var(--color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "using_pug_as_html",
+  "version": "1.0.0",
+  "description": "this how we can use pug as we html normalu",
+  "main": "pug_tutu.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pug",
+    "as",
+    "html"
+  ],
+  "author": "Arif alam",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "pug": "^3.0.2"
+  }
+}

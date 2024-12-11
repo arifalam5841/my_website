@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random items</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Han+Sans&family=Cabin+Sketch&family=Concert+One&family=Cuprum&family=Dosis&family=Fredoka&family=Indie+Flower&family=Inspiration&family=Josefin+Sans:wght@300&family=M+PLUS+Rounded+1c&family=Monoton&family=Palette+Mosaic&family=Roboto&family=Supermercado+One&family=Titan+One&family=Ubuntu:wght@300&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #random_num_sec {
+            display: flex;
+            align-items: center;
+            margin: 50px;
+        }
+
+        span {
+            margin: 0 10px;
+        }
+
+        /* question box style-------------------- */
+
+        #question_box {
+            flex-direction: column;
+            width: 300px;
+            background-color: rgb(102, 188, 194);
+            margin: 0 auto;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: all 0.5s;
+        }
+
+        #question_box #question {
+            font-family: 'Dosis', sans-serif;
+            font-weight: 900;
+            font-size: 18px;
+            /* color: whiteS; */
+        }
+
+        #question_box #next_btn {
+            margin-top: 10px;
+            border: none;
+            background-color: white;
+            color: rgb(102, 188, 194);
+            padding: 5px 10px;
+            border-radius: 2px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        #question_box h1 {
+            color: white;
+            font-family: 'Varela Round', sans-serif;
+            margin-bottom: 10px;
+            background-color: rgb(66, 117, 121);
+            padding: 5px 10px;
+        }
+
+        #question_box div {
+            margin: 10px;
+        }
+
+        /* ----------------- second project style ------------------- */
+
+        #clothes_cont {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: fit-content;
+            padding: 10px;
+            border: 1px solid black;
+            margin: 20px;
+        }
+
+        #clothes_cont div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+            margin-bottom:10px ;
+        }
+        #clothes_cont div img {
+            width: 100px;
+            
+        }
+        #clothes_cont div p {
+        background-color: rgb(93, 190, 122);
+        color: white;
+
+        }
+
+     
+    </style>
+</head>
+
+<body>
+    <div id="random_num_sec">
+        <span id="num_cont"></span>
+        <button onclick="random_num()">Click</button>
+    </div>
+
+
+
+
+    <!-- random questions ---------------- -->
+
+    <section id="question_box">
+        <h1>| Quize</h1>
+        <div>
+            <p id="question">What is your favoirate food ?</p>
+            <button id="next_btn">NEXT</button>
+        </div>
+    </section>
+
+
+
+    <!-- // --------------------second project ------------------------// -->
+
+    <section id="clothes_cont">
+        <div>
+            <img src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F1e%2F86%2F1e86c77fb86afc19daad9acb5b39470e7bc5ca1f.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_tshirtstanks_shortsleeve%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]"
+                alt="">
+            <p>$1000</p>
+        </div>
+        
+    </section>
+
+
+
+</body>
+<script>
+    let nums_cont = document.getElementById("num_cont")
+    let nums = [1, 2, 3, 4, 5, 6]
+
+    function random_num() {
+        // geting the random index
+        random_index = Math.floor(Math.random() * nums.length)
+
+        //get the "nums" array index a random num
+        index = nums[random_index]
+
+        // put the random num in a html element
+        nums_cont.innerHTML = index
+    }
+
+
+
+
+
+    //----------------first project -----------------------------
+
+    let questions = [
+        "Where is Burj khalifa ?",
+        "If you could live anywhere, where would it be?",
+        "If you are a Superhero , What will you do",
+        "What is your biggest fear?",
+        "What is your favorite family vacation?",
+        "What would you change about yourself if you could?",
+        "What really makes you angry?",
+        "What's your favorite indoor/outdoor activity?",
+        "What was your favorite food when you were a child?"
+    ]
+
+    let questions_box = document.getElementById("question")
+
+    let next_btn = document.getElementById("next_btn")
+
+    next_btn.addEventListener("click", function () {
+        random_index = Math.floor(Math.random() * questions.length)
+        question_index = questions[random_index]
+
+        questions_box.innerHTML = question_index
+    })
+
+
+
+
+
+// ---------------- second project -----------------
+
+let clothes = [
+    {image : "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F1e%2F86%2F1e86c77fb86afc19daad9acb5b39470e7bc5ca1f.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_tshirtstanks_shortsleeve%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]", price : "500"},
+    {image : "http://cdn.shopify.com/s/files/1/0420/7073/7058/collections/002.jpg?v=1642751140", price : "822"},
+    {image : "https://www.collinsdictionary.com/images/full/tshirt_204029461_1000.jpg", price : "1400"},
+    {image : "https://5.imimg.com/data5/YU/MT/NS/SELLER-3664875/mens-shirts-500x500.jpg", price : "4000"},
+    {image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1FfvN6No6wDmuH9mfxefyChnfQCMSYfd6Fw&usqp=CAU", price : "1000"},
+    {image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb2PO78NGfsXdEquTFsYqIeXE6oNY0ASSC0w&usqp=CAU", price : "8000"},
+]
+
+let clothes_cont = document.getElementById("clothes_cont")
+
+
+function random_clothes(){
+    random_index = Math.floor(Math.random() * clothes.length)
+   
+
+    let item = document.createElement("div")
+    let clothe_img = document.createElement("img")
+    let price_box = document.createElement("p")
+    
+    item.append(clothe_img,price_box)
+
+    clothe_img.src = clothes[random_index].image
+    price_box.textContent = "$" + clothes[random_index].price
+    
+    clothes_cont.append(item)
+    
+}
+
+
+
+for(i=0; i<clothes.length; i++){
+    random_clothes()
+}
+</script>
+
+</html>

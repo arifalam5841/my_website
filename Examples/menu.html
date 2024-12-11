@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Roboto:wght@100&family=Ubuntu&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #menucolum{
+            display: inline-block;
+            flex-direction: column;
+            width: 230px;
+            align-items: center;
+
+
+        }
+        .menumainitem{
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            height: 40px;
+            background-color: #ffffff;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+        }
+        .menumainitem img{
+            height: 18px;
+            margin: 0 0 0  15px;
+        }
+        .menumainitem h6{
+            font-size: 13px;
+            margin: 8px 84px 6px 25px;
+         font-family:    ' Bold', sans-serif;
+         font-weight: 200;
+        }
+
+        .menumainitem:hover{
+            background-color: #fafafa;
+
+        }
+        .menumainitem:active{
+            background-color: #eeeeee;
+         font-weight: 900;
+         font-size: 14px;
+
+
+
+        }
+        
+        /* , 'Arial Narrow Bold' , sans-serif*/
+    </style>
+</head>
+<body>
+    <div id="menucolum">
+        <div class="menumainitem">
+            <img src="YTimg/home.png" alt="">
+            <h6>Home</h6>
+        </div>
+        <div class="menumainitem" id="compass">
+            <img src="YTimg/compass.png" alt="">
+            <h6>Explore</h6>
+        </div>
+    </div>
+    
+</body>
+</html>

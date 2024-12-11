@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="stylesheetnews.css">
+    <script src="newsjs.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="sgininsec">
+        <img src="img/global.png" alt="image" class="mainlogo">
+        <h1 class="mainhead">News_On</h1>
+
+        <div class="socialimg">
+            <h4 class="signin">Sign in</h4>
+            <img src="img/fb.png" alt="image" class="face">
+            <img src="img/insta.png" alt="image">
+            <img src="img/whatsapp.png" alt="image">
+            <img src="img/twitter.png" alt="image">
+            <img src="img/num.png" alt="image">
+        </div>
+
+    </div>
+
+    <div class="bar"></div>
+
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Page</a></li>
+                <li><a href="#">Science</a></li>
+                <li><a href="#">Techonology</a></li>
+                <li><a href="#">Beuty</a></li>
+                <li><a href="#">Health</a></li>
+                <li><a href="#">Art & Culture</a></li>
+                <li><a href="#">Opinion</a></li>
+                <li><a href="#">Video</a></li>
+                <li><a href="#">Space</a></li>
+            </ul>
+        </nav>
+        <input type="text" placeholder="Search.." class="searchbar" id="sbar">
+        <img src="img/searchicon.png" alt="image" class="searchimg" id="searchbtn">
+    </div>
+    
+    <div class="bar" id="bar2"></div>
+
+    <div class="container">
+        <div class="mainnews">
+            <img class="mainimage" src="img/james.jpg" alt="Image">
+            <h4>Techonology</h4>
+            <h1>Needs to Rename James Webb<br>Space Telescope</h1>
+            <h5>by peter parker</h5>
+
+        </div>
+
+        <div class="sidenews">
+
+            <div class="rows">
+                <img src="img/vr.PNG" alt="image" class="rowimg">
+                <div class="discription">
+                    <h4 class="head4">Techonology</h4>
+                    <h1 class="head1">These striking photo capture the <br>future of human flight </h1>
+                    <h5 class="head5">by peter parker</h5>
+                </div>
+            </div>
+
+            <div class="rows">
+                <img src="img/codes.PNG" alt="image" class="rowimg">
+                <div class="discription">
+                    <h4 class="head4">Techonology</h4>
+                    <h1 class="head1">Exploring the origins of punk<br>across America with kid Karate </h1>
+                    <h5 class="head5">by peter parker</h5>
+                </div>
+            </div>
+
+            <div class="rows">
+                <img src="img/massas.PNG" alt="image" class="rowimg" id="masas">
+                <div class="discription">
+                    <h4 class="head4">Techonology</h4>
+                    <h1 class="head1">The world's first fitness influencer was a <br>Victorian Strongman</h1>
+                    <h5 class="head5">by peter parker</h5>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div id="bar3"></div>
+
+
+    <div class="titlesec">
+        <h3>Art &#949; Culture</h3>
+        <button type="button"><strong>see all</strong></button>
+    </div>
+    <!-- <h1>Art &#949; Culture</h1>
+<button type="button"><strong>see all</strong></button> -->
+
+    <div class="secondarycontainer">
+        <div class="colum">
+            <img src="img/girl.PNG" alt="image" class="columimg">
+            <h4 class="columh4">Health</h4>
+            <h1 class="columh1">Substituing 'follow your<br>passion' with 'find your <br>goal</h1>
+            <h5 class="columh5">by peter parker</h5>
+        </div>
+
+        <div class="colum">
+            <img src="img/hokey.PNG" alt="image" class="columimg">
+            <h4 class="columh4">Culture</h4>
+            <h1 class="columh1">Substituing 'follow your<br>passion' with 'find your <br>goal</h1>
+            <h5 class="columh5">by peter parker</h5>
+        </div>
+
+        <div class="colum">
+            <img src="img/video.PNG" alt="image" class="columimg">
+            <h4 class="columh4">Videos</h4>
+            <h1 class="columh1">Substituing 'follow your<br>passion' with 'find your <br>goal</h1>
+            <h5 class="columh5">by peter parker</h5>
+        </div>
+
+        <div class="add">
+            <div class="addimg">
+                <img src="img/oil.PNG" alt="">
+                <img src="img/rice.PNG" alt="">
+            </div>
+
+            <H4>In-Depth on<br>optic'ss<br>content<br>creation<br>pipeline</H4>
+            <button type="button"  >X</button>
+            <input type="button" value="Visit our shop">
+        </div>
+
+    </div>
+
+   
+</body>
+<script>
+   let searchbtn = document.getElementById("searchbtn")
+   let sbar = document.getElementById("sbar")
+   searchbtn.addEventListener('click',function run(){
+       if(sbar.style.right == "-400px"){
+        sbar.style.right = "150px"
+       }
+
+       else{
+        sbar.style.right ="-400px"
+       }
+   })
+
+</script>
+</html>

@@ -1,0 +1,99 @@
+extends base.pug
+
+block title 
+      title Foodies
+block style_files 
+      style 
+           include ../foodies_frontend_files/home.css   
+
+block content
+      nav#navbar
+        div
+          img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABMElEQVRIie2SO07DQBRFr2lonIogBYVABUKyyC5gBdTULACxCiSkrIMNRJQRi0iBCxp6oIHmUDCKBuM3HyeiQL7NvBm/e898LPWSBAyB2tUl8AyUbl4DuxH/NvAILHLBZwCurvhW5eYA5xH/jevD6tky1k+9euLGfW+tCkBLSdehjYXAfvA4ByzpSlLwKULgQ6+eNEZJOghkXsagIbB/urar9uuVgKl+PlM2eM8FHXlBU+DY1eNWl3SRAjUFvBHWq+F7aDZaDOvET5G91cb6ScQXBd9HfNb3nVRwq4ABsDSueQkMDN8vdYGPgHkjZw6MAp71wW1hCb0v6/5cXTXbWFLmiQvgLsVTpIBXzUUR7U/1bPqqk9WDe3AP/lPwpxs/MnKjnhTwraR3N6aqi+ef6wtw4kQo3z9TTgAAAABJRU5ErkJggg==", alt="")
+          //- img(src="", alt="")
+          h1 Foodies
+        span#home-restaurants 
+          button#home_btn Home   
+          button#restrns_btn Resautrants   
+        ul
+          li #[img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAA6ElEQVQ4jc3UsUpDMRTG8V9bd5fqA3Tpcziog0sHH8bdsYKbII4OFVdpheqkvoK2gpMubuIi6KAdcksxVO/NvR36QSDJSf45Xw4cFqwGWjjCbra+rwKs4yebN3GGdhVgDH/FXlXIVN+4xE4V4Eq0HqCH8xKsU1zEm6v4Ev41dRzw2zK8465EdnA9Dwj9ErBP3P4VbEu3ezW9PC/DRzwlZvgvkFDtFA3zDmwobvcFtTxgDYf4yIE9YzvRTZoaObF9wf6NWRMhdKiuUINx0ce2zKxtRrGTbP+tKAzWMcID1qJYJ4MdpwCXQxNUQ1BQ0H4wXwAAAABJRU5ErkJggg==", alt="")] #[a(href="/") Oders]
+          li  #[img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAnUlEQVRIie2T2wmDQBBFj8EKDLEL9cMG7EFNJSkjzZkyItqC/ihKFN2HLAbnwMAw7N57GXZBEIQTUAKFa9MY6IaKTARuhsbBrL+7NLbmesa+wpkEeKzMRtIVnRqoLHLxZHq9ulVuCe+turMIvXnXUxCIgfBnlgDvoX+xXOsX+Kik0yVjWmlmInC97/R3xu2sb44IokMB5K5NBUFY0APsYB9AitdJzgAAAABJRU5ErkJggg==", alt="")]  #[a(href="/") cart]
+          li #[img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAACQElEQVQ4jY2UQUhUURSGv/PemKMzkkZoU4sW0SKIFsGMgZXgzKZFKta4bGfYIrRNtChECokWluhCkiAkKAKzaBcZSBqo0KKgTbQQYiZLkpg36TTz5rRQxzfzRn1ndTj897v/uffcCx5C43FT43HTi9bnRfR3ZfFBPi+VwOXdtFKumI5FhlEVFV4qclqUPgAV+gWdEaUdEQ28nb/qCWhFIwkgtIuZpeDU/IHSouFyFw2HPcAAGja05R2mY5FhVS44YVJbB7kcaqV2AidFmNhsf8uhiuGE+c614r83gn9oDPPEyfV2jhxFAsFSYAjVgrECUJVXTpWvOUZmcIDss3HMpmakqorKG/1Q6XdZVIzC2i0gnCkS/VrC19SMeaoJ/ZGg4lIXudcv0N/LbqBydjMXjcdNa2VxRJRup0iCNfjaOyFtYX/5zJ4rvaxd6wbNu4AbKx4H7KqubQdbrRTZJ49ADPz3R/k3OkRFRydUB8hNPt/2ogqHmWppvC2iN0sFFa0XkdBBdPknxrHjaDKB7K0lMzjgaFnu1LybuwWOMxRDZ1y77duP73wH2fExpD6EPfeB3Ow0Ut9Q6ur9Zl5oWfK0aem7yayRuduHrq5iz06zp+c62DbZiafFQKENeFMExMBGSeKYRU1b6LevANifPrLW0wWmD/2z4uQlka2bcr3ldDQcVmS+tF4uBI0EphYWimtlwopGvgOHdsZpIji14NKUHRsRJr18X166KBvpWGQ41dL40IvW049dXXe4dz2b21X7Hzni0WCp2eHBAAAAAElFTkSuQmCC", alt="")] #[a(href="/")  Offers]
+          li #[img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAABVklEQVQ4ja3UO0tcQRjG8Z+yLAgiijdw0WIbLYTtU0SSrxBIsItdPkJaCysrIUVS5AtYKisEC0uRQCDptrBJ4mpEkIBEEW/FmV2GydmrPjCc4b385513Zg5PrIEWthKKHXKvcYT7dkGvcRKCuhl1vGoFq+C2B1hj3GAxD/i5D1hjfMwD/nkE8CiFFUPp/QJvUIDBALzGQV7ZXeprgDaBsJsE/cYb/Ipsx3gbvrG+NCaFxHGANdxhD/+wjZdh8T1cYBMvZLdiNQakwMsASG3VHNtOmL+PHYM6azRZeBpljOUFtwNW8A3n+CtrxYist4f4kZeUbrmhYWxhHytYwCfZYZSC/7wX4DNMyE70Ct8xj2V8wGmrbcVbrmNW9reZCUlXkf9nsMcawJzopcQVVrGODZwFXznyTya2IbzDuP9vQVNLqOn+ydXwPC05T1OyxrfThTa9fDI9AK3Bi4AAgLoSAAAAAElFTkSuQmCC", alt="")] #[a(href="/")  Own Restaurant ]
+          
+        span#profile_section
+          button#log-in-btn Log in 
+          button#signin-btn Sign in 
+      
+      //- div#home-restaurants
+      //-   button#home_btn Home
+      //-   button#restrns_btn Restaurants
+      
+      
+      nav#food_category_nav 
+        span  Cartegory &#x027E9;
+        //- span  Cartegory 
+        div 
+          a(href="/")  All 
+          a(href="/")  Indian 
+          a(href="/")  Chineese 
+          a(href="/")  Italian 
+          a(href="/")  Non-Veg
+          a(href="/")  Veg
+          a(href="/")  Paneer
+          a(href="/")  chicken
+          a(href="/")  Meat
+          a(href="/")  Cold drinks
+          a(href="/")  Desert
+
+      //- banner style ----------------------
+      section#banners_container
+            section.banners#banner1
+                  section.discription 
+                      span.offer_container 
+                      div 
+                        h1.first_head PIZZA ! PIZZA ! PIZZA !!
+                        h3.second_head don't miss a Slice get pizza at only #[i  -/$20]
+                        p.restaurant_name Aysha Restaurant
+                      span.btns_cont   
+                        a.order_btn(href="/") Order now
+                        a.second_odering_btn(href="/") see more 
+                  img.main_img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3zmE9LbK9tNdtauY358uBg6ibupq-mZIrdQ&usqp=CAU", alt="")       
+                      
+
+  
+      //- ----------------   MAIN SECTION   ------------------- -//
+
+      section#primery_items_container
+
+            //- div#item_container
+            //-    div#item_img_container 
+            //-      img#item_image(src="https://post.healthline.com/wp-content/uploads/2018/04/steak-meat-1200x628-facebook-1200x628.jpg", alt="")
+            //-    div#discription_box
+            //-      div#restrnt_food_name
+            //-        span#head_addbtn 
+            //-           h3 Aysha restaurant
+            //-           button#add-to-cart #[img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAABmJLR0QA/wD/AP+gvaeTAAAAgklEQVQ4je2UsQ3CMBBFnxEzmIYMkDpZh+nYhgyQAdKxxKOxJVIYHSJNgNecZX09nXSng69Czeqk5kj+EPR2wFjqZtK3+Eu351gf6gk4N3J9rWrLtaSU7qufsoefMFVXepJm2nvYA1fgAszhTl+hDqWbIZLfz/R/XBqi3NNb9J7uhwc2cnFktBtsUQAAAABJRU5ErkJggg==", alt="")]
+            //-        span#food_category_section
+            //-            i   
+            //-            h5 non-veg
+            //-            //- h5 #[i] non-veg 
+            //-        h5 chicken tikka 
+            //-      div#rate_qty_rate
+            //-         span#rating_box
+            //-            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAABmJLR0QA/wD/AP+gvaeTAAABDklEQVQokX2Qr0/DUBDHP1fahAkCqIGrIOC6JTUF3DKNGSFhYDBo/gUcfqropigUkgRHsGMJDk/mmIL94B2iZS30jTP37nv3ubt3YDFNg5amwb2mQcuWd20i6BlIG+UNePiblUp5HHqsTIfAOvCO+1WXo5dJucapDFmdtHMAYI3ZUmVF0ZvGFarnJW0ZqJXiD+CzIOTaxaiPzDvbrPariVHfoTs4RrkApv+AADOUS7ydk/khNGnu45hboG4BhhinI6f9Rygf4rX/BGoWTNEsn1kBbTf2QDYXQBtsNXerENop3vIMHOQ+rzSHFkh8QEF7jEeRdAd3jEcRaC/Txa8uHYeeJkFk/VASRBqH3k/8Dc2BUXcEM3OHAAAAAElFTkSuQmCC", alt="")
+            //-            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAABmJLR0QA/wD/AP+gvaeTAAABDklEQVQokX2Qr0/DUBDHP1fahAkCqIGrIOC6JTUF3DKNGSFhYDBo/gUcfqropigUkgRHsGMJDk/mmIL94B2iZS30jTP37nv3ubt3YDFNg5amwb2mQcuWd20i6BlIG+UNePiblUp5HHqsTIfAOvCO+1WXo5dJucapDFmdtHMAYI3ZUmVF0ZvGFarnJW0ZqJXiD+CzIOTaxaiPzDvbrPariVHfoTs4RrkApv+AADOUS7ydk/khNGnu45hboG4BhhinI6f9Rygf4rX/BGoWTNEsn1kBbTf2QDYXQBtsNXerENop3vIMHOQ+rzSHFkh8QEF7jEeRdAd3jEcRaC/Txa8uHYeeJkFk/VASRBqH3k/8Dc2BUXcEM3OHAAAAAElFTkSuQmCC", alt="")
+            //-            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAABmJLR0QA/wD/AP+gvaeTAAABDklEQVQokX2Qr0/DUBDHP1fahAkCqIGrIOC6JTUF3DKNGSFhYDBo/gUcfqropigUkgRHsGMJDk/mmIL94B2iZS30jTP37nv3ubt3YDFNg5amwb2mQcuWd20i6BlIG+UNePiblUp5HHqsTIfAOvCO+1WXo5dJucapDFmdtHMAYI3ZUmVF0ZvGFarnJW0ZqJXiD+CzIOTaxaiPzDvbrPariVHfoTs4RrkApv+AADOUS7ydk/khNGnu45hboG4BhhinI6f9Rygf4rX/BGoWTNEsn1kBbTf2QDYXQBtsNXerENop3vIMHOQ+rzSHFkh8QEF7jEeRdAd3jEcRaC/Txa8uHYeeJkFk/VASRBqH3k/8Dc2BUXcEM3OHAAAAAElFTkSuQmCC", alt="")
+            //-            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAABmJLR0QA/wD/AP+gvaeTAAABDklEQVQokX2Qr0/DUBDHP1fahAkCqIGrIOC6JTUF3DKNGSFhYDBo/gUcfqropigUkgRHsGMJDk/mmIL94B2iZS30jTP37nv3ubt3YDFNg5amwb2mQcuWd20i6BlIG+UNePiblUp5HHqsTIfAOvCO+1WXo5dJucapDFmdtHMAYI3ZUmVF0ZvGFarnJW0ZqJXiD+CzIOTaxaiPzDvbrPariVHfoTs4RrkApv+AADOUS7ydk/khNGnu45hboG4BhhinI6f9Rygf4rX/BGoWTNEsn1kBbTf2QDYXQBtsNXerENop3vIMHOQ+rzSHFkh8QEF7jEeRdAd3jEcRaC/Txa8uHYeeJkFk/VASRBqH3k/8Dc2BUXcEM3OHAAAAAElFTkSuQmCC", alt="")
+            //-            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAABmJLR0QA/wD/AP+gvaeTAAABDklEQVQokX2Qr0/DUBDHP1fahAkCqIGrIOC6JTUF3DKNGSFhYDBo/gUcfqropigUkgRHsGMJDk/mmIL94B2iZS30jTP37nv3ubt3YDFNg5amwb2mQcuWd20i6BlIG+UNePiblUp5HHqsTIfAOvCO+1WXo5dJucapDFmdtHMAYI3ZUmVF0ZvGFarnJW0ZqJXiD+CzIOTaxaiPzDvbrPariVHfoTs4RrkApv+AADOUS7ydk/khNGnu45hboG4BhhinI6f9Rygf4rX/BGoWTNEsn1kBbTf2QDYXQBtsNXerENop3vIMHOQ+rzSHFkh8QEF7jEeRdAd3jEcRaC/Txa8uHYeeJkFk/VASRBqH3k/8Dc2BUXcEM3OHAAAAAElFTkSuQmCC", alt="")
+            //-            //-  img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAA00lEQVQ4jbWQPWoCYRRFz81MIEU6iQhWQQRBiKROqjRWKVMYwRVY2ttlAe5AgwlxFdlCYpMl2LmAmLkWDuIPwflGvN2De8733genjN8a94c6Z//Ck6cIeZRbwOLnEXOdX2B1D8EAMYAn9Uv+olsSXSGXEGXMQ2YBv1Ef0UNOX8+CrpKe4BfwZ3ZsR6D2dE6cNDGvoQJtDjbi/WYMtNaF52/tUbsbrMvC4IuQDbYENgLd5Rbw0agCxXSaIXXCBCQVYIEZEJ/X1PoK+1QbeVgrBEHHZgkRAjJ5EgLWMgAAAABJRU5ErkJggg==", alt="")
+            //-         span.partition_line |
+            //-         span Qty - 1
+            //-         span.partition_line |
+            //-         span $ 100 
+
+
+
+block script_files
+      script  
+           include ../foodies_frontend_files/home.js  

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling event</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+
+body{
+    height: 200vh;
+    width: 100%;
+}
+
+        #nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+            background-color: cadetblue;
+            color: white;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            right: 0;
+            transition-duration: 0.5s;
+            transition-property: all;
+        }
+
+        #nav ul{
+            display: flex;
+            text-decoration: none;
+            padding: 0 10px;
+
+            
+        }
+        #nav ul li{
+                list-style: none;    
+                padding:10px; 
+                font-size: 16px;  
+                    
+
+        }
+        #nav h2{
+                margin: 0 0 0 50px;
+                    
+
+        }
+    </style>
+</head>
+<body>
+
+    <div id="nav">
+        
+<h2>Scroll me</h2>
+        <ul>
+            <li>Home</li>
+            <li>More</li>
+            <li>About us</li>
+            <li>Oders</li>
+            <li>Others</li>
+        </ul>
+    </div>
+</body>
+<script>
+    // scroll event
+
+    window.addEventListener("scroll", function(){
+        var nav = document.getElementById("nav");
+       if(window.scrollY > 50){  
+           nav.style.top = "-50px"
+      
+
+       }
+  
+  
+       else{
+        nav.style.top = "0px"
+       
+
+
+       }
+    })
+</script>
+</html>

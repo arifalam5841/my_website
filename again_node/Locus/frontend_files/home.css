@@ -1,0 +1,662 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Quicksand&family=Red+Hat+Mono:wght@600&family=Roboto:wght@300;900&family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 00;
+    padding: 00;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid gainsboro;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
+    z-index: 22000;
+    width: 100vw;
+}
+
+#navbar #logo {
+    margin-right: 20px;
+}
+
+#navbar #logo_container img {
+    width: 160px;
+    padding: 0  20px;
+}
+
+.flexed {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+#navbar #navigaters_container {
+    display: flex;
+    align-items: center;
+
+}
+
+#navbar #navigaters_container #menu_icon {
+    display: none;
+
+}
+
+#navbar #navigaters_container ul li {
+    margin: 0 15px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+#navbar #navigaters_container ul li img {
+    margin: 0 5px;
+    cursor: pointer;
+
+
+}
+
+#navbar #navigaters_container ul {
+    margin-right: 50px;
+
+
+}
+
+#navbar #navigaters_container ul li a {
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
+    font-weight: 600;
+    transition: all 0.2s;
+    /* display: flex;
+   align-items: center;
+   flex-direction: row; */
+}
+
+#navbar #navigaters_container ul li h3{
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
+    font-weight: 600;
+    transition: all 0.2s;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#navbar #navigaters_container ul li h3:hover{
+    font-size: 110%;
+}
+
+#navbar #navigaters_container ul #menu_cut_bnt {
+    display: none;
+}
+
+#navbar #navigaters_container ul li a:hover {
+    font-size: 110%;
+}
+
+/* courses options --------------- */
+
+#courses_options {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 150px 0 0 0;
+    border: 1px solid ghostwhite;
+    box-shadow: 1px 1px 5px gainsboro;
+    /* padding: 5px; */
+    border-radius: 5px;
+    border-bottom: 2px solid rgb(100, 176, 246);
+    display: none;
+}
+
+
+#courses_options p {
+    font-size: 15px;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+
+
+
+
+/* banner design */
+
+#banner_photos_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+
+}
+
+
+
+
+
+#banner_photos_container #banner {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    /* background-color: red; */
+    width: 58%;
+
+
+}
+
+#banner_photos_container #banner::-webkit-scrollbar {
+    display: none;
+
+}
+
+#banner_photos_container #banner img {
+    width: 100%;
+    margin: 10px;
+    border-radius: 10px;
+    scroll-snap-align: center;
+
+
+}
+
+#img_dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.dots {
+    padding: 3px;
+    background-color: black;
+    border-radius: 10px;
+    margin: 5px;
+
+
+}
+
+
+/* body--------------- */
+
+/* about us section */
+
+#aboutUs_addimssionForm {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    /* padding-left: 30px; */
+
+}
+
+#about_us_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(82, 175, 175);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px 10px;
+    width: 100%;
+    /* margin-left: 30px; */
+}
+
+
+#about_us_section h1 {
+    font-family: 'Red Hat Mono', monospace;
+    font-weight: 900;
+    font-size: 35px;
+    color: rgb(23, 68, 105);
+
+}
+
+#about_us_section a {
+    background-color: rgb(231, 79, 79);
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 10px 0;
+
+}
+
+#about_us_section p {
+    text-align: center;
+    margin: 10px 0;
+    /* color: white; */
+    font-weight: 500;
+    padding: 0 100px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* ADDIMISSION SECTION STYLE  */
+
+#addmission_section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    /* margin-left: 20px; */
+
+}
+
+#addmission_section h1 {
+    margin: 10px 0 10px 30px;
+    color: rgb(23, 68, 105);
+    display: flex;
+    align-items: center;
+    font-family: 'Red Hat Mono', monospace;
+
+}
+
+#addmission_section #addimission_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+    background-color: rgb(255, 255, 255);
+    margin: 10px 30px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgb(230, 230, 230);
+    /* border: 1px solid black; */
+
+}
+
+#addmission_section #addimission_form div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+#addmission_section #addimission_form input {
+    width: 100%;
+    padding: 5px;
+    margin: 3px 3px 3px 0;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: rgb(243, 243, 243);
+
+
+}
+
+#addmission_section #addimission_form input:focus {
+    border: 1px solid black;
+}
+
+#addmission_section #addimission_form .selects {
+    border: none;
+    outline: none;
+    padding: 3px 10px;
+    border: 0.5px solid black;
+    width: 100%;
+    margin: 5px;
+
+
+}
+
+#addmission_section #addimission_form #submit {
+    background-color: rgb(147, 221, 147);
+    color: white;
+    cursor: pointer;
+}
+
+/* what_makes_us_unique_section   ---------------------*/
+
+#what_makes_us_unique_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+    /* background-color: red; */
+}
+
+#what_makes_us_unique_section #heading_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    /* padding: 10px 20px; */
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    color: #422e59;
+    font-size: 18px;
+}
+
+#what_makes_us_unique_section #heading_container span {
+    height: 3px;
+    width: 100px;
+    background-color: rgb(232, 232, 77);
+    /* margin: 10px; */
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+#what_makes_us_unique_section #blocks_container {
+    display: flex;
+    /* align-items: center; */
+    /* padding: 20px; */
+    /* position: relative; */
+    /* justify-content: center; */
+
+
+}
+
+#what_makes_us_unique_section .blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 20px;
+    /* padding: 20px; */
+    text-align: center;
+    /* position: fixed; */
+    /* top: 10px; */
+}
+
+#what_makes_us_unique_section .blocks p {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#what_makes_us_unique_section .blocks img {
+    background-color: #482c2c;
+    padding: 10px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+#what_makes_us_unique_section #book img {
+    background-color: #FC7174;
+
+}
+
+#what_makes_us_unique_section #book ul li {
+    text-align: left;
+
+}
+
+#what_makes_us_unique_section #book ul {
+    align-items: flex-start;
+    padding: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#what_makes_us_unique_section #note img {
+    background-color: #68B0AB;
+
+}
+
+#what_makes_us_unique_section #doubt img {
+    background-color: #006477;
+
+}
+
+#what_makes_us_unique_section .blocks h2 {
+    font-family: 'Quicksand', sans-serif;
+    color: #422e59;
+    padding: 10px;
+    font-weight: 900;
+}
+
+
+
+/* FOOTER -------------------------------- */
+
+#main_footer {
+    display: flex;
+    align-items: center;
+    background-color: #4363B4;
+    width: 100%;
+    justify-content: space-between;
+    /* padding: 10px; */
+}
+
+
+#main_footer #detail_container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 40%;
+}
+
+#main_footer #detail_container .detail_blocks {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+}
+
+
+
+
+#main_footer #detail_container .detail_blocks h3 {
+    margin-bottom: 10px;
+    /* display: none; */
+}
+
+#main_footer #detail_container .detail_blocks span {
+    display: flex;
+    padding: 3px 0;
+    display: flex;
+    align-items: center;
+
+}
+
+#main_footer #detail_container .detail_blocks span img {
+    margin-right: 5px;
+}
+
+#main_footer #location {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15%;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    align-items: center;
+    margin: 10px;
+
+}
+
+#main_footer #location a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: rgb(240, 118, 118);
+    border-radius: 5px;
+    margin-top: 20px;
+    color: white;
+    padding-right: 60px;
+    text-transform: uppercase;
+    transition: 0.3s all;
+}
+
+#main_footer #location span {
+    display: flex;
+    align-items: center;
+}
+
+#main_footer #location span img {
+    margin-right: 5px;
+}
+
+#main_footer #location a:hover {
+    padding-right: 70px;
+}
+
+/*----------------------- media query -------------------------------------------------------*/
+
+/* @media (min-width: 254px) and (max-width: 862px)  { */
+@media (min-width: 254px) and (max-width: 1100px) {
+
+
+
+    #navbar #navigaters_container ul {
+        flex-direction: column;
+        position: fixed;
+        right: -230px;
+        /* right: 0px; */
+        top: 60px;
+        /* background:rgb(87, 138, 197); */
+        background: white;
+        align-items: flex-start;
+        /* padding:10px 0px; */
+        /* border-radius: 5px; */
+        height: 100vh;
+        border: 1px solid gainsboro;
+        padding: 10px 0;
+
+    }
+
+    /* /* 
+    /* } */
+
+    #what_makes_us_unique_section .blocks {
+ 
+    }
+
+    #what_makes_us_unique_section #blocks_container {
+        flex-direction: column;
+
+    }
+
+    #main_footer #detail_container {
+
+        width: 90%;
+    }
+
+    #aboutUs_addimssionForm {
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        /* justify-content: space-around; */
+
+    }
+
+    #navbar #navigaters_container ul li {
+        padding: 15px 0;
+        /* border: 1px solid black; */
+        display: flex;
+        align-items: center;
+        height: 10px;
+    }
+
+    #navbar #logo_container img {
+        width: 140px;
+        padding: 0 10px;
+    }
+
+    #navbar #navigaters_container ul li a:hover {
+        color: rgb(207, 106, 106);
+    }
+
+    #navbar #navigaters_container ul #menu_cut_bnt {
+        display: inline;
+        position: absolute;
+        margin-left: 110px;
+        cursor: pointer;
+
+    }
+
+    
+
+    #navbar #navigaters_container #menu_icon {
+        display: block;
+        width: 35px;
+        cursor: pointer;
+        margin-right: 30px;
+
+    }
+
+    #about_us_section p {
+        padding: 0 0px;
+
+    }
+
+    #about_us_section {
+        width: auto;
+    }
+
+    #about_us_section #second_line {
+        display: none;
+    }
+
+    #main_footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #what_makes_us_unique_section #blocks_container {
+        align-items: center;
+        
+    }
+    
+
+    #navbar {
+        padding: 10px 15px;
+    }
+
+    #banner_photos_container #banner {
+        width: 85%;
+
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (min-width: 862px) and (max-width: 1100px) {
+
+    body{
+        background-color: red;
+    }
+
+    #banner_photos_container #banner{
+        width: 75%;
+    }
+
+} */

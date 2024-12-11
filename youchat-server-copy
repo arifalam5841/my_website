@@ -1,0 +1,86 @@
+
+// const io = require('socket.io')(500, {
+//   cors: {
+//     origin: '*',
+//   }
+// });
+
+
+
+let express = require('express');
+// let events = require('./routes/events');
+let app = express();
+let server = app.listen(500);
+let fs = require('fs')
+const path = require('path') //" VERY IMPORTAN " , BY USING THIS WE CAN INCULDE ANY 'FILE' WHITOUT READING THAT FILE BY 'fs'
+let io = require('socket.io')(server, {
+    cors: {
+    origin: '*',
+  }
+});
+
+// inculding file without reading file 
+// The 'PUBLIC' is the folder where the css and js folders are the and the index.html also and all should be in that file  
+let home = path.join(__dirname, "../public") // "__dirname" is for just a 'FOLDER' , for a file - "__filename"
+
+// THE THE NAME OF THE HOME PAGE SHOULD BE "index.html" then only it will run
+app.use(express.static(home))
+
+
+app.get("/", (req,res)=>{
+  res.send('helo')
+})
+
+
+
+
+const users = []
+
+io.on('connection', socket => {
+  // LIKE THIS YOU CAN SEND MULTIPLE PARAMS 
+  const id = socket.id
+  socket.on("new-user-joined", (name) => {
+    // console.log(name)
+    socket.emit("appending-all-users", users) // it should be on the top 
+
+    users.push({
+      username : name,
+      id: socket.id
+     })
+
+     console.log(users)
+
+
+    socket.broadcast.emit('user-joined', { names: name, used_s_id: id }) /* name of the params of the both 'socket.on' and 'emit' should be different
+    socket.broadcast.emit('user-joined',{this.users, names : users[len].username, used_s_id : users[len].id}) /* name of the params of the both 'socket.on' and 'emit' should be different
+     */ 
+ 
+  })  
+
+  // socket_id  of the reciver will be in the 'id'
+  socket.on('send', (message, to) => {
+    
+    console.log(message + to)
+    console.log(id)
+    socket.to(to).emit('receive', {message: message, your_id : id }) // we can push the message to the user's msg array list
+ 
+  })
+
+  
+
+
+  // ON DISCONNECT 
+
+  socket.on('disconnect',()=>{       
+    for(let i=0; i < users.length; i++){
+        if(users[i].id === socket.id){
+            users.splice(i,1); 
+        }
+    }
+});
+})
+
+
+// server.listen(500, () => {
+//   console.log('YouChat !!');
+// });

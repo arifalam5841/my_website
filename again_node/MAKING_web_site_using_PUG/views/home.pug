@@ -1,0 +1,58 @@
+//- THIS IS THE HOME PAGE OF THE WEB SITE
+
+//- --------IT IS NOT COMPLERSORY TO WRITE THE CODE IN ORDER LIKE HMTL WE CAN WRITE ANY WHERE
+//- THE BASE FILE WILL PUT THE BLOCKS IN ORDER  --------------//
+
+
+
+//- NOW WE ARE INCLUDING or EXTENDING THE 'base.pug' file which is the base of the web site
+extends base.pug
+
+
+//- now we are giving vlues to the blocks
+//- we can give any value in the blocks it just like a variable
+
+
+
+block style_files 
+      style
+          include ../frontend_files/pug_style.css
+
+//- below one in the block where we are going to write body of this page
+
+block content
+    //- spacing are very import if you are write comment of code also 
+    //- now you can delete the Foodies.pug file becouse now its the home of site and that is 
+    //- useless
+    
+
+    section#changing_img_sec 
+                  img#images(src="", alt="")      
+                  div   
+                    h1#img_text 
+                      p#first_line Welcome to Foodies 
+                      br#secondline
+                      | here is something new
+    
+    h1#heading Order 
+    section#items_section
+                   
+                  div 
+                     img(src="https://www.freepnglogos.com/uploads/food-png/food-grass-fed-beef-foodservice-products-grass-run-farms-4.png ", alt="sorry")
+                     span  
+                          h3 Osso buco
+                          h4 $200
+                          h5 Aysha restaurant 
+                     button Order  
+
+
+block scripts_files 
+      script
+         include ../frontend_files/PUG_frontend.js
+
+//- just like below we given title at the bottom not like html at the top
+//- So we can give values to the block anywhere and we give anything values in that block 
+
+
+block title 
+      title Foodies

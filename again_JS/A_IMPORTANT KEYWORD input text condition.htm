@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input text condition</title>
+
+    <style>
+        div{
+            margin: auto;
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="Enter your name">
+        <button>Set name</button>
+        <h1>Your naem</h1>
+    </div>
+</body>
+
+<script>
+    let input = document.querySelector("input")
+    let btn = document.querySelector("button")
+    let head = document.querySelector("h1")
+   
+     btn.addEventListener("click", function (){
+         head.innerHTML = input.value[0]+input.value[1]+input.value[2]+input.value[3]+"..." //like this you do also
+     })
+
+     console.log(head.innerHTML[0]+head.innerHTML[1]) //l like this you can set the value a elelement in other also
+     input.addEventListener("keyup", function(){ // "keyup" is use manipulate the text of the innput
+         if(input.value.length < 5){
+             btn.disabled = true
+         }
+
+         else{
+            btn.disabled = false
+
+         }
+     })
+
+</script>
+</html>

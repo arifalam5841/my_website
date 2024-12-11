@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corona Update</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="icon"
+        href=data:image/png;base64,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type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #map{
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>    
+</head>
+
+<body>
+    <div id='map'></div>
+
+</body>
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiYXJpZi1hbGFtIiwiYSI6ImNsMTZoNHl3ZzB1OWMzb3F6ZWEwY2l6NnkifQ.ZYMg4e6sAqlChMdZQduMHQ';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/dark-v10', // this is for dark mode
+    // style: 'mapbox://styles/mapbox/streets-v11' //this is for light mode 
+    zoom :1,
+    center : [0,20]
+  });
+</script>
+
+
+<script src="index.js"></script>
+
+</html>

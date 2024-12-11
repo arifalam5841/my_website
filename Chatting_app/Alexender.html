@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHATING APP</title>
+    <!-- the below line to connect the socket.io file to the js file  -->
+    <script defer src="http://localhost:800/socket.io/socket.io.js"></script>
+    <script defer src="Js_files/client.js"></script>
+    <script defer src="Js_files/app.js"></script> 
+    <link rel="stylesheet" href="Css_files/alexender.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@300&family=Open+Sans:wght@500&family=Quicksand&family=Red+Hat+Mono:wght@600&family=Roboto:wght@300;900&family=Source+Sans+Pro&family=Ubuntu:wght@300&family=Varela+Round&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div>
+            <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAAABmJLR0QA/wD/AP+gvaeTAAABOklEQVRYhe3Wu0oDQRSA4U/jrVPURixtRLSxsdPU1j6AjaBPYGWXQjtfQETwCbQXwcLSwlqwsRJEEIsgGIuYOIbsJrvZ7KbIDwszLDPn33N2LgwZ8p+Rlv4CjrGB8RTzfeAaFVTTCJXwgFoGz2kaAVjLSKCG1ySBR4P2XFr7NsynlSiMoUSDPCTK/n7YKm6xkrdEyAS2cCXYh4oqxxJWi5aA6UGQaNIvifDcKBUlcR+0F4uQeMJB0N/uNGAs5t0FLhMKvOERX7/9dewkmSDcVM70nqVlPIs+actxEr0ITKqv/4r6BSfuuG9KtJbjHHv4jghSSynXNTM6Z+BTdhefZibCoO+iM9DgppuvSUrS2u/jLmuJuCXajhdsYla9fEnYxVHCMX3hUIclmrdI5BLNg5MCYkYyVbTA4PEDEaZtJ8BZL6QAAAAASUVORK5CYII=" />
+            <H1>CHATING APP</H1>
+            <p id="user-head-name">Guest</p>
+        </div>
+        <img id="setting_icon"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABP0lEQVRIidWXoU4DQRRFDwVXRAWKgEFUIfkAugj4Cn6BBEPSYElQVGNRlSVFoqohQcEXQIJAF0ICiN0Nsy+b2bdvZkq4yVX73pzJ7M7MXfiH2gOyRQL7wA3wXfgW2E4J7AHnwIcDLf0JXAJrMYEd4BB4rQFKvwFHwEoodBd4UACln4ADC3ATuDIApafAlgbYBc6AeQRo6XkxZtcHHkcESo9dUEeA1xWrYlVlbAnW6Jr8o1stPCB/l0Ga4V+uE0/vsKF3ZgVPFBOfasFtlnqkqLnQDtYGfK+ouUsB1mgpBXgnUk1r8HGkmlo1baehp/e0ode8ndyDf8DvAZJRDQbJwFZ79/GLb1aBevY9/LNrsdQGeRD4CoSqg4CUNfo8AvsWoCtL2FsOhboq4+17DTBJvJXqU73+kgd6qYwF/8JE0Q8y2g9fg/hcBgAAAABJRU5ErkJggg==" />
+    </nav>
+    <div class="container">
+        <div id="messages_container">
+            <!-- <div class="message right"><span>You:</span> Hey how are you !</div> -->
+            <!-- <div class="message left"><span>Max:</span> Yeah, i am fine what about you </div> -->
+            <!-- <div class="user-joined-notification">Arif joined the room</div> -->
+        </div>
+    
+        <form action="#" id="input_section">
+
+            <input type="text" placeholder="Let's chat !" name="messageInp" id="messageInp">
+
+            <button class="btn" type="submit"><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABmJLR0QA/wD/AP+gvaeTAAABsklEQVRIid2VQWsTURSFvzNO066ktv4DV4L+AEFkUhdFNLYrt12IC5UpdSGuhKylgtNYxNClVGghCVKKSNpkoVsFQUELLtyoYJSgUhImc13YiJaGZOIEoWf5OPd97/LefQf2i+SV/BuC85gCGx0rVNPZMHHIybXLh4ZCdwsYBz7KdD9yh+5WM7c/JwYBmCjO+iZb+GO9Aaw4cuY3poKXiUC8StZ16rXnBsf38DyTLBhvfCqsXlht9Q0BSBdnTyMrd3baOzPlQzfMPz1372tfEACv5D8SZLrUfEe27JiCjenc69iQiaJ/xMQrYLiH2gjYFCxsTuXWENYTBCBd8m8B13s54e9NjK3IscXUyMjSk8n5H10hZ9b9g9tNHgtOxAHt6AvS0gFHi+VM8L4jpK1ThbmjrtOaMbgIHI4JiyStR2ZBdTpX7ghpyyvOjUqtB8DZmKAd2dX/08kg7sTd7dpu2k2hWIBYr2tQc/J3J47uYNYN8A3Zw74mfuB/l1fJuqrXXgDH9vD88y/sAqheu7ILkGyeTK5cG2umwrf8SsYPMuWTTka3kQovCd60M74ygIzfP/oJWsHRnQB2MSwAAAAASUVORK5CYII="></button>
+
+        </form>
+    </div>
+<!-- to play audio from the js you have first make a audio just like below and then call it in ths js file -->
+    <audio id="noification" src="notification_sound2.mp3"></audio> 
+</body>
+
+</html>

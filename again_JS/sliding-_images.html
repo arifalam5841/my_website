@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sliding images</title>
+    <style>
+        #container {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            background-color: gainsboro;
+            border-radius: 10px;
+            margin: 100px auto;
+            justify-content: center;
+        }
+
+        #container img {
+            width: 250px;
+            height: 250px;
+        }
+
+        #container #hidden_img {
+            /* display: none; */
+            left: 200px;
+            background-color: black;
+        }
+        #container #apered_img {
+            display: block;
+            left: 0px;
+            background-color: red;
+        }
+
+        #container .image_boxs {
+            position: relative;
+            transition-property: all;
+            transition-duration: 0.5s;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="apered_img" class="image_boxs">
+            <!-- <img src="img/denim.png" alt=""> -->
+        </div>
+        <div id="hidden_img" class="image_boxs">
+            <!-- <img src="img/fan.png" alt=""> -->
+
+        </div>
+    </div>
+</body>
+
+<script>
+    let images_list = ["denim", "pan", "drone", "dress", "diya", "smartphone", "fan"]
+    let apearing_img = document.getElementById('apered_img')
+    let hidding_img = document.getElementById('hidden_img')
+    i = 0
+    function sliding_images() {
+
+        //     let i = 0
+        //     let j = i + 1
+        //    i++
+
+        i++
+
+        j = i + 1
+        if (i >= images_list.length) {
+            i = 0
+        }
+
+
+        apearing_img.innerHTML = `<img src="img/${images_list[i]}.png" alt="">`
+        hidding_img.innerHTML = `<img src="img/${images_list[j]}.png" alt="">`
+
+
+
+            if(apearing_img.style.left == "0px"){
+                apearing_img.style.left = "200px",
+                 apearing_img.style.display = 'none'
+                 
+                hidding_img.style.left = "0px",
+                hidding_img.style.display = 'block'
+                 
+            }
+ 
+    
+            else if(hidding_img.style.left == "0px"){
+                hidding_img.style.left = "200px",
+                 hidding_img.style.display = 'none'
+                 
+                apearing_img.style.left = "0px",
+                apearing_img.style.display = 'block'
+            }
+        
+
+
+    }
+    setInterval(sliding_images, 2000)
+
+
+
+</script>
+
+</html>

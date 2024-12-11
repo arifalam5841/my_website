@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chating section</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=M+PLUS+Rounded+1c&family=Roboto&family=Varela+Round&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        * {
+            padding: 00;
+            margin: 0;
+        }
+
+        #chating_area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 260px;
+            height: 450px;
+            background-color: rgb(202, 202, 202);
+            margin: 50px auto;
+            border-radius: 5px;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        #chating_area #title_bar {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(20, 39, 65);
+            padding: 5px 0;
+        }
+
+        #chating_area #title_bar a {
+            display: flex;
+            align-items: center;
+            /* padding: 0 5px; */
+            justify-content: space-between;
+
+            border-radius: 50px;
+            margin-left: 2px;
+            transition: all 0.2s;
+        }
+
+
+
+        #chating_area #title_bar a img {
+            width: 25px;
+            margin: 0 3px;
+        }
+
+
+        #title_bar a div {
+            width: 30px;
+            height: 30px;
+
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            border-radius: 50%;
+            justify-content: center;
+            padding: 5px;
+            /* background-color: gray; */
+
+
+        }
+
+        #title_bar a div img {
+            /* padding: 5px; */
+            /* border-radius: 50%; */
+            background-color: rgb(148, 148, 148);
+            width: 30px;
+            /* margin: 5px; */
+
+        }
+
+        #title_bar a:hover {
+            background-color: rgb(37, 72, 121);
+        }
+
+        #title_bar div img {
+            width: 20px;
+            padding: 5px;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+
+        #title_bar div img:hover {
+            background-color: gainsboro;
+        }
+
+        #title_bar h3 {
+            margin-right: 80px;
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="chating_area">
+        <div id="title_bar">
+            <a href="chating_application_design.html">
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAAwElEQVRYhe3RoUrDURTH8XMnOibCwDAwbaDJ5Pv4Kj6NWEwGhSXDFlfWZ1OD+AqGj8GTFsTyvxfkfuMp3y+/E9HpdDp/AKd4wKKFfIqNH5a15cdYpfwFZzXlYyxT/lp1fhzhMeXvOK8pP8B9yj9xOaSv7MlHEXEbEddDSiMiSiklImK0dxcRX0PLfwWHeMoXvGHeImKCdUbsMGsRMcU2IzY4aRExywXgGeMWERf4yIib6gEZcYU7TJoEdDqdzr/mG8IDxAUJL29qAAAAAElFTkSuQmCC">
+                <div> <img id="profile_img" src="img/default profile.png" alt=""> </div>
+            </a>
+            <h3 id="user-name-chating-sec">arif</h3>
+            <div>
+                <img id="video"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAA4ElEQVRYhe2VQQ6CMBBFpyzYkHgCVx5D4jHcehZXoNdw60mM1wATD2DiyufC1jSFqsECifZtoDOT/p8OTEUikcg/A2QCpMAWOBGOGtgAqUc4AVZAJbqwL8oW8QVwNAWi3QLMAx5tbk7Cis2AvetQni+BsTQmPFp81esLsB7SwFk/b8AOmNr5IQwAHNwWD2lgCShfXhlxpVSj6FsDr/Y1+SSkaBd6N+BrgV3w8x/h6L/h20FkRnEeUNyM4sqKeUdx6QYDUrSYa1xGqTZRezbpQgUUfHIdjwmQjWogEomIiNwBWmYv2bMpSZYAAAAASUVORK5CYII=">
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAB6ElEQVRYhe3WTYiNURzH8eF5rjE0yRSlTIqiSNmY0dgpCykWdoqVspONkI3ZUexsvCwUeVlMKG+l2ChZMCkbeauxIOPlLmZljI/F/eset1uzmOdcpfnvnt85ne/3ec55zjldXbPVplDiPAb/BbzAZY2qY1Mn4SWuBXwqkejMl8DFBDqUyOSXwK6ATfyBtXyRvBK4FaADLXlnJPA1IEvbtO3WrCO5BMYDsLgl34HJaDueBR6gpwHZ05LfifxCNniA9gXoHRYk+f7I32B+ToECzwN2MslLvIj8VDaBgA3EfE9hS5IP4gd+YXtuiWPxth+xIskPRf4Na3MKFLgbsJdYFPkcjEQ+huU5JXqTeX+Ensh78Djy11iVU6IfHwJ2H92R9+FZ5J+02RlxFANVSKyOtQA3UYu8N6TE4jyMudE2HPn3qiTW4XMMOoJ5kddwOv4MGMVZf1dlEhvwJQa9LdmQsBXvE+ikxtlxPZ7rVUmsjzmHB1iYtHXjIO5hZ2TVn6JYkyzMUfRP07/ApURi5tc7rMSrGHQMG6fpP6R5vTs3Y4EYtA8Pkzkf1uag0tjC69HvKspKBGLwGk7gZwDeYi+WYFmsiYlou4KiMniLyGbNXbNdnckGTyRKjfvEE43Dahw3sC0reLb+i/oNH2RtKtnKD00AAAAASUVORK5CYII=">
+            </div>
+        </div>
+        <div id="sending_text_area">
+            df
+        </div>
+    </section>
+  
+</body>
+<script src="chating_section_script.js"></script>
+</html>

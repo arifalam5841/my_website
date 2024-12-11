@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    title Foodies
+    style
+      include ../frontend_files/pug_style.css
+  body
+    nav#navbar.navs 
+    
+        h1#logo Foodies !!
+        ul 
+            li #[a(href="/output", method="post") Home]
+            li #[a(href="/") Orders]
+            li #[a(href="/") Carts ]
+            li #[a(href="/") Stores]
+
+    section#changing_img_sec 
+                  img#images(src="", alt="")      
+                  div   
+                    h1#img_text 
+                      p#first_line Welcome to Foodies 
+                      br#secondline
+                      | here is something new
+    
+    h1#heading Order 
+    section#items_section
+                   
+                  div 
+                     img(src="https://www.freepnglogos.com/uploads/food-png/food-grass-fed-beef-foodservice-products-grass-run-farms-4.png ", alt="sorry")
+                     span  
+                          h3 Osso buco
+                          h4 $200
+                          h5 Aysha restaurant 
+                     button Order  
+
+
+                     
+  script
+      include ../frontend_files/PUG_frontend.js

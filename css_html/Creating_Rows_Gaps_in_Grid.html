@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Rows & Gaps in Grid</title>
+    <style>
+        .grid{
+            display: grid;
+             grid-template-rows: 1fr 1fr 4fr;  /*it will the set the value to first three items  */
+             grid-auto-rows: 3fr;  /*it will set the value in the rest of the items */
+             grid-template-columns: 2fr 4fr; /* it will set two colums by given value */
+             grid-gap: 1rem;         /* grid gap will  not on fr value */
+        }
+       .box{
+           background-color: red;
+           border: 2px solid black;
+       }
+    </style>
+</head>
+<body>
+
+    <div class="grid">
+        <div class="box">This is grid box-1</div>
+        <div class="box">This is grid box-2</div>
+        <div class="box">This is grid box-3</div>
+        <div class="box">This is grid box-4</div>
+        <div class="box">This is grid box-5</div>
+        <div class="box">This is grid box-6</div>
+        <div class="box">This is grid box-7</div>
+        <div class="box">This is grid box-8</div>
+        <div class="box">This is grid box-9</div>
+        <div class="box">This is grid box-10</div>
+    </div>
+    
+</body>
+</html>

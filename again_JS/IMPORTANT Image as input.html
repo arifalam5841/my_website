@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo editor</title>
+    <style>
+     #display_image{
+  width: 400px;
+  height:  225px;
+  border: 1px solid black;
+  background-position: center;
+   background-size: 100px;     /*we can give in the value "cover" */
+   background-repeat: no-repeat;
+}
+    </style>
+</head>
+<body>
+    <input type="file" id="image_input">
+
+  <div id="display_image"></div>
+
+</body>
+<script>
+
+const image_input = document.querySelector("#image_input");
+var uploaded_image;
+
+image_input.addEventListener('change', function() {
+  const reader = new FileReader();
+  reader.addEventListener('load', () => {
+    uploaded_image = reader.result;
+    document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
+  });
+  reader.readAsDataURL(this.files[0]);
+});
+
+</script>
+</html>

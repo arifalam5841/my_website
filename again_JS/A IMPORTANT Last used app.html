@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last use app</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        #apps_cont {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-row-gap: 10px;
+            grid-column-gap: 10px;
+            width: 200px;
+            height: 300px;
+            background-color: rgb(239, 239, 240);
+            padding: 10px;
+            align-items: center;
+            /* margin: 50px; */
+            border-radius: 5px;
+        }
+
+        #apps_cont div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #apps_cont div img {
+            width: 40px;
+            background-color: rgb(92, 48, 28);
+            border-radius: 10px;
+
+        }
+
+        #apps_cont div p {
+            font-size: 11px;
+            font-family: Roboto, serif;
+            margin-top: 2px;
+        }
+
+        /* last used app container ------------- */
+
+        #last_used_cont {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-row-gap: 10px;
+            grid-column-gap: 10px;
+            width: 200px;
+            height: 300px;
+            background-color: rgb(239, 239, 240);
+            padding: 10px;
+            align-items: center;
+            /* margin: 50px; */
+            border-radius: 5px;
+
+        }
+
+        #appslast_used_cont_cont div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #last_used_cont div img {
+            width: 40px;
+            /* background-color: rgb(92, 48, 28); */
+            border-radius: 10px;
+
+        }
+
+        #last_used_cont div p {
+            font-size: 11px;
+            font-family: Roboto, serif;
+            margin-top: 2px;
+        }
+
+        #main_cont {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin: 50px;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main_cont">
+
+        <div id="apps_cont" class="cont">
+            <!-- <div>
+            <img src="" style="" />
+            <p>Foodies</p> -->
+            <!-- </div> -->
+        </div>
+        <div id="last_used_cont">
+
+        </div>
+    </div>
+</body>
+
+<script>
+    let app_cont = document.getElementById('apps_cont')
+
+    let apps = [
+        { icon: "https://img.icons8.com/doodle/48/000000/hamburger.png", name: "Foodies", bg: "rgb(92, 48, 28)" },
+        { icon: "img/cryptocurrency.png", name: "Cryptorn", bg: "transparent" },
+        { icon: "https://img.icons8.com/color/48/000000/youtube-play.png", name: "Youtube", bg: "transparent" },
+        { icon: "https://img.icons8.com/color/48/000000/google-logo.png", name: "Google", bg: "white" },
+        { icon: "https://img.icons8.com/external-tulpahn-detailed-outline-tulpahn/64/000000/external-game-mobile-user-interface-tulpahn-detailed-outline-tulpahn.png", name: "Games", bg: "transparent" },
+        { icon: "https://img.icons8.com/offices/40/000000/gallery.png", name: "Gallery", bg: "transparent" }
+
+    ]
+
+    for (i = 0; i < apps.length; i++) {
+        let app = document.createElement("div")
+        let app_icon = document.createElement("img")
+        let app_name = document.createElement("p")
+
+        app.append(app_icon, app_name)
+
+        app_icon.src = apps[i].icon
+        app_icon.style.backgroundColor = apps[i].bg
+        app_name.textContent = apps[i].name
+
+
+        app_cont.append(app)
+
+
+        app.dataset.app_index = i
+        app.addEventListener("click", app_click, false)
+
+
+
+    }
+
+
+
+    // -----------making the script of last seen pragram-------------------------- 
+
+    let last_seen_list = [undefined]
+    let last_seen_list_cont = document.getElementById("last_used_cont")
+
+
+    function app_click() {
+        const apps_index = event.currentTarget.dataset.app_index;
+        last_seen_list.push(apps[apps_index])
+
+        if (0 > -1) { // removing the elment 
+            last_seen_list.splice(0, 1);
+        }
+
+        // for (i = 0; i < last_seen_list.length; i++) {
+        //  function last_seen(){
+        // let app = document.createElement("div")
+        // let app_icon = document.createElement("img")
+        // let app_name = document.createElement("p")
+
+
+        // app.append(app_icon, app_name)
+
+        // app_icon.src = apps[apps_index].icon
+        // app_icon.style.backgroundColor = apps[apps_index].bg
+        // app_name.textContent = apps[apps_index].name
+
+
+        // last_seen_list_cont.append(app)
+
+        // }
+        // }
+        //    last_seen()
+
+        let apps_var;
+        for (i = 0; i < last_seen_list.length; i++) {
+            // apps_var += last_seen_list[i] + "<br>"
+            apps_var += `<div> <img  src="${last_seen_list[i].icon}" style="background-color: ${apps[apps_index].bg};"  /><p>${last_seen_list[i].name}</p></div>`
+            if (last_seen_list[i] == undefined) {
+                let a = last_seen_list.indexOf(undefined)
+                if (a > -1) { // removing the elment 
+                    last_seen_list.splice(a, 1);
+                }
+            }
+        }
+
+        last_seen_list_cont.innerHTML = apps_var
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

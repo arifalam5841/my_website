@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays </title>]
+    <style>
+        #famous-persons {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            background-color: gainsboro;
+            border-radius: 10px;
+            padding: 10px;
+            width: fit-content;
+            height: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>search box</h1>
+    <div id="names-container"></div>
+    <button id="search-btn">search</button>
+    <!-- second project ----- below -->
+    <h1>Removeing and adding element in array</h1>
+    <div id="famous-persons"></div>
+    <button id="remove">Remove</button>
+    <button id="add">Add</button>
+
+
+
+</body>
+<script>
+    animals = [' ant', 'bison', 'camel', 'duck', 'elephant'];
+
+    const removed_animals = animals.slice(1, 5) // the firt value if start and second is end between this index will
+    // remain and left will remove
+    console.log(removed_animals)
+
+
+    // impotant - to remove all the element of the array below
+
+    while (animals.length > 0) { // while the animals lenght is > than 0 remove the last elemnt of the array
+        animals.pop();
+    }
+    console.log(animals) // it will print empty array because we have make the array empty above
+
+
+    //-------------------- Filter ---------------------
+
+    const ages = [14, 51, 85, 45, 65, 85, 52, 65] // so this is the array whom we will filter
+    // first methos is filter by a funtion below
+    let filterd_age = ages.filter(small_age) // we use this and in parameter we enter the func name
+    console.log(filterd_age) // loging the filterd array
+    function small_age(ages) { // this the func that will call in the above parameter
+        return ages <= 50   // in this func the number that are less the 50 or equal to 50 is return so in filerted array
+    }  // all the num that are less that 50 will print
+
+
+
+
+    // like this you can filter a string also const
+    let students = ["arif", "ayan", "max", "Sham", "Ram", "ayan", "ayan"]
+    console.log(students[0][2])
+    let filert_names = students.filter(same_name)
+    function same_name(students) { return students == "ayan" }
+    console.log(filert_names)
+    let index_student = students.indexOf("arif") // like this you can find the index of a element in a array
+    console.log(index_student)
+
+    //------------------- A searching funtion project by filert attributes ------------------ 
+
+    let name_box = document.getElementById("names-container")
+    let search_btn = document.getElementById("search-btn")
+    search_btn.addEventListener("click", function () { // the all func will be written in this
+        search_name = prompt("Search name", "search")
+        let names = ""
+        let names_container = ["arif", "arif", "ayan"
+            , "Sham", "alam", "asif", "atif", "rehan", "rehan", "rehan", "ayan", "asif", "rohan", "rohan"
+            , "riya", "aysha"]
+        function name_filtring(names_container) {
+                    // return names_container == search_name
+                    let get_names;
+                    for(i=0; i<names_container.length;i++){
+                    return  names_container[i][0] == search_name[0]
+                  
+                  
+                    }
+           
+         }
+             console.log(names_container[0][0])
+    
+        let searche_names = names_container.filter(name_filtring)
+
+        for (i = 0; i < searche_names.length; i++) {
+            names += searche_names[i] + "<br>"
+        } 
+        name_box.innerHTML = names
+    })
+
+
+
+    // ------------------ second project that will add and remove items from the array --------------------------------
+    //  very impotant
+
+
+    let remove_btn = document.getElementById("remove") // btn
+    // list of element
+    // we have always set the list out side the funtion
+    let persons_list = ["Arif alam", "Elon musk", "Jeff bezos", "Ambani", "Mark zakerburk", "Bill gates", "shahrukh khan", "Salman khan", "steve jobs", "Einstine", "Nikola tesla"]
+
+    let default_list = " "
+    for (i = 0; i < persons_list.length; i++) { // this will defaulty print in the html and then user will remove items 
+        default_list += persons_list[i] + "<br>"
+    }
+    document.getElementById("famous-persons").innerHTML = default_list
+
+    remove_btn.addEventListener("click", function () { // this is the function of the btn and we have write the js in this
+
+
+        let remove_name = prompt('whom you want to remove') // this is a promt 
+        let index_person = persons_list.indexOf(remove_name) // geting the index value of the element that user search
+
+        if (index_person > -1) { // removing the elment 
+            persons_list.splice(index_person, 1);
+        }
+        let person = " "
+
+        for (i = 0; i < persons_list.length; i++) {
+            person += persons_list[i] + "<br>"
+        }
+        document.getElementById("famous-persons").innerHTML = person
+
+
+    })
+
+
+    document.getElementById("add").addEventListener("click", function () { // adding items function.
+
+        let add_items = prompt("Which name you want to add")
+        let added_items = " "
+        persons_list.push(add_items) // it will add the item in the array that the user input
+        for (i = 0; i < persons_list.length; i++) { // this will again log the  added element of the array in the box
+            added_items += persons_list[i] + "<br>"
+        }
+
+        document.getElementById("famous-persons").innerHTML = added_items // loging the added element in the box
+
+
+
+    })
+
+
+
+
+
+
+</script>
+
+</html>

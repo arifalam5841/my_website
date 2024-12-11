@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css positions = static(default,absolute,relative,fixed,sticky */
+        .box{
+            border: 2px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 3px;
+            display: inline-block;
+        }
+        #box3{
+             position: relative;
+             top: 100px;        /*relative position is use to move the element to any direction */
+             right: 10px;
+             bottom: 10px;
+             left: 5px;
+        }
+        #box1{
+            position: absolute;
+            top: 100px;        /*absoluted  position is use to move the element to any direction whitout leaving gap */
+             right: 10px;
+             bottom: 10px;
+             left: 5px
+        }
+        #box2{
+           position: fixed;           /* fixed position is use to fix the element on the position given and when we sroll it will fixed */
+            right: 10px ;
+        }
+
+        .container{
+            border: 2px solid red;
+            background-color: rgb(167, 107, 107);
+        height:4000px;
+        }
+        #box4{
+            position: sticky; /* sticky position also like fixed Position*/
+            top: 10px;
+        }
+     
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="box" id="box1">1</div>
+    <div class="box" id="box2"><a href="https://google.com">go to google</a></div>
+    <div class="box" id="box3">3</div>
+    <div class="box" id="box4">4</div>
+</div>
+</body>
+</html>

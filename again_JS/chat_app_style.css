@@ -1,0 +1,413 @@
+*{
+    margin: 0;
+    padding: 0;
+ 
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#home{
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 260px;
+height: 450px;
+background-color: rgb(202, 202, 202);
+margin: 50px auto;
+border-radius: 5px;
+/* overflow: hidden; */
+overflow: hidden;
+}
+
+#home #title_box{
+   display: flex;
+   align-items: center;
+   width: 260px;
+   background-color: rgb(20, 39, 65);
+   justify-content:space-around;
+   padding: 5px 0;
+  
+   
+}
+
+#home #title_box h3{
+    padding: 0 10px;
+    margin-right: 100px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    /* font-size: 18px; */
+    color: rgb(255, 255, 255);
+    display: block;
+}
+#home #title_box img{
+    width: 20px;
+    padding: 3px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: transparent;
+    transition: all 0.5s;
+    display: block;
+  
+}
+#home #title_box img:hover{
+    background-color: rgb(236, 236, 236);
+
+}
+
+#home #title_box  #search_btn{
+    width: 18px;
+    padding: 5px;
+}
+
+
+
+
+#home #title_box #menu{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    background-color: rgb(163, 163, 163);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 150px;
+    margin-top: 150px;
+    height: 0px;
+    transition: all 0.2s;
+  
+}
+
+#home #title_box #menu ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 4px 0;
+    transition: all 0.2s;
+
+
+    
+}
+
+#home #title_box #menu ul li{
+    display: flex;
+ width: 100px;
+    
+    align-items: center;
+    transition: all 0.2s;
+
+}
+
+#home #title_box #menu ul li  a{
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    font-family: Roboto,serif;
+    font-size: 13px;
+    width: 100px;
+    overflow: hidden;
+  
+
+
+}
+
+#home #title_box #menu ul li  a:hover{
+    background-color: gray;
+}
+
+
+#home #title_box input{
+    outline: none;
+    border: none;
+    padding: 5px 5px;
+    width: 180px;
+    border-radius: 5px;
+    display: none;
+}
+
+
+#home #title_box #back_title_btn{
+    display: none;
+}
+
+
+#home #title_box #back_title_btn:hover{
+    background-color: rgb(33, 57, 73);
+}
+
+#page_name_bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 6px 0;
+    background-color: rgb(190, 183, 183);
+}
+
+
+#page_name_bar p{
+    color: white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 900;
+    
+        
+}
+
+
+/* users section ----------------------------- */
+
+#users_section{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    background: transparent;
+    height: fit-content;
+    /* padding: 10px; */
+    /* overflow: hidden; */
+  
+   
+}
+
+#users_section a{
+    width:245px ;
+    background-color: rgba(100, 99, 99, 0.1);  /*  to give tranfarent color use "rgba" and set the tranparency value at the last */
+    /* padding: 0 10px; */
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.5s;
+    padding: 5px 0;
+    
+   
+}
+
+#users_section::-webkit-scrollbar{
+    width: 2px;
+}
+#users_section a div {
+    width: 30px;
+    height: 30px;
+  
+overflow: hidden;
+display: flex;
+align-items: center;
+border-radius: 50%;
+justify-content: center;
+margin: 0 5px;
+
+}
+
+#users_section a div img{
+    /* padding: 5px; */
+    /* border-radius: 50%; */
+    background-color: rgb(148, 148, 148);
+    width: 30px;
+    margin: 5px;
+
+}
+#users_section a span h3{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    transition: all 0.5s;
+  
+}
+
+#users_section a span p{
+    font-family: Roboto,serif;
+font-size: 12px;
+color: rgb(46, 45, 45);
+transition: all 0.5s;
+}
+
+#users_section a:hover{
+    background-color: white;
+    box-shadow: -1px 3px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1) translateX(20px);
+   height: 43px;
+}
+
+#users_section a:hover p{
+    display: none;
+}
+
+
+/* add to cart box style --------------------- */
+
+#ad-to-cart-box{
+    display: flex;
+    align-items: center;
+    width: 270px;
+    flex-direction: column;
+    background: transparent;
+    height: fit-content;
+    
+    /* padding: 10px; */
+    /* overflow: hidden; */
+  
+   margin: 20px 0;
+}
+
+
+#main_container_cart{
+    position: absolute;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#main_container_cart button{
+    background-color: white;
+    border: 0.5px solid black;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+#ad-to-cart-box a{
+    width:245px ;
+    background-color: rgba(100, 99, 99, 0.1);  /*  to give tranfarent color use "rgba" and set the tranparency value at the last */
+    /* padding: 0 10px; */
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.5s;
+    padding: 5px 0;
+    
+   
+}
+
+#ad-to-cart-box::-webkit-scrollbar{
+    width: 2px;
+}
+#ad-to-cart-box a div {
+    width: 30px;
+    height: 30px;
+  
+overflow: hidden;
+display: flex;
+align-items: center;
+border-radius: 50%;
+justify-content: center;
+margin: 0 5px;
+
+}
+
+#ad-to-cart-box a div img{
+    /* padding: 5px; */
+    /* border-radius: 50%; */
+    background-color: rgb(148, 148, 148);
+    width: 30px;
+    margin: 5px;
+
+}
+#ad-to-cart-box a span h3{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    transition: all 0.5s;
+  
+}
+
+#ad-to-cart-box a span p{
+    font-family: Roboto,serif;
+font-size: 12px;
+color: rgb(46, 45, 45);
+transition: all 0.5s;
+}
+
+#ad-to-cart-box a:hover{
+    background-color: white;
+    box-shadow: -1px 3px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1) translateX(20px);
+   height: 43px;
+}
+
+#ad-to-cart-box a:hover p{
+    display: none;
+}
+
+/* recieving items from ad to cart box ------------------------------ */
+
+#recieving-items-from-cart-section{
+    display: flex;
+    align-items: center;
+    width: 270px;
+    flex-direction: column;
+    background: transparent;
+    height: fit-content;
+   
+    /* padding: 10px; */
+    /* overflow: hidden; */
+  
+   position: absolute;
+   top: 50px;
+   right: 50px;
+}
+
+
+
+#recieving-items-from-cart-section a{
+    width:245px ;
+    background-color: rgba(100, 99, 99, 0.1);  /*  to give tranfarent color use "rgba" and set the tranparency value at the last */
+    /* padding: 0 10px; */
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.5s;
+    padding: 5px 0;
+    
+   
+}
+
+#recieving-items-from-cart-section::-webkit-scrollbar{
+    width: 2px;
+}
+#recieving-items-from-cart-section a div {
+    width: 30px;
+    height: 30px;
+  
+overflow: hidden;
+display: flex;
+align-items: center;
+border-radius: 50%;
+justify-content: center;
+margin: 0 5px;
+
+}
+
+#recieving-items-from-cart-section a div img{
+    /* padding: 5px; */
+    /* border-radius: 50%; */
+    background-color: rgb(148, 148, 148);
+    width: 30px;
+    margin: 5px;
+
+}
+#recieving-items-from-cart-section a span h3{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    transition: all 0.5s;
+  
+}
+
+#recieving-items-from-cart-section a span p{
+    font-family: Roboto,serif;
+font-size: 12px;
+color: rgb(46, 45, 45);
+transition: all 0.5s;
+}
+
+#recieving-items-from-cart-section a:hover{
+    background-color: white;
+    box-shadow: -1px 3px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1) translateX(20px);
+   height: 43px;
+}
+
+#recieving-items-from-cart-section a:hover p{
+    display: none;
+}
+

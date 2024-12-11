@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope,if and else condition</title>
+</head>
+
+<body>
+    <div class="">
+        <ul>
+            <li>
+                item-1
+                item-2
+                item-3
+                item-4
+                item-5
+                item-6
+                item-7
+            </li>
+        </ul>
+    </div>
+
+    <script>
+
+
+        let v = "what is your name"
+        console.log(v)
+        {
+            let v = 'hello arif ' //if you want to change the Element of the variable then you have write the variable in a block so it only work in that block
+            console.log(v)  // blocks are called - {}, if{},else{},function
+
+
+        }
+
+        // const is a use if you don't want to change the elemlent of the varible 
+
+        const a = "this can't change"
+        // a = "i want to change" //you will get a error if you able to change the element of the varible of const
+        console.log(a)
+
+        let b = "where are you from"
+        console.log(b)
+        const age = 18
+        const num = 4;
+
+        {
+            let b = "i am from mumbai"
+
+            console.log(b)
+        }
+        console.log(age = 15)   //you get error because age is a const variable
+        console.log(++num)     //you get error again because num is a const variable
+
+        
+
+
+
+    </script>
+</body>
+
+</html>

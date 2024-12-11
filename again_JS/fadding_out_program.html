@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fadding out program</title>
+
+    <style>
+        #container {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0.5px solid black;
+            background-color: gainsboro;
+            border-radius: 10px;
+        }
+
+        #container div img {
+            width: 250px;
+            width: 250px;
+        }
+
+        #container .items {
+            opacity: 0;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="img1" class="items"><img src="img/smartphone.png" alt=""></div>
+        <div id="img2" class="items"><img src="img/drone.png" alt=""></div>
+        <div id="img3" class="items"><img src="img/dress.png" alt=""></div>
+        <div id="img4" class="items"><img src="img/denim.png" alt=""></div>
+        <div id="img5" class="items"><img src="img/pan.png" alt=""></div>
+    </div>
+</body>
+
+<script>
+
+    let img1 = document.getElementById('img1')
+    let img2 = document.getElementById('img2')
+    let img3 = document.getElementById('img3')
+    let img4 = document.getElementById('img4')
+    let img5 = document.getElementById('img5')
+    let container = document.getElementById('container')
+
+
+
+
+
+   
+
+        function image1() {
+            img1.style.opacity = "5"
+            img1.style.display = "block"
+        }
+
+        image1()
+        function sec() {
+            function image2() {
+            img2.style.opacity = "5"
+            img2.style.display = "block"
+        }
+
+        image2_set =  setInterval(image2, 2000);
+        clearInterval(image2_set, 4000)
+        }
+
+        sec()
+      function thi(){
+        function image3() {
+            img3.style.opacity = "5"
+            img3.style.display = "block"
+        }
+
+        image3_set =  setInterval(image3, 4000);
+        clearInterval(image3_set, 6000)
+      }
+
+      thi()
+       
+
+
+
+        function four(){
+            function image4() {
+            img4.style.opacity = "5"
+            img4.style.display = "block"
+        }
+
+       image4_set =  setInterval(image4, 6000);
+       clearInterval(image4_set, 8000)
+}
+
+four()
+    
+
+
+       function fi(){
+        function image5() {
+            img5.style.opacity = "5"
+            img5.style.display = "block"
+        }
+
+        image5_set =   setInterval(image5, 8000);
+
+
+        clearInterval(image5_set, 10000)
+
+}
+
+fi()
+        
+
+
+
+
+
+
+</script>
+
+</html>

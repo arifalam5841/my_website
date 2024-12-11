@@ -1,0 +1,154 @@
+/* you can import font link in css file also like blow to do this you have to click on import in google font website and copy the link paste it in Css file */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Indie+Flower&family=Josefin+Sans:wght@300&family=M+PLUS+Rounded+1c&family=Roboto&family=Varela+Round&display=swap');
+*{
+    margin: 0PX;
+    padding: 0;
+     
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:5px 20px ;
+    background-color: rgb(221, 221, 221);
+    color: rgb(24, 62, 87);
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul li a{
+    color: rgb(24, 62, 87);
+    padding: 5px 20px;
+    font-weight: bolder;
+    text-decoration: none;
+    overflow: hidden;
+}
+nav ul li{
+    list-style: none;
+}
+/* making a under line in the element */
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin: auto;
+    background-color: rgb(24, 62, 87);
+    transition: all 0.3s;
+}
+ 
+nav ul li a:hover::after{
+width: 80px;
+}
+
+
+#logo{
+    font-family: 'Indie Flower', cursive;
+    color: rgb(24, 62, 87);
+    
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+#changing_img_sec{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px auto;
+    border-radius: 10px;
+    background-image: url("https://www.ucsfhealth.org/-/media/project/ucsf/ucsf-health/education/hero/top-ten-foods-for-health-2x.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 400px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: left;
+    padding: 20px;
+    font-size: 25px;
+}
+
+#changing_img_sec div{
+    margin-bottom: 100px;
+}
+
+#items_section{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+#items_section div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 15px 5px 15px;
+    background-color: gainsboro;
+    margin: 10px;
+    border-radius: 5px;
+    width: 117px;
+    height: 200px;
+    justify-content: space-between;
+}
+#items_section div img{
+    width: 90px;
+    padding-bottom: 20px;
+}
+
+#items_section div span{
+    text-align: left;
+    color: rgb(24, 62, 87);
+   font-family: Roboto, serif;
+   font-size: 15px;
+}
+
+#items_section div button{
+      outline: none;
+      border: none;
+      padding: 5px 10px;
+   font-family: Roboto, serif;
+   color: white;
+   font-size: 14px;
+   background-color: rgb(93, 214, 144);
+   width: 100%;
+   margin-top: 5px;
+   cursor: pointer;
+
+      
+}
+
+#items_section div button:hover{
+   background-color: rgb(89, 199, 135);
+
+}
+
+#items_section div span h3{
+    color: black;
+}
+
+
+
+#heading{
+    padding:  20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+#footer{
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+
+}

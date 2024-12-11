@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert, prompt and confirm</title>
+    <style>
+        h1{
+            background-color: cadetblue;
+            border:1px solid  black;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+        
+        
+    }
+    </style>
+</head>
+<body>
+    <h1>Alert, prompt and confirm</h1>
+    <script>
+        //Alert
+        // alert is use as a notification
+        alert("your movies are downloaded")
+        
+      //prompt
+    //prompt is use to ask somethin where users write 
+    //always set a default value in prompt
+    // first value will ask or say , second will default on the input box
+       let name = prompt("What is your name ?","name") //the value that user fill in the box it will go in its variable now it will go in "name" 
+       console.log(name) //you can print that value that use  fill in the box
+
+       if(name == 'arif'){
+           console.log("Welcome arif !")
+       }
+       else{
+           console.log("sorry only arif can come")
+       }
+       
+    //confirm 
+    //confirm is use to ask somthing in 'ok' and 'cancle' 
+    //'ok' = True and  'cancle' = false 
+    let age = confirm('Are above 18+ ?')
+    if(age == true){  //so like this you can make conditions 
+        console.log('you can come')
+    }
+    else{
+        console.log('sorry')
+    }
+
+    //practise
+    function licence(name, age, phonenum, carname, state, country) {
+            console.log("   Licence   ")
+            console.log("Name: " + name)
+            console.log("Age: " + age)
+            console.log("Mobile number: " + phonenum)
+            console.log("Car :" + carname)
+            console.log("State: " + state)
+            console.log("Country: " + country)
+        }
+        let q = confirm("DO want to maek a licence ?")
+
+        if (q == true) {
+            let nme = prompt("what is your name ?", "Name")
+            let cnumber = prompt("what is your car number ?", "154df")
+            let state = prompt("what is your state ?", "Maharashtra")
+            let pnum = prompt("what is your mobile number ?", "123456789")
+            let country = prompt("what is your country ?", "India")
+            let ae = prompt("what is your age ?", "Age")
+
+            if (ae > 18) {            // if you want a make conditon of a variable which is in a block then you have write the in that block like this
+                licence(nme, ae, pnum, cnumber, state, country)
+            }
+            else {
+                console.log(`Sorry  you can't Drive because you are under 18`)
+            }
+
+        }
+
+
+        else {
+            alert("Ok")
+        }
+
+
+    </script>
+
+
+</body>
+</html>

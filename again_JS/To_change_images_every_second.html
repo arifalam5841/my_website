@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change images at every secod</title>
+    <style>
+        /* first example of changing the images at every sec */
+        #Images_box {
+            width: 350px;
+            height: 150px;
+            border-radius: 10px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition-property: all;
+            transition-duration: 0.5s;
+            overflow: hidden;
+        }
+
+        #Images_box img {
+            width: 100px;
+            height: 100px;
+            transition-property: all;
+            transition-duration: 5s;
+
+
+        }
+
+        #dots_container {
+            display: flex;
+            margin-left: 20px;
+        }
+
+        #dots_container .dots {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+            margin: 10px;
+            border: 1px solid black;
+
+        }
+
+        #main_container {
+            display: flex;
+            background-color: black;
+            border-radius: 10px;
+            padding: 0 20px;
+            width: 400px;
+            align-items: center;
+        }
+
+
+        #main_container .arrows {
+            cursor: pointer;
+        }
+
+
+        /* second example of changing the images at every sec   only by css*/
+    </style>
+</head>
+
+<body>
+    <!-- /* first example of changing the images at every sec */ -->
+    <h1>Changing Images at every second</h1>
+    <div id="main_container">
+        <div id="previous" class="arrows"><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAX0lEQVRIiWNgGAXUBv///w/7jwpWUtNwkf///79EMvz1////xahpwSo014dS0/DRoMFp+AgPGiaquYYcAA2iF2hBJE5tS/zRgmkDVS2AWkK7ZAq1YDSoiLZgmATVyAIA0NNTvYGm1nIAAAAASUVORK5CYII=">
+        </div>
+        <div id="Images_box">
+
+        </div>
+
+        <div id="next" class="arrows"><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAA70lEQVRIie3WMUoDURCA4RAQKzshYGXhASy0tEplGxu9g/ESxkNY6RU8gGIjJOAZBAUrsZOAKPksfMH1GbBxJhb5++XjLW9np9Va9J/Cla9GWMmCb33vAu0MeB1PFT4Ihwu+g9cGPMFBFt6vTj3GdhZ+WuGPWMuAl3Bd4TdYzsBXcVfh5+FwwTfxUuH9LLxXbve0d+xm4YPq1M/YyIDbPidZs9Fvz8WPvahwkv6qsVddrjd0o9FZn9NhNNrBQ4WeRaPzGZl+/iTu0YlGjyp0jK1otFtu7bQJ9qPRWavPcSha4Lkte5cNdChrvV30F30A7hgDN1exTwwAAAAASUVORK5CYII=">
+        </div>
+    </div>
+
+
+    <div id="dots_container">
+        <div id="first_dot" class="dots"></div>
+        <div id="second_dot" class="dots"></div>
+        <div id="third_dot" class="dots"></div>
+        <div id="fourth_dot" class="dots"></div>
+        <div id="fifth_dot" class="dots"></div>
+        <div id="sixth_dot" class="dots"></div>
+        <div id="seventh_dot" class="dots"></div>
+        <div id="eighth_dot" class="dots"></div>
+        <div id="ninth_dot" class="dots"></div>
+        <div id="tenth_dot" class="dots"></div>
+        <div id="eleventh_dot" class="dots"></div>
+    </div>
+    <!-- second example of changing the images at every sec   only by css -->
+
+</body>
+
+<script>
+    //first we have give the images in a array like this
+    let images = ["denim", "mixing", "rccar", "smartphone", "toaster", "pan", "drone", "fan", "dress", "diya", "gamelogo"]
+
+    let a = 0;
+    function change_img() {
+
+        let img_box = document.getElementById('Images_box')
+
+        img_box.innerHTML = ` <img  src="img/${images[a]}.png" alt="">` // it will change the index value at every 2 secod becuse we give the "a" a++
+        if (a >= images.length) { // if the "a" value is == to image.lenght then it will make the value of the a again 0
+            a = 0
+        }
+
+        a++; // add 1 in the a every 2 second
+
+
+
+        //--------------------- making the dots funtion----------------
+        function dots_condition(dot_id, index_value) {
+            let dot = document.getElementById(dot_id)
+            if (a == index_value) {
+                dot.style.background = "black"
+            }
+
+            else {
+                dot.style.background = "white"
+            }
+        }
+
+        dots_condition('first_dot', 1)
+        dots_condition('second_dot', 2)
+        dots_condition('third_dot', 3)
+        dots_condition('fourth_dot', 4)
+        dots_condition('fifth_dot', 5)
+        dots_condition('sixth_dot', 6)
+        dots_condition('seventh_dot', 7)
+        dots_condition('eighth_dot', 8)
+        dots_condition('ninth_dot', 9)
+        dots_condition('tenth_dot', 10)
+        dots_condition('eleventh_dot', 11)
+    }
+
+    change_img_func = setInterval(change_img, 2000) // run the funtion at every 2 sec
+
+
+    // ---------------- funtion of previous and next arrows ---------------------
+
+
+    function previous_next_func() {
+
+        i = 0;
+
+        let arrow = document.getElementById('next')
+
+        arrow.addEventListener('click', function () {
+
+            clearInterval(change_img_func)
+            i++
+
+if(i == images.length){
+    i= 0
+}
+            let img_box = document.getElementById('Images_box')
+            img_box.innerHTML = ` <img  src="img/${images[i]}.png" alt="">` // it will change the index value at every 2 secod becuse we give the "a" a++
+
+
+            // function again_changing_image() {
+            //     setInterval(change_img, 2000);
+            // }
+
+
+            // setTimeout(again_changing_image, 5000);
+
+        })
+
+
+
+
+
+    }
+
+    previous_next_func()
+
+
+</script>
+
+</html>

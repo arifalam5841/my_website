@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+     <link rel="icon" href=https://cdn-icons-png.flaticon.com/512/1384/1384060.png type="image/x-icon"> <!-- to add image on tab-->
+
+    <link rel="stylesheet" href="YouTubeestyle.css">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400&family=Roboto&family=Sansita:wght@700&family=Signika+Negative:wght@500&family=Ubuntu&family=Varela+Round&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="flex-div" id="first-nav">
+        <div class="nav-left flex-div">
+            <!-- <i class="fa fa-bars" aria-hidden="true" id="menu-img"></i> -->
+            <img src="ytimg/menu.png" id="menu-img">
+            <img src="ytimg/small_sr_menu.png" id="small-menu-img">
+
+            <!-- <img src="https://img.icons8.com/windows/32/000000/menu--v4.png" > -->
+            <img src="YTimg/YTred.png" alt="">
+            <h1>YouTube</h1>
+            <p>IN</p>
+        </div>
+        <div class="nav-middle flex-div">
+            <div class="search-box flex-div">
+                <input type="text" placeholder="Search">
+            </div>
+            <div>
+                <button id="search_btn">
+                    <img src="img/search.png" alt="">
+                    <p class="hover-text" id="search_btn_text">search</p>
+                </button>
+
+            </div>
+
+            <div>
+                <img src="YTimg/mic.png" class="mic_icon" id="search_mic_icon">
+
+                <p class="hover-text" id="mic_text">search with you voice</p>
+            </div>
+        </div>
+
+        <div class="small_nav_right">
+
+            <img src="ytimg/google-cast-logo.png" alt="">
+            <img src="ytimg/video-call.png" alt="">
+            <img src="ytimg/search_icon.png" alt="">
+            <img src="https://yt3.ggpht.com/yti/APfAmoHESyL_fnRxzBFjmVfuUlL6SqbWvDHvY7GZGfutjQ=s88-c-k-c0x00ffffff-no-rj-mo"
+                id="profile_small">
+        </div>
+        <div class="nav-right flex-div">
+
+            <div class="create_big">
+                <img src="YTimg/addvideo.png" id="create_btn">
+                <p class="hover-text" id="create_text">Create</p>
+
+            </div>
+            <!-- https://static.thenounproject.com/png/198752-200.png -->
+            <div class="more_apps">
+                <img src="YTimg/apps.png" id="moreapps_btn">
+                <p class="hover-text" id="apps_text">More apps</p>
+
+            </div>
+
+            <div class="notification_r">
+                <img src="ytimg/bell.png" id="notification_btn">
+                <p class="hover-text" id="notification_text">Notification</p>
+
+            </div>
+            <img src="https://yt3.ggpht.com/yti/APfAmoHESyL_fnRxzBFjmVfuUlL6SqbWvDHvY7GZGfutjQ=s88-c-k-c0x00ffffff-no-rj-mo"
+                id="profile">
+        </div>
+
+
+        <!-- on hover text   -->
+
+        <p class="hover-text" id="mic_text">search with you voice</p>
+        <!-- /on hover text   -->
+    </nav>
+    <!------ --------- --------- side bar --------------------------- -->
+
+    <div class="sidebar" id="side_bar_id">
+        <div class="short-cut-links" id="short_icons">
+
+            <div id="mini_menu_items">
+                <a><img src="ytimg/home.png">
+                    <p>Home</p>
+                </a>
+                <a href="https://www.youtube.com/feed/explore"><img src="ytimg/compass.png">
+                    <p>Explore</p>
+                </a>
+                <a href="https://www.youtube.com/feed/subscriptions"><img src="ytimg/subscribe.png">
+                    <p>Subscriptions</p>
+                </a>
+                <div class="menu-bar"></div>
+
+                <a href="https://www.youtube.com/feed/library"><img src="ytimg/library.png">
+                    <p>Library</p>
+                </a>
+            </div>
+
+            <!-- main menu item_----------------- -->
+
+            <div id="main_menu_item">
+                <a href="https://www.youtube.com/feed/history"><img src="ytimg/history.png">
+                    <p>History</p>
+                </a>
+                <a href="https://studio.youtube.com/channel/UCxcQXvNBMs25Z3l-WqozX6A/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D"><img src="ytimg/yourvideo.png">
+                    <p>Your videos</p>
+                </a>
+                <a href="https://www.youtube.com/playlist?list=WL"><img src="ytimg/clock.png">
+                    <p>Watch later</p>
+                </a>
+                <a href="https://www.youtube.com/playlist?list=LL"><img src="ytimg/like.png">
+                    <p>Liked videos</p>
+                </a>
+
+
+                <div id="playlist">
+                    <a><img src="ytimg/playlist.png">
+                        <p>Web site tutorial</p>
+                    </a>
+                    <a><img src="ytimg/playlist.png">
+                        <p>Motion layyout</p>
+                    </a>
+                    <a><img src="ytimg/playlist.png">
+                        <p>Animaions</p>
+                    </a>
+                    <a><img src="ytimg/playlist.png">
+                        <p>SQLite Database + a</p>
+                    </a>
+                </div>
+                <div id="up_bottom">
+                    <a><img src="ytimg/uparrow.png">
+                        <p>Show less</p>
+                    </a>
+                </div>
+
+                <div class="menu-bar"></div>
+
+
+                <!-- -------------------- subcribe -------- -->
+
+                <div class="subcribehead">
+                    <h1>Subcriptions</h1>
+                </div>
+
+
+
+
+                <div id="subribelist">
+                    <a><img
+                            src="https://yt3.ggpht.com/ytc/AKedOLSkYRQKSBrhs0ov1qmAG0xWhlouqLlqYm6M10UYCLs=s88-c-k-c0x00ffffff-no-rj">
+                        <p>NASA</p>
+                    </a>
+                    <a><img
+                            src="https://yt3.ggpht.com/VNcjotw70URYJgW3DZWMysp2mjblgfO42xCHl_YtL1SWWyDnTRtGOWPkE3bWxzegUhLjdgrF=s88-c-k-c0x00ffffff-no-rj">
+                        <p>SAAS bahu aur beti</p>
+                    </a>
+                    <a><img
+                            src="https://yt3.ggpht.com/ytc/AKedOLQI7EvCq9jyIkFgCeq79RU9CMm78JMLs0QGkW_kvw=s88-c-k-c0x00ffffff-no-rj">
+                        <p>Musicthearapy</p>
+                    </a>
+                    <a><img
+                            src="https://yt3.ggpht.com/ytc/AKedOLTpI_L3eRvUgwB5vqw2vGK8Td8IYarRMgj87YFS_A=s88-c-k-c0x00ffffff-no-rj">
+                        <p>CosmoSapiens</p>
+                    </a>
+                    <a><img
+                            src="https://yt3.ggpht.com/ytc/AKedOLR3uHlD-z_JoaGtAPHXtrbd66fa0a9q8A3w1giLbA=s88-c-k-c0x00ffffff-no-rj">
+                        <p>Space video</p>
+                    </a>
+                </div>
+                <div id="sub_up_bottom">
+                    <a><img src="ytimg/uparrow.png">
+                        <p>Show less</p>
+                    </a>
+                </div>
+
+                <div class="menu-bar"></div>
+
+
+                <div class="subcribehead">
+                    <h1>MORE FROM YOUTUBE</h1>
+                </div>
+
+                <div id="more_from_yt">
+                    <a href="https://www.youtube.com/premium"><img src="ytimg/yourvideo.png">
+                        <p>Youtube Premium</p>
+                    </a>
+                    <a href="https://www.youtube.com/feed/storefront?bp=ogUCKAI%3D"><img src="ytimg/film-roll.png">
+                        <p>Film</p>
+                    </a>
+                    <a href="https://www.youtube.com/gaming"><img src="ytimg/console.png">
+                        <p>Gaming</p>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig"><img src="ytimg/radio.png">
+                        <p>Live</p>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCrpQ4p1Ql_hG8rKXIKM1MOQ"><img src="ytimg/clothes-hanger.png">
+                        <p>Fashion & Beauty</p>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCtFRv9O2AHqOZjjynzrv-xg"><img src="ytimg/bulb.png">
+                        <p>Learning</p>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCEgdi0XIXXZ-qJOFPf4JSKw"><img src="ytimg/trophy.png">
+                        <p>Sport</p>
+                    </a>
+                </div>
+                <div class="menu-bar"></div>
+                <a href="https://www.youtube.com/account"><img src="ytimg/setting.png">
+                    <p>Setting</p>
+                </a>
+                <a href="https://www.youtube.com/reporthistory"><img src="ytimg/flag.png">
+                    <p>Report history</p>
+                </a>
+                <a><img src="ytimg/question.png">
+                    <p>Help</p>
+                </a>
+                <a href="https://www.youtube.com/reporthistory"><img src="ytimg/conversation.png">
+                    <p>Send Feedback</p>
+                </a>
+                <div class="menu-bar"></div>
+
+                <div id="discription">
+                    <p>AboutPressCopyright <br> AboutPressCopyrightContact usCreatorAdvertise <br> Developers</p>
+                    <p>TermsPrivacyPolicy & Safety <br> How YouTube works <br> Test new features
+                    </p>
+
+                    <footer>© 2022 Google LLC</footer>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- -------------------------- main container----------------------- -->
+    <div id="container">
+
+        <div id="second_nav_bar"  onscroll="scrollfunc()">
+            <a href="" id="explore"><img src="ytimg/compass.png">Explore</a>
+            <a href="" id="all">All</a>
+            <a href="">CSS</a>
+            <a href="">Marvevl Cinematic</a>
+            <a href="">Sci-fi films</a>
+            <a href="">Granny</a>
+            <a href="">Ghost</a>
+            <a href="">Live</a>
+            <a href="">Universe</a>
+            <a href="">Python</a>
+            <a href="">NASA</a>
+            <a href="">Gadget</a>
+            <a href="">BTS</a>
+            <a href="">Action Figure</a>
+            <a href="">Children's Music</a>
+            <a href="">Comedy</a>
+            <a href="">GTA</a>
+            <a href="">Space</a>
+            <a href="">elon musk</a>
+            <a href="">investing</a>
+        </div>
+        <!-- ----- banner  -->
+        <div id="banner">
+
+            <img src="ytimg/banner.PNG" alt="">
+        </div> 
+
+        <div class="list-container">
+
+            <div class="vid-list" id="vid_list_id">
+                <a href="https://www.youtube.com/watch?v=fVwMeLxlIkc"> <img src="ytimg/machine x.PNG" class="thumbnail">
+                </a>
+
+                <div class="flex-div">
+                    <img
+                        src="https://yt3.ggpht.com/ytc/AKedOLShWqciO-M-dBtV7ne66dkwecmFPfCaZhWoMvnB8w=s88-c-k-c0x00ffffff-no-rj">
+                    <div class="vid-info">
+                        <a href="">Spiz <img src="ytimg/dots.png" alt=""></a>
+                        <p>machine x gamer</p>
+                        <p>100 M views &bull; 2days</p>
+                    </div>
+                </div>
+
+            </div> 
+
+            <div class="vid-list" id="vid_list_id">
+                <a href=""> <img src="ytimg/thumbnail2.PNG" class="thumbnail"> </a>
+
+                <div class="flex-div">
+                    <img
+                        src="https://yt3.ggpht.com/ytc/AKedOLTST4S8KSU8IRIaj9_X4kTUR4KEnNtSE9lgXkBovw=s68-c-k-c0x00ffffff-no-rj">
+                    <div class="vid-info">
+                        <a href="">How To Make Ecommerce Website Using HTML And CSS Step By Step | Create e-Commerce
+                            Website <img src="ytimg/dots.png" alt=""></a>
+                        <p>Joker stap</p>
+                        <p>279,169 views &bull; 2days</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vid-list" id="vid_list_id">
+                <a href=""> <img src="ytimg/thumbnail3.PNG" class="thumbnail"> </a>
+
+                <div class="flex-div">
+                    <img
+                        src="https://yt3.ggpht.com/ytc/AKedOLSt0-LiGJ_CB6pC0PWtV6AFsxWG0j-EQGt6NdJGPw=s68-c-k-c0x00ffffff-no-rj">
+                    <div class="vid-info">
+                        <a href="">Spider Man Identity Revealed To Whole World Scene | SPIDER MAN NO WAY HOME (2021)
+                            Movie CLIP 4K <img src="ytimg/dots.png" alt=""></a>
+                        <p>Joker stap</p>
+                        <p>279,169 views &bull; 2days</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vid-list" id="vid_list_id">
+                <a href=""> <img src="ytimg/thumbnail4.PNG" class="thumbnail"> </a>
+
+                <div class="flex-div" id="vid_list_id">
+                    <img
+                        src="https://yt3.ggpht.com/ytc/AKedOLRdBmvZyYxYmkqz7U1ogrOubMuAENbfbJ2t5c8I8w=s68-c-k-c0x00ffffff-no-rj">
+                    <div class="vid-info">
+                        <a href="">1st Star, 1st Galaxy, 1st Planet, 1st Moon. <img src="ytimg/dots.png" alt=""></a>
+                        <p>Joker stap</p>
+                        <p>279,169 views &bull; 2days</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vid-list" id="vid_list_id">
+                <a href=""> <img src="ytimg/thumbnail5.PNG" class="thumbnail"> </a>
+
+                <div class="flex-div">
+                    <img
+                        src="https://yt3.ggpht.com/wzh-BL3_M_uugIXZ_ANSSzzBbi_w5XnNSRl4F5DbLAxKdTfXkjgx-kWM1mChdrrMkADRQyB-nQ=s68-c-k-c0x00ffffff-no-rj">
+                    <div class="vid-info">
+                        <a href="">इंगलिश सीखने का सम्पूर्ण ज्ञान | Best English Speaking Tips on YouTube | Dr Vivek
+                            Bindra <img src="ytimg/dots.png" alt=""></a>
+                        <p>Joker stap</p>
+                        <p>279,169 views &bull; 2days</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vid-list" id="vid_list_id">
+                <a href=""> <img src="ytimg/thumbnail6.PNG" class="thumbnail"> </a>
+
+                <div class="flex-div">
+                    <img
+                        src="https://yt3.ggpht.com/zuLFaSTMjF5Xog5t5X3APMppi4KyMHZRIp68rvapXAw0PDDonJHhqWIEMeVNo_b4vqrvXTqf=s68-c-k-c0x00ffffff-no-rj">
+                    <div class="vid-info">
+                        <a href="">Satyamev Jayate Season 3 | Episode 3 | Accepting Alternative Sexualities | Full
+                            episode (Subtitled) <img src="ytimg/dots.png" alt=""></a>
+                        <p>Joker stap</p>
+                        <p>279,169 views &bull; 2days</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vid-list" id="vid_list_id">
+                <a href=""> <img src="ytimg/thumbnail7.PNG" class="thumbnail"> </a>
+
+                <div class="flex-div">
+                    <img
+                        src="https://yt3.ggpht.com/eekON3Eh0Z1I9d0UsvhrjbJdrkhwAQK1He2IQmCw_kszT2k7LqT3MpQAx2YBoLnfZHItCbvo=s68-c-k-c0x00ffffff-no-rj">
+                    <div class="vid-info">
+                        <a href="">खून खौल उठेगा | शहीद-ए-आज़म Bhagat Singh| Dr Vivek Bindra <img src="ytimg/dots.png"
+                                alt=""></a>
+                        <p>Joker stap</p>
+                        <p>279,169 views &bull; 2days</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vid-list" id="vid_list_id">
+                <a href=""> <img src="ytimg/thumbnail8.PNG" class="thumbnail"> </a>
+
+                <div class="flex-div">
+                    <img
+                        src="https://yt3.ggpht.com/dBY7uOsk2FwBaIsnvMfJfvSl8xaZnFQ0IyCpu-Qikd7WKyb3mrSpIIwC0gjteF-kMPVDtpF7jg=s68-c-k-c0x00ffffff-no-rj">
+                    <div class="vid-info">
+                        <a href="">Sardar Patel Full Biography | Powerful Case Study | Dr Vivek Bindra <img
+                                src="ytimg/dots.png" alt="" id="dots"> </a>
+                        <p>Joker stap</p>
+                        <p>279,169 views &bull; 2days </p>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div id="bottom_menu_container">
+                <div id="bottom_menu">
+                    <div class="bottom_menu_items">
+                        <img src="ytimg/home.png">
+                        <p>Home</p>
+                    </div>
+                    <div class="bottom_menu_items">
+                        <img src="https://www.edigitalagency.com.au/wp-content/uploads/Youtube-shorts-icon-png.png">
+                        <p>shorts</p>
+                    </div>
+                    <div class="bottom_menu_items" id="create_small">
+                        <img
+                            src="https://iconape.com/wp-content/files/gr/367426/svg/add-circle-outline-logo-icon-png-svg.png">
+
+                    </div>
+                    <div class="bottom_menu_items">
+                        <img src="YTimg/subscribe.png">
+                        <p>Subcriptions</p>
+                    </div>
+                    <div class="bottom_menu_items" id="create_bottom">
+
+                        <img src="ytimg/library.png">
+                        <p>Library</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    function hover_text_func(hover_id, display_id) {
+        hover_id.addEventListener('mouseover', function hover_text_efffect() {
+            display_id.style.display = "block"
+            display_id.style.opacity = "5"
+        })
+        hover_id.addEventListener('mouseout', function hover_text_efffect() {
+            display_id.style.display = "none"
+            display_id.style.opacity = "0"
+        })
+    }
+
+    hover_text_func(create_btn, create_text)
+    hover_text_func(notification_btn, notification_text)
+    hover_text_func(moreapps_btn, apps_text)
+    hover_text_func(search_btn, search_btn_text)
+    hover_text_func(search_mic_icon, mic_text)
+
+
+    // Show more or less function
+
+
+    function buttom_condition(image, text, btn) {
+        let buttom = document.getElementById(btn)
+        buttom.innerHTML = `  <a><img src="ytimg/${image}.png">
+                    <p>Show ${text}</p>
+                </a>`
+    }
+
+
+    function display_paylist_condition(prime_btn, secondary_id, btn_id) {
+        prime_btn.addEventListener('click', function display_con() {
+            if (secondary_id.style.display == 'block') {
+                secondary_id.style.display = 'none'
+                buttom_condition("bottomarrow", "more", btn_id)
+            }
+
+            else {
+                secondary_id.style.display = 'block'
+                buttom_condition("uparrow", "less", btn_id)
+            }
+        })
+    }
+
+    display_paylist_condition(up_bottom, playlist, "up_bottom")
+    display_paylist_condition(sub_up_bottom, subribelist, "sub_up_bottom")
+
+    // menu icon on click - condition 
+
+    let menu_icon = document.getElementById('menu-img')
+    let side_bar = document.getElementById('short_icons')
+    let container = document.getElementById('container')
+    menu_icon.onclick = function () {
+        side_bar.classList.toggle('small-sidebar')// toggle - if the toggle condition is not there then it set if there is toggle condition it will remove
+    }
+
+
+    //   small menu icon click condition
+
+    let small_menu = document.getElementById('small-menu-img')
+    let small_sidebar = document.querySelector('.sidebar')
+
+    small_menu.addEventListener('click', function () {
+        if (small_sidebar.style.left == '-250px') {
+            small_sidebar.style.left = '0px'
+        }
+
+        else {
+            small_sidebar.style.left = '-250px'
+
+        }
+    })   
+
+
+let second_nav =  document.getElementById("second_nav_bar")
+let scroll_value = 0
+
+function scrolings(){
+    scroll_value++
+second_nav.scrollBy(scroll_value,0)
+
+}
+
+
+let scrolings_var;
+second_nav.addEventListener("mouseover", function(){
+ scrolings_var =   setInterval(scrolings, 50);
+
+})
+second_nav.addEventListener("mouseout", function(){
+    clearInterval(scrolings_var)
+
+})
+
+// second_nav.style.display = "none"
+    // setInterval(scrolings, 100);
+
+
+</script>
+
+</html>

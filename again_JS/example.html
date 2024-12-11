@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licence</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <h1>Making of licence</h1>
+    </div>
+    <script>
+        function licence(name, age, phonenum, carname, state, country) {
+            console.log("   Licence   ")
+            console.log("Name: " + name)
+            console.log("Age: " + age)
+            console.log("Mobile number: " + phonenum)
+            console.log("Car :" + carname)
+            console.log("State: " + state)
+            console.log("Country: " + country)
+        }
+        let q = confirm("DO want to maek a licence ?")
+
+        if (q == true) {
+            let nme = prompt("what is your name ?", "Name")
+            let cnumber = prompt("what is your car number ?", "154df")
+            let state = prompt("what is your state ?", "Maharashtra")
+            let pnum = prompt("what is your mobile number ?", "123456789")
+            let country = prompt("what is your country ?", "India")
+            let ae = prompt("what is your age ?", "Age")
+
+            if (ae > 18) {
+                licence(nme, ae, pnum, cnumber, state, country)
+            }
+            else {
+                console.log(`Sorry  you can't Drive because you are under 18`)
+            }
+
+        }
+
+
+        else {
+            alert("Ok")
+        }
+
+
+    </script>
+</body>
+
+</html>

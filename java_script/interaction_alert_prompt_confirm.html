@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intarectoin alert prompt confirm </title>
+</head>
+
+<body>
+    <div class="container">
+        This is a page
+    </div>
+    <script>
+        // alert in browser
+       // alert("This is a message ") // alert is use to make pop up message in browser and does not return any thing 
+
+    //    prompt
+   // let name = prompt("What is your name?" , "guest"); // prompt is use to make a pop message where you can user can write 
+    // first value wil ask and second will as default in input area
+  //  console.log(name); //when you will click ok then the name that have given in prompt  it wil print
+//   confirm
+     //let deleteitem = confirm("do you realy want to delete the post?")  //it ask there will a pop up message which will ask a
+     //if(deleteitem){
+    //     console.log("post had been deleted")  ///you use if else statment
+  //   }
+  //   else{            
+    //    console.log("post had not been deleted")
+
+  //   }
+   //  //console.log(deleteitem) //if user click yes then it will print else false
+
+   let askage = prompt("what is your age?" ," ")
+    if(askage>80){
+       console.log("you can't drive because age is above 80")
+
+   }
+  else if(askage>18){
+       console.log("you can drive the car")
+
+   }
+
+else{
+    console.log("you can't drive")
+}
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@300&family=Nunito&family=Open+Sans:wght@300&family=Quicksand&family=Red+Hat+Mono:wght@600&family=Roboto&family=Source+Sans+Pro:wght@300;400&family=Ubuntu:wght@300&family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+}
+/* --------------------------- main container style --------------------------------- */
+
+#home_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 10px gainsboro ;
+    width: 300px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 5px ;
+    display: none;
+}
+
+#home_container #upper_cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    border-bottom: 1px solid gray;
+}
+
+#home_container #upper_cont h3{
+    font-family: 'Roboto', sans-serif;
+}
+
+#home_container #users_list{
+    display: flex;
+    flex-direction: column;
+    height: 370px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#home_container #users_list .user{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    cursor: pointer;
+    
+}
+
+#home_container #users_list .user #img-cont{
+    display: flex;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    border-radius: 50px;
+    box-shadow: 1px 1px 5px gainsboro ;
+
+}
+
+#home_container #users_list .user #img-cont img{
+    width: 35px;
+    /* height: 50px; */
+}
+
+
+
+#home_container #users_list .user #name-lastmsg-cont{
+    display: flex;
+    flex-direction: column;
+    margin-left:15px;
+}
+
+#home_container #users_list .user #name-lastmsg-cont h3{
+    font-family: 'Roboto', sans-serif;
+/* margin-left: 10px; */
+font-weight: 900;
+}
+#home_container #users_list .user #name-lastmsg-cont p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    /* color: gray; */
+    color: rgb(131, 172, 94);
+    
+}
+
+
+#home_container #users_list .user #name-lastmsg-cont #socket-id{
+    display: none;
+}
+
+#home_container #send_chat_sec{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 2px 2px 10px gainsboro ;
+    overflow: hidden;
+    padding: 5px 10px;
+
+}
+
+#home_container #send_chat_sec input{
+  outline: none;
+  border: none;
+  font-size: 13px;
+  padding: 5px;
+  width: 100%;
+}
+
+#home_container #send_chat_sec button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: none;
+    outline: none;
+    margin: 0 10px;
+    transition: 0.5s all;
+    padding: 3px;
+
+}
+
+#home_container #send_chat_sec button:hover{
+    background-color: gainsboro;
+}
+
+
+/* -------------------------- CHATTING SECTION  DESIGN -------------------------------- */
+
+
+#chatting_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 10px gainsboro ;
+    width: 300px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 5px ;
+    display: none;
+}
+
+#chatting_cont #upper_cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-bottom: 1px solid gray;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#chatting_cont #upper_cont #back{
+display: flex;
+align-items: center;
+justify-content: center;
+/* background-color: red; */
+border-radius: 20px;
+padding: 2px;
+transition: 0.5s all;
+cursor: pointer;
+}
+
+#chatting_cont #upper_cont #back:hover{
+    background-color: rgb(226, 226, 226);
+}
+
+
+#chatting_cont #upper_cont #back #profile{
+    width: 35px;
+    border-radius: 50px;
+}
+
+
+#chatting_cont #send_chat_sec{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 2px 2px 10px gainsboro ;
+    overflow: hidden;
+    padding: 5px 10px;
+
+}
+
+#chatting_cont #send_chat_sec input{
+  outline: none;
+  border: none;
+  font-size: 13px;
+  padding: 5px;
+  width: 100%;
+}
+
+#chatting_cont #send_chat_sec button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: none;
+    outline: none;
+    margin: 0 10px;
+    transition: 0.5s all;
+    padding: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+#chatting_cont #send_chat_sec button:hover{
+    background-color: gainsboro;
+}
+
+
+#chatting_cont #chats_container{
+    height: 370px;
+    overflow: hidden;
+    overflow-y: auto;
+
+}
+
+#chatting_cont #chats_container::-webkit-scrollbar{
+    display: none;
+
+}
+
+#chatting_cont #chats_container .message{
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 13px;
+    width: fit-content;
+    max-width: 120px;
+    word-wrap: break-word;
+}
+
+#chatting_cont #chats_container .right{
+    float: right;
+    clear: both;
+    background-color: rgb(236, 236, 239);
+}
+#chatting_cont #chats_container .left{
+    float: left;
+    clear: both;
+}
+
+
+
+/* --------------------------------- LOGIN PAGE DESIGN ----------------------------- */
+
+#login_container{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 250px;
+    box-shadow: 1px 1px 5px gainsboro;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 100px auto;
+    /* display: none; */
+
+}
+
+#login_container h2{
+    font-family: 'Nunito', sans-serif;
+    margin: 5px  5px 10px 5px;
+}
+
+#login_container #input-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#login_container #input-cont input{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 5px;
+    /* border-radius: 2px; */
+}
+
+#login_container #input-cont button{
+    background-color:transparent;
+    outline: none;
+    border: 1px solid black;
+    padding: 5px 7px;
+    margin: 10px 0px 0px 180px ;
+    cursor: pointer;
+}

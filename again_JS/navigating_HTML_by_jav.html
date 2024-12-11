@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigating DOM</title>
+</head>
+
+<body>
+
+    <div class="container" id="main">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>contact</li>
+            <li>more about us</li>
+            <li>others</li>
+        </ul>
+    </div>
+
+
+    <div class="container">
+      <p>Another container </p>
+    </div>
+
+    <div class="box"  >
+        <ul id="boxul"></ul>
+    </div>
+</body>
+<script>
+// for id use - getElementById
+//  var                             id
+let main = document.getElementById('main');
+console.log(main)  //it will log the elements of the id or class 
+
+let nav = document.getElementById('nav'); 
+console.log(nav)  
+
+// for id use - getElementsByclassname
+
+let containers = document.getElementsByClassName('container');
+console.log(containers)  // it will log all the element whose class is container 
+
+console.log(containers[0])  //if there is many element with same class and you want to log one of them the n you can log the element in  idex value
+
+console.log(containers[1])
+
+let sel = document.querySelector('.container')  ///querySelector  is use for all class and id
+console.log(sel)
+
+let sel3 = document.querySelector('#nav>li')  //it will print only one 
+console.log(sel3)
+
+
+let sel2 = document.querySelectorAll('#nav>li') //it will print all
+console.log(sel2)
+
+
+</script>
+
+</html>

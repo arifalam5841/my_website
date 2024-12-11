@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+
+    <style>
+        #clock{
+            background-color: black;
+            color: white;
+            padding: 10px;
+            width: 440px;
+            border: 1px solid black;
+            border-radius: 10px;
+            display: block;
+            margin: auto;
+            cursor: pointer;
+        
+        }
+
+
+        .btn{
+            background-color: lightblue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+           
+            margin-top: 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .container{
+            display: flex;
+        justify-content: center;
+        }
+.btn:hover{
+    background-color: rgb(143, 213, 236);
+
+}
+</style>
+
+</head>
+<body>
+    <div id="clock"></div>
+<div class="container">
+    <button class="btn" id="stop">Stop</button>
+    <button class="btn" id="start">Start</button>
+</div>
+
+<div id="timers">
+
+</div>
+
+<div id="box">
+    <!-- <ul>
+        <li></li>
+    </ul> -->
+</div>
+</body>
+
+<script>
+    function clocks() {
+        time = new Date;
+
+        let clockbox = document.getElementById('clock').innerHTML = time;
+
+    
+    }
+
+timer = setInterval(clocks, 1000);
+
+let stp = document.getElementById('stop')
+let start = document.getElementById('start')
+
+stp.addEventListener('click',function run(){
+    clearInterval(timer)
+})
+
+start.addEventListener('click',function run(){
+    timer = setInterval(clocks, 1000);
+
+})
+  
+function watch(){
+//    let time = new Date()
+//    let sec = time.getSeconds()
+//    document.getElementById('timers').innerHTML =  sec
+let a = 0;
+while(a<100){
+    a++
+   document.getElementById('timers').innerHTML = a 
+
+}
+    
+}
+   
+
+setInterval(watch,1000)
+  
+
+let box = document.getElementById('box')
+
+box.innerHTML('arif')
+</script>
+</html>

@@ -1,0 +1,39 @@
+//- so now we are using "Template inheritance"
+//- IN THIS WE CAN MAKE A FILE AND THROUG THAT WE CAN WRITE ALL CODE IN THAT FILES WHERE 
+//- THE 'BASE' FILE IS EXTENDED YOU WILL GET TO BY LOOKING ON THE CODE
+//- the file where we write blocks is called the base of the web site we give any name that file
+//- just for understanding i am giving this file name "base"
+html
+  head
+    block title
+    //- here you can give the tile to pagess
+    block style_files 
+       
+            //- IN THIS BLOCK WE WILL SET style sheets    
+  body
+    //- JUST LIKE BELOW CODE "block content " YOU CAN MAKE MULTIPLES LIKE THIS AND SET 
+    //- VLUES IN THE FILE IN THE BLOCK 
+    //- WE GIVIE ANY NAME TO THE BLOCK AND ANY VALUES BECAUSE IT JUST LIKE A VAR
+
+    //- now we wrote a html code in base file so it will write this code in all file wher this
+    //- base file in extent or included
+    nav#navbar.navs 
+        h1#logo Foodies !!
+        ul 
+            li #[a(href="/") Home]
+            li #[a(href="/") Orders]
+            li #[a(href="/") Carts ]
+            li #[a(href="/contact") Contact]       
+    block content 
+    //- HERE WE WILL SET THE BODY CONTENT BY THE FILE WHERE WE WANT
+ 
+  
+    
+
+    //- now we wrote a html code in base file so it will write this code in all file wher this
+    //- base file in extent or included
+    footer#footer 
+           p Copyright © www.Foodies.com 
+        
+    block scripts_files 
+            //- IN THIS BLOCK WE WILL SET JS FILE   

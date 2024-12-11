@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>using media queries with grid </title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas: 
+           'navbar navbar navbar '                  
+        'section section  aside'
+        'footer footer footer';     
+        }
+
+        
+        nav{
+            grid-area: navbar;
+            
+        }
+
+        section{
+            grid-area: section;
+        }
+
+        aside{
+            grid-area: aside;
+
+
+        }
+        footer{
+            
+        }
+
+        @media only screen and (max-width:300px){
+            body{
+                background-color: red;
+            }
+            
+        }
+
+           
+        @media only screen and (max-width : 200px){           /*'0px to 200px' do this  */
+            body{
+                background-color: rgb(115, 255, 0);
+        
+            }
+            .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas: 
+           'navbar navbar navbar '                  
+        'section section section '
+        'aside aside aside'
+        'footer footer footer';}
+        footer{
+            grid-area: footer;
+            text-align: center;
+        }
+
+        .borderstyle{
+            font-size: 15px;
+        }
+
+        
+        }
+        @media (min-width : 300px) and (max-width: 500px){    /*'300px to 500px' do this  */
+            body{
+                background-color: rgb(0, 89, 255);
+            }
+
+        }
+        @media (min-width : 500px) and (max-width: 800px){    /*'500px to 800px' do this  */
+            body{
+                background-color: rgb(0, 255, 234);
+            }
+
+        }
+         @media (min-width : 800px) {          /* after 800px do this */
+            body{
+                background-color: rgb(82, 124, 81);
+            }
+
+        }
+        .borderstyle{
+            border: 2px solid black;
+            padding: 15px;
+            background-color: wheat;
+
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="borderstyle" id="head">
+            Home about contact
+        </nav>
+        <section class="borderstyle" id="sec">
+            <h1>Learn Css in hindi </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolorum error ex cumque ullam assumenda corrupti officiis laudantium quaerat, ab, doloribus debitis reiciendis saepe adipisci autem obcaecati veniam quidem laborum ducimus ut impedit voluptas, vel magnam quod? Voluptatem, aliquam ipsam mo   lestiae hic perferendis minima rem quos adipisci nihil aperiam impedit in, voluptas provident nisi libero officiis porro quae iste. Numquam dignissimos inventore sapiente ut nesciunt dolores exercitationem voluptas quaerat dolore, ex pariatur officia voluptatum iusto recusandae reiciendis expedita saepe natus repudiandae cumque, optio voluptates amet quam? Voluptatibus provident sequi fugiat sit voluptatum facilis perferendis asperiores omnis? Corrupti consequuntur officiis incidunt qui doloremque exercitationem cupiditate vel excepturi, repellat voluptatem rem veniam possimus maxime saepe architecto aliquid adipisci nulla explicabo asperiores dolorum veritatis ipsam. Modi impedit, aliquam quidem consequuntur est nihil nam praesentium possimus maiores, similique expedita repellat ex nemo optio nesciunt quaerat ipsa eligendi, debitis officia ab necessitatibus autem esse voluptatum illum. Ratione ex soluta beatae quos voluptatem ipsam inventore commodi. Facere suscipit recusandae id. Expedita sed aliquid ea, dolore ratione nihil, eveniet sunt consequuntur excepturi, unde quam. Corrupti facilis placeat iure eius consectetur laudantium corporis necessitatibus voluptatibus totam? Nam maiores eligendi quisquam minus sed, est nobis libero sequi doloribus, eius dolorem reprehenderit facere quos deserunt quas qui laudantium voluptates illo? Est aliquid labore odio optio quos eum magnam similique quibusdam. Odit dolor fugit dolorum, quae, architecto porro quis corporis accusantium asperiores reiciendis aspernatur magni. Est sed quos vero non quia? Fuga, voluptatum enim. Asperiores qui culpa laborum iure quibusdam, suscipit fugit dolore quo facilis! Id ratione rerum corporis accusamus labore ipsum atque omnis, deleniti reprehenderit, nemo ducimus sunt asperiores hic. Nulla nobis officiis commodi eius iste laboriosam dolore, aut asperiores labore necessitatibus laudantium corrupti voluptatibus, vel facere. Ratione quia error hic veritatis minus? Id, nemo doloribus labore corporis, voluptas incidunt unde aliquid quis debitis explicabo vitae a facilis rerum molestiae fuga quidem laboriosam magni harum? Provident cum iusto mollitia natus excepturi voluptates quibusdam illum aliquid quia, ex et veniam eveniet, necessitatibus nemo porro? Voluptas, esse? Ipsam aspernatur veniam dolores tenetur ipsum tempora, deserunt quibusdam odio iure assumenda voluptatum quasi similique adipisci! Delectus eius aut doloremque adipisci mollitia cupiditate praesentium nesciunt magni porro, aperiam quaerat expedita totam ab minima odio officiis ducimus eaque ad beatae quo fuga? Commodi, nisi maiores natus officia voluptates dolor dolores saepe, harum adipisci tempora earum omnis quisquam repellat fuga qui ipsa dignissimos ex accusamus numquam sunt unde? Eius, placeat. Voluptatum non tempora maxime omnis sint corporis aperiam ratione, dolorum eius saepe voluptatem expedita blanditiis nemo optio? Harum expedita saepe soluta rerum sit asperiores aperiam accusantium magnam est. Est mollitia, distinctio nobis, dignissimos aliquid non dolores necessitatibus corporis maiores dicta deleniti iure architecto suscipit incidunt. Perferendis quis quae dolorum, libero minima repellendus velit voluptatem tempore dicta officia necessitatibus, adipisci nemo, optio hic sapiente totam nulla ipsam similique ullam? Enim dolore illum id autem hic similique corrupti debitis modi repellat dignissimos, reprehenderit quidem delectus dolores, accusantium quia? Eaque deserunt nam maxime. Explicabo doloribus quasi nulla ad voluptatibus cumque.</p>
+        </section>
+        <aside class="borderstyle" id="aside">
+            <h1>More about us</h1>
+        </aside>
+
+    <footer class="borderstyle" id="footers">www.E planes.com</footer>
+    </div>
+ 
+    
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    background: #202020;
+    color: white;
+}
+button {
+    width: 100px;
+    height: 30px;
+    border: 3px soldi white;
+    border-radius: 50px;
+    background: #202020;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+#stopwatch {
+    font-size: 100px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+}
+#buttons {
+    position: absolute;
+    top: 55%;
+    left: 48.4%;
+    transform: translate(-51.6%, -45%);
+}
+#buttons li {
+    display: inline;
+    padding-left: 10px;
+}
+    </style>
+</head>
+<body>
+    <div id="stopwatch">
+        00:00:00
+    </div>
+
+    <ul id="buttons">
+        <li><button onclick="startTimer()">Start</button></li>
+        <li><button onclick="stopTimer()">Stop</button></li>
+
+        <li><button onclick="resetTimer()">Reset</button></li>
+    </ul>
+
+    <script>
+const timer = document.getElementById('stopwatch');
+
+var hr = 0;
+var min = 0;
+var sec = 0;
+var stotime = true;
+
+function startTimer() {
+  if (stotime == true) {
+    stotime = false;
+        timerCycle();
+    }
+}
+function stopTimer() {
+  if (stotime == false) {
+    stotime = true;
+  }
+}
+
+function timerCycle() {
+    if (stotime == false) {
+    sec = parseInt(sec);  
+    min = parseInt(min);
+    hr = parseInt(hr);
+
+    sec = sec + 1;
+
+    if (sec == 60) {
+      min = min + 1;
+      sec = 0;
+    }
+    if (min == 60) {
+      hr = hr + 1;
+      min = 0;
+      sec = 0;
+    }
+
+    if (sec < 10 || sec == 0) {
+      sec = '0' + sec;
+    }
+    if (min < 10 || min == 0) {
+      min = '0' + min;
+    }
+    if (hr < 10 || hr == 0) {
+      hr = '0' + hr;
+    }
+
+    timer.innerHTML = hr + ':' + min + ':' + sec;
+
+    setTimeout(timerCycle, 1000);
+  }
+}
+
+// function resetTimer() {
+//     timer.innerHTML = '00:00:00';
+// }
+
+function resetTimer() {
+  if(stotime == false){
+    timer.innerHTML = "00:00:00";
+    stotime = true;
+    
+    timerCycle()
+  }
+   
+}
+    </script>
+</body>
+</html>

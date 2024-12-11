@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focusing a elemnent by click a button</title>
+</head>
+<body>
+    <input type="text" id="myTextField" value="Text field.">
+<p></p>
+<button type="button" onclick="focusMethod()">Click me to focus on the text field!</button>
+</body>
+<script>
+    //search on google more about us
+
+    // you can use for a search icon 
+    focusMethod = function getFocus() {
+  document.getElementById("myTextField").focus(
+    document.getElementById("myTextField").style.backgroundColor = "red" // like this you change the state of the eleement 
+    //you change the other elements state also 
+
+  ); // "focus()" is use to focus on a element
+}
+</script>
+</html>

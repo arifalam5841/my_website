@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adding items in a div</title>
+    <style>
+        #container {
+
+
+
+            overflow: auto;
+
+            background: rgb(223, 222, 222);
+            height: 450px;
+            width: 250px;
+            border-radius: 10px;
+            margin: auto;
+            color: black;
+
+        }
+
+        #container::-webkit-scrollbar {
+            width: 4px;
+
+        }
+
+        
+
+        #container::-webkit-scrollbar-thumb {
+            background: gray;
+
+        }
+
+        #container .sending {
+            width: 200px;
+            height: 50px;
+            background: rgb(44, 70, 40);
+            margin: 10px auto;
+            border-radius: 0 10px 10px 10px;
+            overflow: auto;
+        }
+
+        #container .reciving {
+            width: 200px;
+            height: 50px;
+            background: rgb(153, 153, 153);
+            margin: 10px auto;
+            border-radius: 10px 0px 10px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <!-- <div class="sending"></div>
+        <div class="reciving"></div> -->
+
+
+    </div>
+
+
+
+
+    <button  id="send"> send</button>
+    <button  id="recieve"> recieve </button>
+</body>
+
+
+<script>
+ let send_btn = document.getElementById('send')
+ let recieve_btn = document.getElementById('recieve')
+ let chat_section = document.getElementById('container')
+
+ let chats_list = []
+
+
+let chats = " "
+
+ function chating(){
+     for ( i = 0; i < chats_list.length; i++) {
+     chats += chats_list[i]   
+   chat_section.innerHTML = chats
+    }
+
+ }
+
+ send_btn.addEventListener('click', function(){
+     chats_list.push(` <div class="sending"></div>`)
+ chating()
+
+ })
+ recieve_btn.addEventListener('click', function(){
+     chats_list.push(`<div class="reciving"></div>`)
+ chating()
+
+ })
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object important</title>
+    <style>
+        #main_container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: fit-content;
+            height: fit-content;
+            background-color: rgb(221, 221, 221);
+            margin: 50px 50px 50px 0;
+        }
+
+
+        #main_container #head {
+            display: flex;
+
+            background-color: rgb(68, 177, 240);
+
+
+
+        }
+
+        #main_container #head .data_row {
+            width: 100px;
+            padding: 5px;
+            border: 0.5px solid black;
+
+
+
+        }
+
+        /* data  row */
+        #container .data_box {
+            display: flex;
+
+            background-color: #90c8e9;
+
+
+            color: white;
+        }
+
+        #container .data_box .data_row {
+            width: 100px;
+            padding: 5px;
+            border: 0.5px solid black;
+
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1
+        style="color: lightblue; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: auto;">
+        Employee's data by 'object'</h1>
+
+    <div id="main_container">
+        <div id="head">
+            <div class="data_row">Name</div>
+            <div class="data_row">Class</div>
+            <div class="data_row">Salarry</div>
+            <div class="data_row">Company</div>
+            <div class="data_row">Anum</div>
+        </div>
+        <div id="container">
+            <div class="data_box">
+                <div class="data_row" id="name"></div>
+                <div class="data_row" id="std"></div>
+                <div class="data_row" id="salarry"></div>
+                <div class="data_row" id="company"></div>
+                <div class="data_row" id="anum"></div>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="add()" style="background-color: cadetblue; color: white; padding: 10px 30px; border: none; border-radius: 10px;">add</button>
+
+</body>
+
+<script>
+    let Employee_data = [ // here we are making a object in array this blocks information
+        {name: "Arif" , std:"8th", salarry: 5000 , company: "shipshop", anum: 100000},
+        {name: "Atif" , std:"5th", salarry: 6000 , company: "amozon", anum: 10545000},
+        {name: "Rohan" , std:"2th", salarry: 4500 , company: "facebook", anum: 844000},
+        {name: "Ayan" , std:"6th", salarry: 4500 , company: "tesla", anum: 45000},
+        {name: "Rehan" , std:"5th", salarry: 6500 , company: "ford", anum:440000},
+        {name: "Ram" , std:"5th", salarry: 5100 , company: "Tata", anum: 8758000},
+        {name: "Sham" , std:"9th", salarry: 5210 , company: "relience", anum: 145000},
+        {name: "Alam" , std:"10th", salarry: 4510 , company: "adani", anum: 14000}
+     ]
+
+    // Employee_data.push ({name: "abcd" , std:"8", salarry: 4554 , company: "jdflkjld", anum: 5454})
+
+    //  takign information of employee and puting it in in list 
+   function adding_employee(){
+    let take_name = prompt("what is you name"," ") 
+     let take_class = prompt("in which class you are"," ") 
+     let take_comapny = prompt("In which company you want to go"," ") 
+     let salary = ""
+     let annum = ""
+
+    if(take_comapny == "facebook"){
+           salary = 4500
+           annum = 844000
+    }
+    else if(take_comapny == "amazon"){
+        salary = 6000
+        annum = 10545000
+    }
+    else if(take_comapny == "tesla"){
+        salary = 4500
+        annum = 45000
+
+    }
+    else if(take_comapny == "Tata"){
+        salary = 5100
+        annum = 8758000
+
+    }
+    else if(take_comapny == "adani"){
+        salary = 4510
+        annum = 14000
+
+    }
+
+    else{
+        Employee_data.push("sorry")
+    }
+  
+    // Employee_data.push ({name: "${take_name}" , std:"${take_class}", salarry: ${salary} , company: "${take_comapny}", anum: 54})
+    Employee_data.push ({name: take_name , std: take_class, salarry: salary , company: take_comapny, anum: annum})
+
+   }
+
+   function add(){
+       adding_employee()
+   }
+
+
+
+  
+
+
+    
+
+
+    //  takign information of employee and puting it in in list 
+
+let data = " "
+     for(i = 0; i<Employee_data.length ; i++){
+ 
+        //like this you can print value of each variable in object like below
+data += `   <div class="data_box">
+                <div class="data_row" id="name">${Employee_data[i].name}</div> 
+                <div class="data_row" id="std">${Employee_data[i].std}</div>
+                <div class="data_row" id="salarry">${Employee_data[i].salarry}</div>
+                <div class="data_row" id="company">${Employee_data[i].company}</div>
+                <div class="data_row" id="anum">${Employee_data[i].anum}</div>
+            </div>`
+     }
+
+
+document.getElementById('container').innerHTML = data
+
+
+
+</script>
+
+</html>

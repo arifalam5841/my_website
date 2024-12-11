@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="content"></div>
+        <p>Lorem ipsum dolor sit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, sit consequatur. Qui, magnam cumque
+            soluta incidunt quae sapiente labore unde id consectetur adipisci nemo praesentium voluptate. Sed alias quos
+            autem delectus esse quasi Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus saepe, ducimus
+            facilis dolor laboriosam sapiente!</p>
+    </div>
+
+    <script>
+        var string = "This ";
+        var name = " arif" +"WAY"+"NEW";
+        var address = 'world';
+        var tab= `${name}  is a good boy and he is going to beacome a richest person in    ${address}` ;  //we can set a var + string in var like this 
+        // console.log(string + name + address + tab );
+        // console.log(tab  );
+        var len = address.length; // lenth is use to show the lenth of letters in that word
+        // console.log(`the lenth of name is ${len}`);
+        console.log("hello world\n  \\ appearin \tnew \bline")   // \n is use make the element after the \n in new line \t is use make a space and \b is use to make a > sing
+       // if you want to write a \ in middle of string we have to write \\ double back salash
+       var y = new String(name); //capital S is important 
+       console.log(y)
+    //    important
+
+    // to set element in html
+    document.getElementById('content').innerHTML='<H2>This is from java script</H2>'  //innnerHtml part will come that id or class that you given in the document.getElementById
+ 
+    </script>
+</body>
+
+</html>

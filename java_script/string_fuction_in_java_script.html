@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String function in java script </title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            This is my web site
+        </h1>
+    </div>
+</body>
+<script>
+    var string = "This is string"
+    console.log(string)
+    // impotant
+    // it will check the element from first 
+    var position = string.indexOf('Th');  //to show the position of elelment
+    console.log(position)
+    // it will check the element from last 
+    position = string.lastIndexOf('in');  //to show the position of elelment
+    console.log(position)
+
+    //  sbstring from a string 
+    var str = "this is string"
+    var substr1 = str.slice(1, 7);  // it will print letter that are in the 1-7 index
+    console.log(substr1)
+
+    var substr1 = str.substring(1, 7);    //its also same like slice
+    console.log(substr1)
+    var substr1 = str.substr(0, 7);    //it will show the lenth
+    console.log(substr1)
+    // impotant
+
+    // to change the sring of element  
+
+    var change = str.replace('string', 'newvar');
+    console.log(str)
+    console.log(change)
+    console.log(str.toUpperCase()) //to make the string upper case
+    console.log(str.toLowerCase()) //to make the string lower case
+    var newstring = str.concat(' new string')  //to add new string in that element 
+    console.log(newstring)
+    var strwhitespace = "   This is   string    "
+    console.log(strwhitespace)
+    var strwhitespace = "   This is   string    "
+    console.log(strwhitespace.trim())  //it will remove spaces from starting and ending 
+    var char2= str.charAt(2);  //it will print the charachter that is on the 2 number index
+    console.log(char2) 
+    var char2= str.charCodeAt(2);  //it will print the code of charachter that is on the 2 number index
+    console.log(char2) 
+
+    console.log(string[4])  //it will show the letter that is on 4 index of the variable that you given
+</script>
+
+</html>

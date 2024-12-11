@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Quicksand&family=Red+Hat+Mono:wght@600&family=Roboto:wght@300;900&family=Source+Sans+Pro&family=Ubuntu:wght@300&family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(242, 242, 242);
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div h2{
+    font-family: 'Varela Round', sans-serif;
+
+}
+div h3{
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+div a{
+    color: black;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid black;
+    text-decoration: none;
+    margin: 20px 0;
+    font-family: 'Varela Round', sans-serif;
+
+}

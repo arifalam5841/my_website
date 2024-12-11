@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+<body>
+   <div id="table">
+0
+   </div>
+
+   <div id="con">
+
+   </div>
+<button id="btn">+1</button>
+<button id="btnsub">-1</button>
+    
+</body>
+<script>
+//     let box = document.getElementById("inputbox")
+//   let head = document.getElementById("head")
+// let input = prompt('Name ?')
+//   let heading = document.getElementById("heading")
+//   heading.innerHTML = `<h1> ${box}}</h1> `
+
+// let getable = prompt("Which table you want ?") 
+let num = 0 
+
+let table = document.getElementById("table")
+
+let btnadd = document.getElementById('btn')
+let btnsub = document.getElementById('btnsub')
+let a = 0;
+btnadd.addEventListener('click', function run(){
+a++
+table.innerHTML = a
+})
+btnsub.addEventListener('click', function rn(){
+a--
+table.innerHTML = a
+if(a<0){
+   table.innerHTML = '0'
+}
+
+})
+
+
+</script>
+</html>

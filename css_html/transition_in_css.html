@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Transitions</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            border-radius: 0px;
+            height: 200px;
+            color: white;
+            position: relative;
+            
+            
+            background-color: red;
+            /* transition you can change any things like you can see in the box example */
+            /* transition-property: background-color, width,height,margin,border-radius; */
+            transition-property:all;    /*  you can set all to set all properties to tandtion */
+            transition-duration: 0.5s;  /* it will take time that you set to complete the transition */
+            /* animation-timing-function: ease-in;  ease-in is to start slow and end fast  */
+               /* animation-timing-function: ease-out;  ease-in is to start fast and end slow  */
+               /* animation-timing-function: ease-in-out;  ease-in is to start slow and in mid it get fast  end slow  */
+               /* transition-delay: 1s;          after how much time the animation get start */
+
+
+        }
+        #box:hover{
+            background-color: #fff;
+            width: 300px;
+            height: 300px;
+            /* margin-left: 100px;
+            margin-top: 100px; */
+            border-radius: 10px;
+            font-size: 50px;
+            padding: 10px;
+            content: "fsdhkjfvhj";
+            color: red;
+     
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h2>This Transitions in CSS tutorial</h2>
+    <div class="container">
+        <div id="box">
+            This is my box
+        </div>
+    </div>
+</body>
+</html>

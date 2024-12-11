@@ -1,0 +1,63 @@
+<!-- you have to write the comments in one line just like below one and at the startign put "|" so that you will not get error -->
+|
+<!-- To make the PUG file into a normal html file we have to click on "Pug" at bottom bar where "GO live" btn is and the we have to write "HTML" in the input bar which we occur  after you click on the "pug" btn    -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>#{title}</title>
+
+
+
+   <!-- //  -----BELOW HOW TO INCLUDE A CSS FILE IN PUG FILE---------- // -->
+
+   <!-- if the CSS  file is in another folder then type "../" at the starting like below -->
+   <!-- syntax - "../foldername/filename" -->
+   <!-- if the CSS file is not in another folder or in the folder where the pug file is -->
+   <!-- then just type the folder name and "/" file name don't type "../" at the starting -->
+   <!-- syntax - "foldername/filename" -->
+
+   style
+      include ../style_fldr/style_sheet.css
+
+
+</head>
+
+<body>
+
+
+   
+   <!-- put '|' this at the starting of the code line so you will not get errors -->
+   <!-- TO set values in the var from the backend first we have make var in the pug file-->
+   <!-- for the element in between the tags -->
+  
+
+   
+   <!-- here we make a var "heading" in between the tags  -->
+
+   <h1 id="head">#{heading}</h1>
+
+<div id="container">
+
+   <!-- give "post" method to make condition on click -->
+   <form action="" id="form" method="post">
+   <h1>Fitness world</h1>
+   <h4>Fill up the form and submit</h4>
+   <input type="text" placeholder="Name" name="name">
+   <input type="number" placeholder="Age" name="age">
+   <input type="text" placeholder="Gender" name="gender">
+   <textarea name="adderess" cols="30" rows="10" placeholder="Adress"></textarea>
+   <textarea name="aboutyou"  cols="30" rows="10" placeholder="More about you..."></textarea>
+   <input  type="submit" value="DONE"   id="submit_btn"  name="submit_btn" >
+
+    
+
+</form>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String function</title>
+</head>
+<body>
+    <h1>HTML tuts</h1>
+    <div id="changed"></div>
+</body>
+<script>
+    var a = "arif"
+    var b = "is a good boy"
+    var c ="thing"
+    var age = 5;
+    var age2 = 10;
+    var clas = --age2;
+    var age3=14;
+    console.log(a+' '+b)
+    console.log(`${a} is good boy he can do any  ${c} his age is ` + ++age3 + ' and he is in class ' + --clas + 'th' )
+
+    // To change element in Body through Java script 
+    // use .innerHTML
+
+    let change = document.getElementById('changed')
+
+//variable.innerHTML = 'element'
+    change.innerHTML ='<h1>THis item is changed by Java script</h1>'
+</script>
+</html>

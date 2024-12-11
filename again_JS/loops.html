@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lopps</title>
+</head>
+<body>
+    <H1>Loooooooooooop</H1>
+<script>
+    // for loops
+let a = 0;
+// first value set the Element, second will be conditon, third will something
+for(a=1; a<5;a++){
+    console.log(a + " is less then 5 ")
+}
+
+
+// using in arrays
+let student = ['arif','asif','rohan','rehan','ayan']
+for(indexvalue=0;indexvalue<student.length; indexvalue++){
+    console.log("Good morning "+ student[indexvalue])
+}
+
+// modern for loops
+
+//for each loop
+
+student.forEach(function f(eachelement){  //it use a funtion paramitre of the funtion will be the elemt of the array
+    console.log("hello " + eachelement)
+});
+
+
+// for of loop
+
+for(names of student){  //it also like foreach loop nut it does not have function the "names" varible contain the Element of array it use of 
+    console.log("hello "+ names+ " jii")
+}
+
+for(names in student){  //it also like for of loop  it does not have function the "names" varible contain the Element of array and it use in
+    console.log("hello "+ names+ " jii")
+}
+
+//while loop
+
+let d = 0;
+
+while(d<4){
+    console.log(d+ " is less then 4")
+    d++
+}
+
+// do loop
+
+do{  //in do looop first you have to set the work then condition
+    console.log(d+" less then 6")
+    d++
+}while(d<6)  ///contion
+
+
+
+
+</script>
+</body>
+</html>

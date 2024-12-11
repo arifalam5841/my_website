@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover btn</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #hover{
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            width: 200px;
+            height:200px;
+            justify-content: center;
+        }
+
+        #innerimage{
+            padding: 20px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="hover" onpointerover="hoverfuc()" onpointerleave="nohover()">
+<div id="innerimage"></div>
+    </div>
+</body>
+<script>
+    let hover_btn = document.getElementById('hover')
+    let left_m = [20,520,500,100,452,]
+    let right_m = [200,333,500,256,500,]
+    let top_m = [100,200,302,350,200,]
+    let bottom_m = [63,52,5,15,42,]
+    function hoverfuc(){
+       let lefti = Math.floor(Math.random() * left_m.length)
+       let righti = Math.floor(Math.random() * right_m.length)
+      let  topi = Math.floor(Math.random() * top_m.length)
+      let   bottomi = Math.floor(Math.random() * bottom_m.length)
+
+        hover_btn.style.marginLeft = left_m[lefti] + 'px'
+        hover_btn.style.marginRight = right_m[righti] + 'px'
+        hover_btn.style.marginTop = top_m[topi] +'px'
+        hover_btn.style.marginBottom = bottom_m[bottomi]+ 'px'
+    }
+    function nohover(){
+
+    }
+</script>
+</html>

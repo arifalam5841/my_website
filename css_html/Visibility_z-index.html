@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 170px;
+            height: 170px;
+            border: 2px solid black;
+        }
+
+        #box1 {
+            background-color: red;
+            position: relative;
+            top: 49px;
+            z-index:100;
+        }
+
+
+        #box2 {
+            position: relative;
+            top: 34px;
+            background-color: blue;
+            z-index: 32;
+
+            /* display: none;                    wil hide the element and the space/ */ 
+             visibility: hidden;              /*      wil hide the element but show the space of element  */
+             /* z-index: will only for position : relative , absolute, fixed , sticky;
+            whosee z-index will biger it will come up on the element like u can see box2's z-index is lower and box1' is higher so box2 comes up on the box2 */
+        }
+
+        #box3 {
+            background-color: green;
+        }
+
+        #box4 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+
+</html>

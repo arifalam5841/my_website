@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanning Multiple Rows and Columns in Grid </title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-column-gap: 2rem;
+            grid-row-gap: 1rem;
+        }
+        .box{
+            border: 2px solid red;
+            background-color: rgb(214, 190, 190);
+            padding: 15px;
+         
+        }
+        /* important  */
+
+        .box:first-child{
+           grid-column-start: 1;  /*  it is to make the layout good  */
+            grid-column-end: 4; 
+          grid-row-start: 1;    /*  it will start from given  line that is 1  */
+            grid-row-end: 4;    /* it will end on given  line that is 4 */
+                                
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">item-1</div>
+        <div class="box">item-2</div>
+        <div class="box">item-3</div>
+        <div class="box">item-4</div>
+        <div class="box">item-5</div>
+        <div class="box">item-6</div>
+        <div class="box">item-7</div>
+        <div class="box">item-8</div>
+        <div class="box">item-2</div>
+        <div class="box">item-3</div>
+        <div class="box">item-4</div>
+        <div class="box">item-5</div>
+        <div class="box">item-6</div>
+        <div class="box">item-7</div>
+        <div class="box">item-8</div>
+    </div>
+    
+</body>
+</html>

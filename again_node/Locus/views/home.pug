@@ -1,0 +1,131 @@
+extends base.pug
+block title
+      title Locus classes
+block style_files 
+      style 
+           include ../frontend_files/home.css   
+       
+block content 
+      nav#navbar 
+        div#logo_container
+           img#logo(src="https://locuscoachingclasses.com/wp-content/uploads/2021/01/class-240x68.png", alt="locus")
+        div#navigaters_container
+           img#menu_icon(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABmJLR0QA/wD/AP+gvaeTAAAAlElEQVRYhe3WMQqDQBCF4V+xskildc5g4108YW7gNXKG9AEhRUAQ1koZbbP4ILwPFpZp5u3CDgtm9oeKsL8BD0GGAficiy2QBKvdApSZT/mTKuwnoBdkmAQ9zfKLQ68BXoIMd+ANx6ddALUgzH4hMUwCvtdnIQl6muUX50wFdIIMT2A5F/25iuLQm4FRkGEW9DSz66wPv0fu14QH3wAAAABJRU5ErkJggg==", alt="")
+           ul.flexed#menu
+            img#menu_cut_bnt(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAABmJLR0QA/wD/AP+gvaeTAAAApklEQVRIie2UTQ6CMBCFv4UBdzQcQCj3P4iS4H34C27G2BiBGaCJC96u6ev32s60cOpfVAJXpfcC3LTgAuiBB+BWvE58vTYgkQUTUC8EOJmfxJ9o4AAZcJeFDZAb500BzwCQ8TnZJvBcgD8K/FZ4tx3rtTCrBFoBtzI+RNF2/l08z+8i7waH3bIrIFqfp2x7oakG7oER298yYOigSrsT8VVa8Km4egFkVEAdRCrowQAAAABJRU5ErkJggg==", alt="")
+            li 
+              a(href="/" ) Home 
+            li 
+              a(href="/" ) About us
+            li 
+              a(href="/") Events & Gallery
+            li  
+             h3#courses_btn Coures 
+             img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABmJLR0QA/wD/AP+gvaeTAAAAmklEQVQ4je3NPQ6CQBCG4W/2EFpTmyix8Day2xhmiYfgDv6E0hjuA9txFRrGykJld7Gh4m2/zDPA0ry1bI6Otf33zrG2rtAZACgA2FWPWgiblrPzVKQpzGkg7LerpAYAeg8CkLP6ApEurZ7XGAKRQ7pOcirL4QOaio0hP1AM8yGjkA8LIV7oGxOl+hASTQBqrL47NjcJPF2auRcp1GDCxpnY7wAAAABJRU5ErkJggg==", alt="")
+             div#courses_options 
+                p 5th to 7th 
+                p 8th to 9th
+                p 10th to 11th
+                p 12th
+            li 
+              a(href="/")  Faculties
+            li 
+              a#contact_btn(href="/" ) Contact us
+
+      section#banner_photos_container
+         div#banner 
+            img#imag1(src="https://locuscoachingclasses.com/wp-content/uploads/elementor/thumbs/Banner-4-1-scaled-e1636608194478-pfw56ylcm18tjpjx1y6bsxpfp6ezfje62omikhrvgk.jpg", alt="")
+            img#imag2(src="https://locuscoachingclasses.com/wp-content/uploads/elementor/thumbs/10x5-1new-pfw5lg9rz32yjai5fpo9qs29e0zp3jx72eozx2adj8.jpg", alt="")
+            img#imag3(src="https://locuscoachingclasses.com/wp-content/uploads/elementor/thumbs/IMG-20211114-WA0006-pg1zpdf46dipbbhjg9cdd1te77dzw25voc8si36qys.jpg", alt="")
+      span#img_dots 
+         a.dots(href="#imag1") 
+         a.dots(href="#imag2") 
+         a.dots(href="#imag3") 
+
+      //- body
+      section#aboutUs_addimssionForm
+          section#about_us_section 
+             h1 About us
+             p #[strong #[i "LOCUS COACHING CLASSES"]] is an autonomous educational & welfare platform in #[strong  Navi Mumbai]
+             p#second_line Coaching classes are always played an important and vital role in proper guidance of students. It play the role as like a mediator between the gathering of knowledge and a very bright future of student.
+             p So everyone is quite serious regarding to choice of a good and trusted classes.
+             p #[strong  #[i LOCUS COACHING CLASSES]] is one among of those classes which provided a welcoming, happy, safe and suitable environment through which a student can achieve his/her target with great ease.
+             a(href="/") READ MORE 
+          section#addmission_section
+             h1 | Addimission 
+             form(action="/contact" , method="post")#addimission_form
+               div
+                 input(type="text", name="firstname" placeholder="First name")
+                 input(type="text", name="lastname" placeholder="Last name")
+               input(type="text", name="school" placeholder="School")
+               div 
+                 //-  input(type="text", name="" placeholder="Std")
+                 select#classes_select.selects(name="Std") 
+                     option(value="aa") 5th  
+                     option(value="aa") 6th  
+                     option(value="aa") 7th  
+                     option(value="aa") 8th  
+                     option(value="aa") 9th  
+                     option(value="aa") 10th  
+                     option(value="aa") 11th  
+                     option(value="aa") 12th  
+                 select#boards.selects(name="board") 
+                     option(value="aa") CBSE  
+                     option(value="aa") STATE  
+                     option(value="aa") ICSE
+               input(type="Number", name="mobille_number" placeholder="Mobile number")
+               input(type="email", name="email_address" placeholder="e-mail Address")
+               //-      input(type="text", name="" placeholder="Board")
+
+               input#submit(type="submit", value="Submit")
+         
+      section#what_makes_us_unique_section   
+          div#heading_container 
+            h1 What makes us Unique 
+            span#yello_bar
+          section#blocks_container
+              div.blocks
+                 img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAA3CAYAAACo29JGAAAABmJLR0QA/wD/AP+gvaeTAAADIUlEQVRoge2Yy28NYRjGn09boa1LtUoTaUOE6kLiFqQukdqwJUFiI1Ere1YSYmOl/ANEhEQssaCtSCQiERRBiOtCVevSSrQ09bOYc5iMmTPzzZyjyPdbnfnOO8/7PvPNfDfJ4XA4HA6Hw/EHMVluBiokrZe0RNI0Sb2Suo0xj1JotUjaIKlB0qCkO5KuGWNGs9SYCmAH8JpwOoHmhDqLgK4IndfA9lJ7CRZ0OKIYP5+A1hidNcBgAq1Df8rYjgTF5HkH1EfozAb6LbS2ldpYBdGvYhTHIrSOW+q8wvvGS2Zuo2VBAH1AWUCnDLtey9NmU+8ES3/LLOMlqV7SnEBbo6S6FFpLbYJtzVVbxueZGrieUiSdgtiae2sZn6c35jopb2yCI80B1cB6YCcwPdfcnaKge8aYAX+DMaZf0v0UWldT3PMLoAE4BQz7PuRG3/+dloPA7og8eyx1Lmc11oI3uvkZxjcEA814E3QSugiMlD6dcuBqQp2PwIIsxiYAt0OEL4bEtuJN0HHGamJy1gDdMTp9xKx0kphbFSG+JSK+HugIMdkD7Caix0J0yoH23H1BU0eBmZmM5ZIcDDF2Bii4c8CbkBuBxUCaucuvVZfTaQRsR/KCwmd9pgaA/Umf/t/Kz14BtkqaJalH0g1jzNi4VeWIJ+tOfJKkWnnLokpJnyQNSfpg2/N4C4U6eTv6Lzmd98aYkbT1lVsknyhppaQ2SSskLZLUpPBVzgjwWNJDSdcldRljnsSkmCTprKTlvrbvwEtJjyTdktQp6WZRjh4AA6wDTgKfI6aKpDwDDgBNBfJVEX3kkGcIOAGsjRvJCxnbDNzNaCiMMeA0MDcibx3JN8R3gE02pmqBSyUwFeQrsI+Qp4/3tthwAZgRZ6wZeFFkE3GcI+T4ALhiqfMcWBhlrArvuxgPOkLq2ZVC5ylQmdfwj3TtkuYV7NrSsRcIHkXcTKEzX9LPLZbfXLaVdzbKJK0OtKXdra/J//Cbm5xSrFhUBa6/pdQJfS3/O5y5f5X/2px/4Xxe0oPxKkS/H/WNSjqSQudxEWpxOBwOh8PhcNjzA/LaacTb0hE+AAAAAElFTkSuQmCC", alt="")   
+                 h2 Highly qualified staff
+                 p Target of achieving good marks becomes easy only under the proper guidelines and supervision of experts. Our classes are governed and executed by highly qualified staff having an average experience of 10 to 15 years. These experiences enables the students to eliminate any obstacles and difficulties in the path of their success.
+  
+              div.blocks#book
+                 img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAABmJLR0QA/wD/AP+gvaeTAAAD3UlEQVRYhe2YW4hVVRjHf58zWjLdtOxiV6SShC6aZGBPMV0eiqjMJnHEXuolIqh8NOqhyB6iECTfIlEbyZgkIi9kKVmgTg9JmahdLB0TDWrygs6vh72O7jnNnMuc2U4X/3DYZ+/1ff/1Y7HW2nt9cEZn9N9SVGpUbwbuzT36A/gF2A/siIj9g+1YHQ9MAK4BzgHOzzWvjoiuwRpvsLL2qavUp9Qrq3hdnuJWqfur+G6o5FVtpDcDtwIzgVFACzAGuJpslKYA41J4L7AWeCUi1uc8bgLmAY8CzenxAWALsBP4Afgt/QQ6gC0RMbUSW0Vo1Sox16rPqF/mRmqJepn6ptqbnnWpz6nXV/EzDdbgVAt0Wfx09YvU8fF03areWYfH6YVOOc3q26nzpeqoOvNVv1LHqCNrTXpe/TW/KurpNHnMTantg8jN66j6annMiLKEKcAC4AiwAjhUb6dDpEOp/z3APHVavnFEWfAN6To/ImYCu4rn61e7Uv8L0v11+cZy6NL98aKpalRpavbZmsuh/xU6A326VBR0N3C4IO+T3wJDqoj4yOwrrqUI/0Kg1UnA0YjYWYR/UdNjE7BD3ag+oV4wlOZFQW8m21unA28Be9UO9bahMC8K+p10/RF4mWxhPgJ8qt7dqHlR0O8BPWRrZj7wQnp+NtDZKHgh0BHxO/A+MB54F3g9NS0EmmgQvMiXS2mKPAyMBr4BXgTaaBC8SOg1wNL0/1vgjog4EBEraRC8EGh1AnAWMAdYBtwCrFXHAlQB/7Oaf1EjfSPZqTqAdmAJMBlYp14IJ8EfTDEfqPel3HvI6isDqqY3onoQOEa2I/Sk/3uB3WQHhe+ATRGRP+ncD8yIiOXqXLJRfQxYo7ZGxMGI+FCdBSwHVqgPRMRq9fFGoDvI6hwlNZFVhM7tJ7ZX3QZ0ktUwACapzwKLyEacBL42B75SbUvgnSXwKlynpLbXciBVR6mXqrerc9TX0iv7mP1rnTpSbUon9FJpYWzO86GUf7g0x9Wpak9FnlqhK+SPU59WtyWf780KOVfkYuoFv0udURh0zqdZbVVHD9BeL/jAG4Y6Kxk92Qh0LaoXPK8oM5oIfA2cAH4ukHk72T7dQ7YdtgFdQGtEHEwsHWQfWUeAPouzz7BHxHayCunga2m1aSKwmGz3mk22c0wmvYDUlxJwN0PwrVKI0lRZlqbKvnTdY1aRnZ3ue9Tzhpu1j8rAe9Vpaov6iaf0xnBz/k1l4FvV9en/x+pu9UR+wf5jVAau+pN6ifp5ur9quBn7VQJfqHbnpovqZ8PNVlXqxepis+L+IvWi4Wb6f+kvN1zdQSmNh1MAAAAASUVORK5CYII=", alt="")   
+                 h2 Robust Study Material
+                 p Our experts creates such environment in which every student can gather better knowledge and achieve good marks. We are providing study materials having these features.
+                 ul 
+                   li Organized notes in proper structure.
+                   li Designing notes in easy language.
+                   li Visualise lectures for complicated or 3D based topics.
+              div.blocks#note
+                 img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAABmJLR0QA/wD/AP+gvaeTAAAD3UlEQVRYhe2YW4hVVRjHf58zWjLdtOxiV6SShC6aZGBPMV0eiqjMJnHEXuolIqh8NOqhyB6iECTfIlEbyZgkIi9kKVmgTg9JmahdLB0TDWrygs6vh72O7jnNnMuc2U4X/3DYZ+/1ff/1Y7HW2nt9cEZn9N9SVGpUbwbuzT36A/gF2A/siIj9g+1YHQ9MAK4BzgHOzzWvjoiuwRpvsLL2qavUp9Qrq3hdnuJWqfur+G6o5FVtpDcDtwIzgVFACzAGuJpslKYA41J4L7AWeCUi1uc8bgLmAY8CzenxAWALsBP4Afgt/QQ6gC0RMbUSW0Vo1Sox16rPqF/mRmqJepn6ptqbnnWpz6nXV/EzDdbgVAt0Wfx09YvU8fF03areWYfH6YVOOc3q26nzpeqoOvNVv1LHqCNrTXpe/TW/KurpNHnMTantg8jN66j6annMiLKEKcAC4AiwAjhUb6dDpEOp/z3APHVavnFEWfAN6To/ImYCu4rn61e7Uv8L0v11+cZy6NL98aKpalRpavbZmsuh/xU6A326VBR0N3C4IO+T3wJDqoj4yOwrrqUI/0Kg1UnA0YjYWYR/UdNjE7BD3ag+oV4wlOZFQW8m21unA28Be9UO9bahMC8K+p10/RF4mWxhPgJ8qt7dqHlR0O8BPWRrZj7wQnp+NtDZKHgh0BHxO/A+MB54F3g9NS0EmmgQvMiXS2mKPAyMBr4BXgTaaBC8SOg1wNL0/1vgjog4EBEraRC8EGh1AnAWMAdYBtwCrFXHAlQB/7Oaf1EjfSPZqTqAdmAJMBlYp14IJ8EfTDEfqPel3HvI6isDqqY3onoQOEa2I/Sk/3uB3WQHhe+ATRGRP+ncD8yIiOXqXLJRfQxYo7ZGxMGI+FCdBSwHVqgPRMRq9fFGoDvI6hwlNZFVhM7tJ7ZX3QZ0ktUwACapzwKLyEacBL42B75SbUvgnSXwKlynpLbXciBVR6mXqrerc9TX0iv7mP1rnTpSbUon9FJpYWzO86GUf7g0x9Wpak9FnlqhK+SPU59WtyWf780KOVfkYuoFv0udURh0zqdZbVVHD9BeL/jAG4Y6Kxk92Qh0LaoXPK8oM5oIfA2cAH4ukHk72T7dQ7YdtgFdQGtEHEwsHWQfWUeAPouzz7BHxHayCunga2m1aSKwmGz3mk22c0wmvYDUlxJwN0PwrVKI0lRZlqbKvnTdY1aRnZ3ue9Tzhpu1j8rAe9Vpaov6iaf0xnBz/k1l4FvV9en/x+pu9UR+wf5jVAau+pN6ifp5ur9quBn7VQJfqHbnpovqZ8PNVlXqxepis+L+IvWi4Wb6f+kvN1zdQSmNh1MAAAAASUVORK5CYII=", alt="")   
+                 h2 Periodic Test And Assignment
+                 p Assignments and worksheets are designed by our experts, which are valuable and helpful for students. Our assignment makes student capable of maximum potential
+              div.blocks#doubt
+                 img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAABmJLR0QA/wD/AP+gvaeTAAAD3UlEQVRYhe2YW4hVVRjHf58zWjLdtOxiV6SShC6aZGBPMV0eiqjMJnHEXuolIqh8NOqhyB6iECTfIlEbyZgkIi9kKVmgTg9JmahdLB0TDWrygs6vh72O7jnNnMuc2U4X/3DYZ+/1ff/1Y7HW2nt9cEZn9N9SVGpUbwbuzT36A/gF2A/siIj9g+1YHQ9MAK4BzgHOzzWvjoiuwRpvsLL2qavUp9Qrq3hdnuJWqfur+G6o5FVtpDcDtwIzgVFACzAGuJpslKYA41J4L7AWeCUi1uc8bgLmAY8CzenxAWALsBP4Afgt/QQ6gC0RMbUSW0Vo1Sox16rPqF/mRmqJepn6ptqbnnWpz6nXV/EzDdbgVAt0Wfx09YvU8fF03areWYfH6YVOOc3q26nzpeqoOvNVv1LHqCNrTXpe/TW/KurpNHnMTantg8jN66j6annMiLKEKcAC4AiwAjhUb6dDpEOp/z3APHVavnFEWfAN6To/ImYCu4rn61e7Uv8L0v11+cZy6NL98aKpalRpavbZmsuh/xU6A326VBR0N3C4IO+T3wJDqoj4yOwrrqUI/0Kg1UnA0YjYWYR/UdNjE7BD3ag+oV4wlOZFQW8m21unA28Be9UO9bahMC8K+p10/RF4mWxhPgJ8qt7dqHlR0O8BPWRrZj7wQnp+NtDZKHgh0BHxO/A+MB54F3g9NS0EmmgQvMiXS2mKPAyMBr4BXgTaaBC8SOg1wNL0/1vgjog4EBEraRC8EGh1AnAWMAdYBtwCrFXHAlQB/7Oaf1EjfSPZqTqAdmAJMBlYp14IJ8EfTDEfqPel3HvI6isDqqY3onoQOEa2I/Sk/3uB3WQHhe+ATRGRP+ncD8yIiOXqXLJRfQxYo7ZGxMGI+FCdBSwHVqgPRMRq9fFGoDvI6hwlNZFVhM7tJ7ZX3QZ0ktUwACapzwKLyEacBL42B75SbUvgnSXwKlynpLbXciBVR6mXqrerc9TX0iv7mP1rnTpSbUon9FJpYWzO86GUf7g0x9Wpak9FnlqhK+SPU59WtyWf780KOVfkYuoFv0udURh0zqdZbVVHD9BeL/jAG4Y6Kxk92Qh0LaoXPK8oM5oIfA2cAH4ukHk72T7dQ7YdtgFdQGtEHEwsHWQfWUeAPouzz7BHxHayCunga2m1aSKwmGz3mk22c0wmvYDUlxJwN0PwrVKI0lRZlqbKvnTdY1aRnZ3ue9Tzhpu1j8rAe9Vpaov6iaf0xnBz/k1l4FvV9en/x+pu9UR+wf5jVAau+pN6ifp5ur9quBn7VQJfqHbnpovqZ8PNVlXqxepis+L+IvWi4Wb6f+kvN1zdQSmNh1MAAAAASUVORK5CYII=", alt="")   
+                 h2 Doubt Removal Session
+                 p Doubts are directly related to extensive study. So it means more study more doubts, no study no doubts. We are always ready to welcome any doubts from student side. For this, we are planned doubts removal session just after covering and completion of each and every topic and chapter.
+      section#main_footer
+        section#detail_container 
+            div#contact_us.detail_blocks 
+              h3 Contact us
+              span 
+                img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAAxklEQVQ4je3SLU5DQRSG4Y9LQ0i6DhbAIrCEimtwSHAotkCCQJBgkHU4SFU3wRZYRwM8COYmQLk/tKKmr5uT872Tc2aSLWuDCmPMrc68OKpggjPs4XEF2RP2cYqToMYHLrGLh3/IphjhHO+oG2HDNXZwM0B252tdV99qS8K2xt+0XfynkOVRGvpW0yrk57IXeNP/ePWo40cdJ3lOMklyWGqvSWZJjtpCXcKU4EuS+3K+SHLQFegTpghuB/QlSaqhjRsTblmfT9aaELbaJPGhAAAAAElFTkSuQmCC", alt="")
+                p arifalam1207@gmail.com 
+              span
+                 img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAAt0lEQVQ4je2VOwoCMRCGvxGL9QDiDbTYM/hoPJHgLTySeIkV1NZqLXQ7RYTfwhXckJBoKfs3IfP4ZqbIxPBIUg8YAl2fH3gABzO7BvwN2ExSpbgukqYpwE0C7K21m+8bqQ8cgUWk9goYpHRYSCp+jetEK3ypFtgC/xIYWk+5JH3cy/p03+42FehqDtyBXSzQBzwBuWNbApkntvTYmpI0qZdnTGdJYzffAtAMGAUmgNcXsDezm+t4AnJzs7XaJYx+AAAAAElFTkSuQmCC", alt="")
+                 p  09022664794 , 08756617240 , 09967216621  
+            div#visit.detail_blocks
+              h3 Visit us
+              p Plot No.19, Shiv Corner Sector, 9, Taloja Phase 1 Rd, behind Panchnand Heights, Taloja, Navi Mumbai, Maharashtra 410208 
+        section#location
+            span  
+               img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABzElEQVRIie2VMUtcQRSFz90YXYgbEFMEEaLYRItUNlnzE+wtVgmIfQrzJ1KpZf5DAopapJEgJo2NSaEgEsRUYWMI0WIt5EvhiE+d+9x5Pqw8sPA498z97gxv3kr3upcjoApU7wLUAUwCS8AfLnQILAIN4EHZ0Dqwzc3aBl6WBZ0AWm1Az9UCJm4LfQWcJECz8LGi0E5grwD0XD+ALq9/JYc9I2nIm0vSXvjhZAYlTbezycud4Yuzky1gOJMbCV5MG6nQGnAaaXQEDETyA8BxJH8KdMcY3lEPOrV1M9u/agZv3el/bdA8cHRKSX8dP6/2OAXcdPw60HnVDF7dWfPb8a+Ls6t05Lwwc0Alk60A8072H/AwxrAc+LKkcae8KWk1PI9LGnVyq2bm9XDBU84uUtTw+uftuCrpp6QnSRNf6FBSv5m1YkX3yxUWLBSEStK8B71RQDfwq8ARN4HoNUqBTxcAv74VNIAN+JQA/Qy4704q/Bn+vc6qBTwvBZqBv2kD/LZUaAAb8DEHulLaEUfgNWAnAj0AelN6JU8IvJD0VdKjjP1N0m4sLum9ma2Fte909pf7oSMVbGbfgbqkWUl9mVKPs6QWoBVJ/SH39D/L6Yz61BQ38QAAAABJRU5ErkJggg==", alt="")
+               h3 Find us on map
+            a(href="https://www.google.com/maps/place/Locus+Coaching+Classes/@19.077732,73.093667,12z/data=!4m5!3m4!1s0x0:0xd936770800f7104d!8m2!3d19.0777318!4d73.0936665?hl=en-US") See Map 
+            
+
+                       
+block script_files
+      script  
+           include ../frontend_files/home.js  

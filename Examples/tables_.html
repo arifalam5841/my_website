@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style> 
+    
+    #table{
+        font-size: 20px;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 250px;
+        border-radius: 10px;
+    }
+    </style>
+</head>
+<body>
+    <h1 id="head"></h1>
+    <div id="table"></div>
+       <div id="areth"></div>
+</body>
+<script>
+    let table = prompt("Which table you wabt ? ")
+
+    let tab = ""
+
+    for(i = 1; i<11;i++){
+        tab += table + " x " +i +" = " + table*i + "<br>"
+    }
+
+    document.getElementById('table').innerHTML = tab
+    document.getElementById('head').innerHTML = "Table of "+ table 
+
+
+    //__________________________________________
+    let answer = document.getElementById('areth')
+    let qeus = prompt("what you want to do ?")
+    // let num = prompt("which num you want to add ?")
+    // let num2 = prompt("by whome")
+   let ans = ""
+    if(qeus == "add"){
+        let num = prompt("which num you want to add ?")
+     let num2 = prompt("by whome")
+     
+
+     answer.innerHTML = num +" + "+ num2 + " = " + num + num2
+
+    }
+    if(qeus == "sub"){
+        let num = prompt("which num you want to suntract ?")
+     let num2 = prompt("by whome")
+     
+
+     answer.innerHTML = num +" - "+ num2 + " = " + num - num2
+
+    }
+
+
+    if(qeus == "mul"){
+        let num = prompt("which num you want to multiply ?")
+     let num2 = prompt("by whome")
+     
+
+     answer.innerHTML = num +" x "+ num2 + " = " + num * num2
+
+    }
+
+    if(qeus == "div"){
+        let num = prompt("which num you want to divide ?")
+     let num2 = prompt("by whome")
+     
+
+     answer.innerHTML = num +" / "+ num2 + " = " + num / num2
+
+    }
+
+    
+
+</script>
+</html>

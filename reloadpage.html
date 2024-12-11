@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reload</title>
+  </head>
+  <body>
+    <input id="inputs" type="text" />
+    <button onclick="savedata()">Save</button>
+    <h1 id="heading"></h1>
+  </body>
+
+  <script>
+    function savedata() {
+      const name = document.getElementById("inputs").value;
+      localStorage.setItem("username", name);
+      document.getElementById("heading").innerText = `Welcome, ${name}!`;
+    }
+
+    // Retrieve and display name on page load
+    window.onload = function () {
+      const savedName = localStorage.getItem("username");
+      if (savedName) {
+        document.getElementById(
+          "heading"
+        ).innerText = `Welcome back, ${savedName}!`;
+      }
+    };
+  </script>
+</html>

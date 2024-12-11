@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paractice</title>
+    <style>
+    #demo img{
+         width: 16px;
+         height: 16px;
+         margin: 0 10px 0 0 ;
+
+    }
+    #demo{
+    background-color: brown;
+    padding: 20px;
+    }
+    #demo div{
+       background-color: rgb(108, 221, 255);
+       margin: 10px;
+       cursor: pointer;
+    }
+
+    #demo div:hover{
+       background-color: rgb(44, 79, 90);
+
+    }
+    
+
+
+    </style>
+
+</head>
+<body>
+    <h2>JavaScript For Loop</h2>
+
+    <p id="demo"></p>
+    <p id="number"></p>
+    <div id="exam">
+
+    </div>
+</body>
+<script>
+const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+const img = [`<img src="playlistbig.png" alt="">`,'arif'];
+
+
+let text = "";
+// let num = ""
+// for (let  i = 1; i < 100 ; i++) { 
+//   num += i +1  +'<br>';//The addition assignment operator ( += ) adds the value of the right operand to a variable and assigns the result to the variable. The types of the two operands determine the behavior of the addition assignment operator. Addition or concatenation is possible.
+//   // '+=' will add item in the variable
+  
+// }
+// // document.getElementById('number').innerHTML = num
+
+for (  i = 0; i < cars.length ; i++) { 
+  text += "<div>"+ img[0]+ cars[i]  + "</div>"; // to add the items in a div we add 'div' in the element 
+  //The addition assignment operator ( += ) adds the value of the right operand to a variable and assigns the result to the variable. The types of the two operands determine the behavior of the addition assignment operator. Addition or concatenation is possible.
+  // '+=' will add item in the variable
+}
+
+document.getElementById("demo").innerHTML =  text;
+
+</script>
+</html>

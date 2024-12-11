@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouChat</title>
+    <link rel="stylesheet" href="Css_files/stylesheet.css">
+</head>
+<body>
+   
+    <!-- -------------------------------- HOME SECTION DESIGN ------------------------------ -->
+    <div id="home_container">
+        <div id="upper_cont">
+            <h3 id="user_name">
+                Arif alam
+            </h3>
+            
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAABCUlEQVQ4jcWUvQrCUAyFP8XBzcVZHYtgFQTBzT617jqo4CouxTeQFqRCB+tglDRcr3+IBwI3zcnpTdME/oApcBCbfiLQBQLl74FCbK+eB8L1YgykQAJEwADIlWAO9CWWCHfsu1mqkl+1VN+0qgTPQngXheQ6ETlukAELscwRj3xv6xvyEmipeBtYGU7oEpoBMeUGZEZMi54oNyoWjTuOjlLmnkoWDv4Ryk2xqHhivjzgccltB7fDCyXfEFIuY2VEO8DacHpaoGYEm8YfATtgI/4QqD/JuSPgOk7vTkqCmn39cav4G/EIFTxN0sthwvVHt8shlNjT5XDDV+vLNgVga/wd0FBnHOff4QLl/oJK0hlfIgAAAABJRU5ErkJggg==" alt="">
+        </div>
+        <div id="users_list">
+            <!-- <div class="user"> 
+                <div id="img-cont">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1V-f7hrWAxOHiHUEoLdzuzMIDu7z8xuLxuw&usqp=CAU" alt="">
+
+                </div>
+                <div id="name-lastmsg-cont">
+                    <h3>
+                        schinchan
+                    </h3>
+                    <p class="last-msg">
+                        hey, hii how are you my bro
+                    </p>
+                    <span id="socket-id">asl2dvdsdsa5dsas</span>  
+                    
+                </div>
+            </div> -->
+            <!-- <div class="user">
+                <div id="img-cont">
+                    <img src="https://img.etimg.com/thumb/msid-75201770,width-650,imgsize-212710,,resizemode-4,quality-100/adventures-of-chhota-bheem-and-his-friends-will-be-aired-on-dd-national-every-afternoon-at-2-pm-.jpg" alt="">
+
+                </div>
+                <div id="name-lastmsg-cont">
+                    <h3>
+                        Chota bheem
+                    </h3>
+                    <p class="last-msg">
+                        bhad me ja 
+                    </p>
+                    <span id="socket-id">jdckjdvkjvdhnd854vg65sfd</span>  
+                </div>
+            </div> -->
+        </div>
+    </div>
+    
+    <!-- ---------------------------CHATING SECTION DESIGN --------------------  -->
+
+    <div id="chatting_cont">
+        <div id="upper_cont">
+            <span style="display: none;" id="reciever_s_id">slsabsdflkv41v</span>
+            <div id="back">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABmJLR0QA/wD/AP+gvaeTAAAAw0lEQVQ4jc3UsUpCARQG4I8QWhpEEFrcm3oCaTA1DVpKocfoGcS112ntCZp6ABfXoCG1NLHh3rtKyB/0z4dv+Dnn8A/TRyON3mKNaRK9xieecZxChyX6inoKHWCFOVop9KpE33GeQvsl+oXLFNrDEluMU+gFPrDDQwrtYFGij4cAR7+Y2R0C70tX0W+0iio9xUZsMUrj1Q6v0E7jA8Upv+EsjVd/YobTNF69yxecpPE7bPCEWhq/xzcmaRhu0PwLeG9+AL8EKPWd5X3oAAAAAElFTkSuQmCC" alt="">
+                <img id="profile" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAM1BMVEXk5ueutLfn6eqrsbTp6+zg4uOwtrnJzc/j5earsbW0uby4vcDQ09XGyszU19jd3+G/xMamCvwDAAAFLklEQVR4nO2d2bLbIAxAbYE3sDH//7WFbPfexG4MiCAcnWmnrzkjIRaD2jQMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMw5wQkHJczewxZh2lhNK/CBOQo1n0JIT74/H/qMV0Z7GU3aCcVPuEE1XDCtVLAhgtpme7H0s1N1U7QjO0L8F7llzGeh1hEG/8Lo7TUmmuSrOfns9xnGXpXxsONPpA/B6OqqstjC6Ax/0ujkNdYQQbKNi2k64qiiEZ+ohi35X+2YcZw/WujmslYewiAliVYrxgJYrdwUmwXsU+RdApUi83oNIE27YvrfB/ZPg8+BJETXnqh9CVzBbTQHgojgiCvtqU9thFJg/CKz3VIMKMEkIXxIWqIpIg2SkjYj+xC816mrJae2aiWGykxRNsW0UwiJghJDljYI5CD8GRiCtIsJxizYUPQ2pzItZy5pcisTRdk/a9m4amtNNfBuQkdVhSaYqfpNTSFGfb9GRIakrE2Pm+GFLaCQPqiu0OpWP+HMPQQcgQMiQprWXNmsVwIjQjYi/ZrhAqNTCgr2gu0Jnz85RSSjso0HkMFZ0YZjKkc26a/jlmh9JiDyDxi9oeorTYAzZkwwoMz19pzj9bnH/GP/+qbchjSGflneWYhtTuKdMOmNKZcJ5TjInQKcYXnESd/jQxy0ENpULTNGOGgxpap/oyw9pbUAqhfx2Dbkhovvfgz4iUzoM9+GlK6/Mh4q29hyC1mwro30hpVVLPF9wYQr71RazOeM5/cw81iBRD+A03aM9/C/obbrKjbYSpCmIVG3qT/Q8oeUo3Rz0IL7vI1tEbCB9pSiu8I/aV8x3Kg/BGWrWp4ZVs0nZfmAoEG4h/61yHYIJiFSl6Q0Vk6tTW1N8kYp8hdOkfHYYMXd2Qft+8CYwqYDSKvqIh+MCF8Wgca2u/cwdgeW3TtuVn6+1oBs3yLo5C2JpK6CvQzGpfUkz9UG/87gCsi5o2LIXolxN0FbwAsjOLEr+YJmXn7iR6N0BCt5p5cMxm7eAsfS+/CACQf4CTpKjzgkvr2cVarVTf96372yut7XLJ1sa7lv6VcfgYrWaxqr3Wlo1S6pvStr22sxOtTNPLzdY3nj20bPP+ejFdJYkLsjGLdtPBEbe/mr2bQKiXWJDroA+vtzc0p9aahuwqHMDYrQEXHEw9jwQl3drMpts9JBU1SdktPe5FBRdJQ6bwXBpa57ib2A8kukQDzMjh++Uo7Fo6Wd02Pkf4fknqoo4HtvAIjsqUcjx6DIPgWCaOML9rKI/oqD9/lgNrn+eF+p7j8tnzHBiR7+kdUGw/+V1Kzkc75mMy6U+FMaxjPibiM1U1uGM+puInHpmALZCgP4pt7i840MV8+0R1zPsRB6UTcqpizncYwZ89syDydfyWCwXB1l8/zRNGWbTG/GHKUm9AkxHMc/EGSk3z2+ArEhPEV5TUBLEvUGFcjEUH80J/jveTGOAJEljJbILWGQT3zRYiwuKsUXN1EEJAzBhRJFll7mBUG7KD8EqPkKekBREaL8hMDZLQSG6AQjtHPYmvTQnX0TtpC1SYCe2YdkkyLP3jj5BSbKiuR585eQhTgoje6yIb0Yb0C+mV6EYvebqw5SDy2WmubogZiF2AVxPC2FpDf8H2Q9QWo6IkjUxTWVEI3WY/wrCeSuqJ+eRWzXR/JXwgVjUMozbCOfoEZiSiKVGepqv5CJ8RyR4D7xBeamqa7z3BJ/z17JxuBPdv93d/a2Ki878MMAzDMAzDMAzDMAzDMF/KP09VUmxBAiI3AAAAAElFTkSuQmCC" alt="">
+            </div>
+            <h3 id="reciever_name">Arif alam</h3>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABmJLR0QA/wD/AP+gvaeTAAAA4klEQVQ4jbXUTWoCQRAF4M+fheDCK6iLERI8SE6RBNFj5B6BLDxUVskmgayyEiJxkYUubJhRAlMztg8GqoqpV49X3c2V0Av+N8cT7vCF7xzDb7HDPn073NQ1dQPEjxhU8kGqXUz8F6w1xhQbpRUbTOqaOkHyMe5TvMZnC4F5EFU8wyLFL3jLMXyGrdLjLYq6psipWGBYyYdK9RcR74O1xiicWvEjYEV0eYXT5b23EJgHTS7IQ4rX+Mgx/L8rPa1ripyKFUaVfIRlDuJ+sNYY5w/9r8BDH13e3NESeMZrC4F5cADE8CySx8NR0gAAAABJRU5ErkJggg==" alt="">
+        </div>
+        <div id="chats_container">
+            <!-- <div class="message right">
+                how  are you my bro
+            </div>
+            <div class="message left">
+                Bhag me ja
+            </div> -->
+        </div>
+
+        <form action="/" id="send_chat_sec">
+            <input type="text" placeholder="Type a message..." id="chat-input" name="chat-input">
+            <button id="sending-btn" type="submit">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABmJLR0QA/wD/AP+gvaeTAAACEklEQVRIib2Uv2tTURTHP+emgi6WOjXNw8FBEXFzqjjURBRNLFjS2qFTEqsg+C/0b3CoNkmROlYU1Chi8iw4OKqLo1PtizgICqb+6LvHIam+pPnR8KLf6d1z7/t+7nnnnAf/QTJwx4UFMzp+8JQxmhbl5caZzOrQoLyjz5dPYHRW0BmwMQCLRoBwkGi5cFRgBpHLoEfq0b8fR4w8BegbElsrONaXKVHSCCc7n9RNatbdNcR5VjygEUmq2Dn1JS4gvatpXC+Vq3WFHCovDf9gaFKFtEXPgu7pp08ULW0/N0GcV6v7tPblAiKz35XzoHt7eSlyX9A4MBKMm4g++ZMTgFO+czxWLt61ta8fFbmnyiVgFwC9Wk1k0oq4LXtvNyZyH5oysca/hjLXw7QNIJePVgpXBJ1q2X8cXBiA6LB/Q9WeQ7gFrPcHkNu0FMtiS8F120qOvsgfM2qSWFII44FzClz3EtnFscpyBjS/fdGAql48E0NEu0KCctyVmK+/kigXEX3YLYOGil4im+uZSTeNucUsSr7ju0YmvdOZR02hfiGoHu58Od3k21ZlB7dfRkTsEvXatJFxvdR8LTRkPT7/HmSt3V5wykNBGnaFdsHglIeGjHze/wDkUwvjTXDKQ0PeTU//BLvSzGie8tAQ2NkAGvkHkJYGqFYnsq8HDqmr0QBCKfgbGSik3gAs+lvcDOMzEP0G9PDQAg9C9IUAAAAASUVORK5CYII=" alt="">
+            </button>
+        </form>
+    </div>
+
+    <!-- --------------------------- LOGIN SECTION ------------------------ -->
+
+    <form action="/" id="login_container">
+        <h2>You chat</h2>
+        <div id="input-cont">
+            <input type="text" id="user-name" name="user-name" placeholder="Username">
+            <button type="submit">
+                Login
+            </button>
+        </div>
+    </form>
+
+</body>
+
+<script src="http://localhost:500/socket.io/socket.io.js"></script>
+
+<script src="js_files/javaS.js"></script>
+<script src="js_files/youchat_client.js"></script>
+
+</html>

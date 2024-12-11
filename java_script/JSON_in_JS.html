@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+ <!-- JSON is use to tranfer Data -->
+ <div class="container">
+     This is container
+ </div>
+</body>
+<script>
+    let jsonobj ={
+        Name :"if",
+        class: "8std",
+        subcribe:"arif chanell",
+    }
+    console.log(jsonobj)
+    // syntax
+    // to transfer data first we have to make the element string by uning bottom sytax
+    //tranfering data
+    let myjsonstr = JSON.stringify(jsonobj);   //to make the element string
+    console.log(myjsonstr) 
+    myjsonstr = myjsonstr.replace('arif', "atif") //to replace the string first we have write the element then what you want to set
+    console.log(myjsonstr) 
+    
+// to make the string into object 
+ 
+newjsononj=   JSON.parse(myjsonstr)
+console.log(newjsononj)
+  
+</script>
+</html>

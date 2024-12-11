@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        #container{
+            background-color: rgb(201, 201, 201);
+            color: white;
+            width: 150px; 
+            height: 200px;
+            transition-property: all; 
+            transition-duration: 0.5s;          
+           display: none;
+           
+           
+           
+            
+        }
+        #container ul li{
+           list-style: none;
+        }
+
+        .a{
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+        
+
+       
+    </style>
+</head>
+<body>
+    <button id="btn" onclick="run()">click</button>
+<div id="container">
+    <ul>
+        <li>Home</li>
+        <li>About us</li>
+        <li>address</li>
+        <li>cateogeiry</li>
+        <li>others</li>
+    </ul>
+</div>
+
+<div class="a">
+    <ul>
+        <li>adsffsd</li>
+        <li>dfdf</li>
+        <li>dfas</li>
+        <li>dfadsf</li>
+        <li>dasdf</li>
+    </ul>
+</div>
+</body>
+
+<script>
+    let container = document.getElementById('container')
+
+    function run(){
+        if(container.style.display == "none"){
+            container.style.display = "block"
+        }
+        else{
+            container.style.display = "none"
+
+        }
+    }
+</script>
+</html>

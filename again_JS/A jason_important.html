@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json tutrial</title>
+
+    <style>
+        #image_list{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: darkcyan;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+
+        #image_list img{
+            width: 180px;
+            height: 180px;
+        }
+
+
+        #changing_btn{
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            display: block;
+            margin: 0px auto;
+            cursor: pointer;
+        }
+
+        #changing_btn:hover{
+         background-color: rgb(46, 46, 46);
+        }
+    </style>
+</head>
+<body>
+  <div id="container">
+      <h1>json tutorial</h1>
+  </div>
+
+  <!-- practicing JSON  -->
+
+  <div> 
+      <p id="para" style="color: red; font-size: 20px; font-family: 'Courier New', Courier, monospace;" ></p>
+      <button onclick="click()" id="btn">change</button>
+  </div>
+
+  <!-- another example JSON -->
+
+  <div id="image_list">
+
+  
+
+  </div>
+  <button id="changing_btn">remove television</button>
+</body>
+
+<script>
+    // json ---------------------
+
+    //  in json we can make a 'array' or 'object' in a "string" and then we can change the value of that 'array' or 'object' and then we can make the 'array' or 'object' again a 'array' or 'object' and we can send the json array any where
+    //  we can do it for any thing not only for 'array' or 'object' we do for everything
+
+//------------------ learn json below ------------------------
+
+
+
+    let obj = {   // now this is normal object
+        name : "arif",
+        std : "9th",
+        scholl : "Radcliff",
+        passoin : "programing",
+    }
+
+    console.log(obj) // we just loging a  normal object
+
+//    now we will make this above Object in a string using 'json'
+
+//first we have to make a variable and then we insert jason string in that variable like below
+let json_string = JSON.stringify(obj)  //making a oject in a string syntaxt
+
+console.log(json_string) //mow we are loging the objet that we have made a string
+
+
+// let is not allow in replacing the object and making again object
+
+replaced_string = json_string.replace("arif","alam") // now we are replacing the element in object first will be oject that we are changing and second is what we replacing
+
+console.log(replaced_string) // loging new object 
+
+ 
+re_object = JSON.parse(replaced_string)// making the string again a object syntax
+
+console.log(re_object) // loging the re made object syntax 
+
+//  ---------------- practicing JSON ------------------- 
+
+
+let names = ["arif","atif","ayan"]
+
+let stringed_names = JSON.stringify(names)
+
+
+//like this you can replace multiple elements in a arrays or object  below example
+new_names = stringed_names.replace("arif","arif alam").replace('atif',"atif alam").replace('ayan', 'new ayan')
+again_array = JSON.parse(new_names)
+
+
+document.getElementById('para').innerHTML = names
+
+    
+document.getElementById('btn').addEventListener('click',function(){
+
+        document.getElementById('para').innerHTML = again_array[1]
+ 
+})
+
+// another example of JSON--------------------
+
+let electronic_images_list = ["television", "toaster","smartphone","drone","rccar"]
+let   stringify_electronic_image_list = JSON.stringify(electronic_images_list) //fist we have make the array in a string to change on click
+
+
+let i=0
+function displaying_images() {
+
+    i++;
+    if (i == electronic_images_list.length) { // if the "a" value is == to image.lenght then it will make the value of the a again 0
+    i = 0
+}
+let img_box = document.getElementById('image_list')
+
+img_box.innerHTML = ` <img  src="img/${electronic_images_list[i]}.png" alt="">` // it will change the index value at every 2 secod becuse we give the "a" a++
+
+
+//we are changing the element of the array on click 
+document.getElementById('changing_btn').addEventListener('click',function(){
+    if(electronic_images_list[0] == "television"){
+        cloths_images_list = stringify_electronic_image_list.replace('television', 'pan') // then we have to make a var and replace the item
+    electronic_images_list = JSON.parse(cloths_images_list)//and then set the same var as the origanel var array and make the string again a array
+    document.getElementById('changing_btn').innerHTML = "remove pan"
+    }
+
+    else{
+        cloths_images_list = stringify_electronic_image_list.replace('pan', 'television') // then we have to make a var and replace the item
+    electronic_images_list = JSON.parse(cloths_images_list)//and then set the same var as the origanel var array and make the string again a array
+    document.getElementById('changing_btn').innerHTML = "remove television"
+    }
+   
+
+})
+   
+
+
+}
+
+setInterval(displaying_images,2000)
+
+</script>
+</html>

@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredoka&family=Indie+Flower&family=Josefin+Sans:wght@300&family=M+PLUS+Rounded+1c&family=Roboto&family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(240, 240, 240);
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    background-color: rgb(82, 188, 192);
+    
+}
+
+nav span{
+    display: flex;
+    align-items: center;
+    font-family: 'Bebas Neue', cursive;
+}
+
+nav span img{
+    width: 30px;
+    margin: 0 5px;
+}
+
+
+
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li{
+    margin: 0 20px;
+}
+
+nav ul li a{
+    text-decoration:none ;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+    transition:all 0.5s;
+}
+
+nav ul li a:hover{
+    color: black;
+}
+
+#items_section{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#items_section div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 5px gray;
+    background-color: white;
+    margin: 10px;
+    height: 200PX;
+    width: 150px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+#items_section div img{
+    width: 100px;
+}
+
+
+#items_section div p{
+    color: gray;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+}
+
+#items_section div h3{
+    font-family: 'Fredoka', sans-serif;
+
+}
+#items_section div h4{
+    font-family: Roboto, sans-serif;
+
+}
+
+#items_section div span h3{
+    padding: 5px;
+}
+
+#items_section div span{
+    text-align: left;
+}
+
+
+/* ordering section desing */
+
+
+
+
+
+#ordering_section{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: fit-content;
+    padding: 10px 20px;
+    background-color: rgb(181, 221, 223);
+    border-radius: 10px;
+    top: 170px;
+    left: 600px;
+    display: none;
+ 
+}
+#ordering_section #uper_section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#ordering_section #uper_section img{
+    width: 100px;
+}
+#ordering_section #uper_section #inputs{
+    display:flex;
+    flex-direction: column;
+}
+
+
+#ordering_section input{
+   padding: 5px;
+   border: none;
+   outline: none;
+   border-radius: 5px;
+   margin: 5px;
+}
+
+#ordering_section  #lower_sec input{
+    width: 83%;
+}
+
+
+#ordering_section #order_btn{
+    width: 100%;
+    display: flex;
+  
+}
+
+#ordering_section #order_btn input{
+    background-color: rgb(82, 188, 192);
+    outline: none;
+    border: none;
+    font-weight: 900;
+    font-size: 12px;
+    cursor: pointer;
+
+}
+
+#ordering_section #uper_section button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+     left: 58px;
+     bottom: 62px;
+     cursor:pointer;
+}
+
+#popup_msg_ordered{
+position: absolute;
+background-color: rgb(223, 222, 222);
+color: rgb(82, 188, 192);
+font-family: 'Fredoka', sans-serif;
+width: fit-content;
+height: fit-content;
+display: flex;
+align-items: center;
+justify-content: center;
+border: none;
+border-radius: 5px;
+padding: 5px;
+font-size: 13px;
+top: -50px;
+left: 710px;
+transition: all 0.3s;
+}

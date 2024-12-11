@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 1px solid black;
+            width: 120px;
+            border-radius: 5px;
+            position: absolute;
+            top: -27%;
+            transition-property: all ;
+            transition-duration: 0.5s;
+            background-color: rgb(233, 233, 233);
+            margin: 10px;
+        }
+        
+        .countries{
+           display: flex;
+           flex-direction: column;
+            
+            margin: 5px;
+           
+            
+          
+   
+        }
+
+        .btn{
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+         z-index: -2;
+         background-color: rgb(255, 255, 255);
+
+       
+    
+
+        }
+
+      
+        .btn input{
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 4px;
+            width: 100px;
+            transition-property: all;
+         transition-duration: 0.3s;
+        
+        
+        }
+
+        .btn input:hover{
+            background-color: rgb(241, 241, 241);
+        }
+
+
+
+  
+
+        
+    </style>
+</head>
+<body>
+<div class="container" id="country_container">
+    <div class="countries">
+<h1>country</h1>
+       
+    </div>
+</div>
+<div class="btn">
+    <input type="button" value="set country" id="btn">
+</div>
+
+</body>
+<script >
+let btn = document.getElementById("btn")
+let country_container = document.getElementById("country_container") 
+
+btn.addEventListener("click", function(){
+    if(country_container.style.top == "-27%"){
+country_container.style.top = "0"
+btn.style.marginTop = "100px"
+
+    }
+
+    else{
+        country_container.style.top = "-27%"
+btn.style.marginTop = "0px"
+
+    }
+})
+
+</script>
+</html>

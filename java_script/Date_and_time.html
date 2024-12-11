@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and time in js</title>
+</head>
+
+<body>
+    <div id="container"><span id="time"></span></div>
+    <div class="container">
+         <img src="/img/america.png" alt="img is not set"> <!--to set img from a folder = /foldername/imgname.png  -->
+ </div> 
+   
+
+</body>
+<script>
+    console.log("Hii welcome to my web site");
+
+    let date = new Date();    // to make date
+    console.log(date)
+
+    let Newdate = new Date("2045-05-15"); // to costomise date 
+    console.log(Newdate)
+
+    // let Date = new Date(year, month,date, hours , minute,second,milisecond)
+    let NewDate2 = new Date(2052, 5, 6, 5, 5, 45, 4546)  //you can construct the date 
+    console.log(NewDate2)
+
+    // to set perticular date months years and ect
+    let yr = Newdate.getFullYear()   // to set pertcular year or month or date or ect to set = variablename.getFullYear()
+    console.log("The year is ", yr)
+
+    let dt = Newdate.getDate()
+    console.log("the date is ", dt)
+
+    let month = Newdate.getMonth()
+    console.log("the month is ", month)
+
+    let sec = Newdate.getSeconds()
+    console.log("the second is ", sec)
+
+    let hr = Newdate.getHours()
+    console.log("the hour is ", hr)
+
+    // to change the date or year or month ect 
+    Newdate.setDate(15)
+    Newdate.setFullYear(15)
+    Newdate.setHours(15)
+    Newdate.setSeconds(2015)
+    console.log(Newdate)
+// let time = document.getElementById('time')
+//     setInterval(time, 1000);
+//     function updatetime() {
+//         time.innerHTMl = new Date();
+//     }
+</script>
+
+</html>

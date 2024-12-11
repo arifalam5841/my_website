@@ -1,0 +1,17 @@
+extends base.pug
+
+block title
+        title Order
+block style_files 
+        style
+            include ../frontend_files/home_style.css
+            include ../frontend_files/orders_page.css
+          
+block content 
+        #container 
+            h3 Name #[span -]   #[p  #{name}]
+            h3 Number of item #[span -]   #[p  #{numitems}]
+            h4 Address
+            h3 city #[span -]   #[p  #{city}]
+            h3 state #[span -]   #[p  #{states}]
+            h3 building #[span -]   #[p  #{buildingname}]

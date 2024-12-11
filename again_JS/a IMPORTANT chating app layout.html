@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat app</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=M+PLUS+Rounded+1c&family=Roboto&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #users_container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        #users_container div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: fit-content;
+            height: fit-content;
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 1px 1px 5px gainsboro;
+
+        }
+
+        .chat_cont {
+            display: block;
+            height: fit-content;
+            background-color: transparent;
+            border-radius: 0px;
+            overflow: visible;
+        }
+
+        #users_container div section {
+            width: 250px;
+            height: 450px;
+            background: transparent;
+            overflow: hidden;
+            overflow-y: auto;
+
+        }
+
+        #users_container div section::-webkit-scrollbar {
+            display: none;
+        }
+
+        #users_container div section .sended_chat {
+            background-color: rgba(214, 214, 214, 0.966);
+            color: rgb(0, 0, 0);
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            font-size: 12px;
+            width: fit-content;
+            max-width: 150px;
+            margin: 10px;
+            border-radius: 2PX;
+            height: fit-content;
+            max-height: 100px;
+            overflow: hidden;
+            overflow-y: auto;
+            float: left;
+            word-break: break-all;
+            margin-right: 80px;
+
+
+        }
+
+        #users_container div section .sended_chat span {
+            text-align: right;
+            font-size: 9px;
+            color: rgb(65, 65, 65);
+            margin: 2px 0 0 0;
+            padding: 0;
+            background-color: transparent;
+            display: block;
+            width: 100%;
+
+        }
+
+        #users_container div section p::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        #users_container div section .recived_chat {
+            background-color: rgba(255, 255, 255, 0.966);
+            color: rgb(0, 0, 0);
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            font-size: 12px;
+            width: fit-content;
+            max-width: 150px;
+            margin: 10px;
+            border-radius: 2PX;
+            height: fit-content;
+            max-height: 100px;
+            overflow: hidden;
+            overflow-y: auto;
+            margin-left: 80px;
+            /* box-shadow: 2px 2px 5px gray; */
+            word-break: break-all;
+            float: right;
+            border: 1px solid gainsboro;
+
+
+        }
+
+        #users_container div section .recived_chat span {
+            text-align: right; 
+            font-size: 9px;
+            color: rgb(65, 65, 65);
+            margin: 2px 0 0 0;
+            padding: 0;
+            background-color: transparent;
+            display: block;
+            width: 100%;
+        }
+
+        /* bottom section style--------------- */
+
+        #users_container div span {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-around;
+            padding: 5px 10px;
+            background: transparent;
+            margin: 5px;
+            border-radius: 50px;
+        }
+
+        #users_container div span img {
+            width: 20px;
+        }
+
+        #users_container div span div {
+            background-color: rgb(168, 167, 167);
+            border-radius: 50px;
+            width: fit-content;
+        }
+
+        #users_container div span div input {
+            border: none;
+            outline: none;
+            font-size: 13px;
+            width: 160px;
+            padding: 5px 5px;
+            background: transparent;
+
+        }
+
+
+        #users_container div span div img {
+            width: 15px;
+        }
+
+
+        /* delete box style -------------------- below */
+
+        #users_container #delete_box {
+            background-color: rgb(131, 131, 131);
+            border: none;
+            border-radius: 0;
+            padding: 5px;
+            position: absolute;
+            margin: 180px 0 0 60px;
+        }
+
+        #users_container #delete_box #cancle_btn {
+            border: none;
+            padding: 2px;
+            background-color: rgb(228, 228, 228);
+        }
+
+        #users_container #delete_box #del_btn {
+            background-color: transparent;
+            border: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="users_container">
+        <!-- <div>
+            <section id="chats-sction">
+                <p class="sended_chat">
+                    hi i am arif alam i the CEO of this company and i like to say that we have a very great work
+                    <span>02:52 am</span>
+                </p>
+                <p class="recived_chat">
+               
+                <span>02:52</span>
+                </p>
+            </section>
+            <span>
+                <div id="search">
+                    <input type="text" placeholder="Type a message...">
+                </div>
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABNUlEQVRYheXXsSuEcRzH8XNnICUsNlIGkmRUFqVMFuVfEKVsjP4DMlqNYlKWGxmRVVlMlEVKnDovw/WkOHf3PM/vuWe49/oMn3fP830+v++vUOh4MIMVdOclsKTGA7YxlIfEuR8+cITpdgqMo+Ivl1hFqR0Se3UEIu6xg8EsBfrx1EACXnGIyawk1psIRFRRxjK6QgoUcdWiRMQdttAXSmIeXzEl4AUHGA0hcZJAIKKKMyymERjBWwqJiBusoTeJxKba1IfgEbsYjivRo1ZEZcnm4jcVHGMuyRuZwj6eA4jABWaLsU3CovHTPD+BPIcQY3gPEHwtyW+I0xSh6YoICwmD01cxSriNGRzuMMJGi6Hhj2MMaF4y2S0kai33H9muZJjAZ53g9iyl8lzL5X0xkffVrOP5BgPdlQN/K5uXAAAAAElFTkSuQmCC">
+            </span>
+        </div> -->
+
+        <!-- <div id="delete_box">
+            <span>
+                <button id="cancle_btn">cancle</button>
+                <button id="del_btn">Delete</button>
+            </span>
+        </div> -->
+    </section>
+
+
+</body>
+<script>
+    let users_container = document.getElementById("users_container")
+
+    let sender_user = document.createElement("div")
+    let sender_chat_section = document.createElement("section")
+    let sender_bottom_cont = document.createElement("span")
+    let sender_input_container = document.createElement("div")
+    let sender_input = document.createElement("input")
+    let sender_send_btn = document.createElement("img")
+
+    users_container.append(sender_user)
+    sender_user.append(sender_chat_section, sender_bottom_cont)
+    sender_bottom_cont.append(sender_input_container)
+    sender_input_container.append(sender_input)
+    sender_bottom_cont.append(sender_send_btn)
+
+
+    sender_send_btn.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABNUlEQVRYheXXsSuEcRzH8XNnICUsNlIGkmRUFqVMFuVfEKVsjP4DMlqNYlKWGxmRVVlMlEVKnDovw/WkOHf3PM/vuWe49/oMn3fP830+v++vUOh4MIMVdOclsKTGA7YxlIfEuR8+cITpdgqMo+Ivl1hFqR0Se3UEIu6xg8EsBfrx1EACXnGIyawk1psIRFRRxjK6QgoUcdWiRMQdttAXSmIeXzEl4AUHGA0hcZJAIKKKMyymERjBWwqJiBusoTeJxKba1IfgEbsYjivRo1ZEZcnm4jcVHGMuyRuZwj6eA4jABWaLsU3CovHTPD+BPIcQY3gPEHwtyW+I0xSh6YoICwmD01cxSriNGRzuMMJGi6Hhj2MMaF4y2S0kai33H9muZJjAZ53g9iyl8lzL5X0xkffVrOP5BgPdlQN/K5uXAAAAAElFTkSuQmCC"
+    sender_input.placeholder = "Type a message..."
+
+    //    deleteing msg box -------------------
+
+
+    let del_cont = document.createElement("div")
+    let btn_cont = document.createElement("span")
+    let cacl = document.createElement("button")
+    let del = document.createElement("button")
+    cacl.textContent = "cancle"
+    del.textContent = "Delete"
+
+    del_cont.setAttribute('id', 'delete_box')
+    cacl.setAttribute('id', 'cancle_btn')
+    del.setAttribute('id', 'del_btn')
+
+    del_cont.append(btn_cont)
+    btn_cont.append(cacl, del)
+    sender_chat_section.append(del_cont)
+
+    del_cont.style.display = "none"
+
+
+
+    // second users -----------------------------
+    // let users_container = document.getElementById("users_container")
+
+    let receiver_user = document.createElement("div")
+    let receiver_chat_section = document.createElement("section")
+    let receiver_bottom_cont = document.createElement("span")
+    let receiver_input_container = document.createElement("div")
+    let receiver_input = document.createElement("input")
+    let receiver_send_btn = document.createElement("img")
+
+    users_container.append(receiver_user)
+    receiver_user.append(receiver_chat_section, receiver_bottom_cont)
+    receiver_bottom_cont.append(receiver_input_container)
+    receiver_input_container.append(receiver_input)
+    receiver_bottom_cont.append(receiver_send_btn)
+
+    receiver_send_btn.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABNUlEQVRYheXXsSuEcRzH8XNnICUsNlIGkmRUFqVMFuVfEKVsjP4DMlqNYlKWGxmRVVlMlEVKnDovw/WkOHf3PM/vuWe49/oMn3fP830+v++vUOh4MIMVdOclsKTGA7YxlIfEuR8+cITpdgqMo+Ivl1hFqR0Se3UEIu6xg8EsBfrx1EACXnGIyawk1psIRFRRxjK6QgoUcdWiRMQdttAXSmIeXzEl4AUHGA0hcZJAIKKKMyymERjBWwqJiBusoTeJxKba1IfgEbsYjivRo1ZEZcnm4jcVHGMuyRuZwj6eA4jABWaLsU3CovHTPD+BPIcQY3gPEHwtyW+I0xSh6YoICwmD01cxSriNGRzuMMJGi6Hhj2MMaF4y2S0kai33H9muZJjAZ53g9iyl8lzL5X0xkffVrOP5BgPdlQN/K5uXAAAAAElFTkSuQmCC"
+    receiver_input.placeholder = "Type a message..."
+    // --------------------------------------------------------------
+
+
+    sender_send_btn.addEventListener("click", function () {
+        if (sender_input.value.length > 0) {
+            // ----------------------------
+            let sended_chat_container = document.createElement("div")
+            sended_chat_container.setAttribute("class", "chat_cont")
+            let sended_chat = document.createElement("p")
+            let timing_sec = document.createElement("span")
+            let text = sender_input.value
+            sender_input.value = null
+
+            // let a = pop_up_msg;
+
+
+            // firing funtion of deleting chat ---------------
+
+
+            function del_func(chat) {
+                chat.addEventListener("click", function () {
+                    del_cont.style.display = "flex"
+
+                    del.addEventListener("click", function () {
+                        chat.style.display = "none"
+                        del_cont.style.display = "none"
+                    })
+                })
+            }
+
+            cacl.addEventListener("click", function () {
+                del_cont.style.display = "none"
+            })
+
+            del_func(sended_chat)
+
+
+            // delete chat code end ---------------------
+
+
+            sended_chat.append(text, timing_sec)
+
+            sended_chat.setAttribute("class", "sended_chat")
+
+            let new_date = new Date()
+            let hour = new_date.getHours()
+            let min = new_date.getMinutes()
+            timing_sec.innerHTML = hour + ":" + min
+
+            sender_chat_section.append(sended_chat)
+            // recieve chat style --------------------
+            let reciev_chat = document.createElement("p")
+            let recieve_timing_sec = document.createElement("span")
+
+            reciev_chat.append(text, recieve_timing_sec)
+
+            reciev_chat.setAttribute("class", "recived_chat")
+            recieve_timing_sec.innerHTML = hour + ":" + min
+
+            sender_chat_section.append(sended_chat)
+            receiver_chat_section.append(reciev_chat)
+
+            deleting_chat(reciev_chat, receiver_chat_section)
+
+del_func(reciev_chat)
+        }
+    })
+
+
+
+    // reciever btn script ------------------
+
+    receiver_send_btn.addEventListener("click", function () {
+        if (receiver_input.value.length > 0) {
+
+
+            let sended_chat = document.createElement("p")
+            let timing_sec = document.createElement("span")
+            let text = receiver_input.value
+            receiver_input.value = null
+            sended_chat.append(text, timing_sec)
+
+            sended_chat.setAttribute("class", "sended_chat")
+            let new_date = new Date()
+            let hour = new_date.getHours()
+            let min = new_date.getMinutes()
+            timing_sec.innerHTML = hour + ":" + min
+
+            // receiver_chat_section.append(sended_chat)
+            // recieve chat style --------------------
+            let reciev_chat = document.createElement("p")
+            let recieve_timing_sec = document.createElement("span")
+
+            reciev_chat.append(text, recieve_timing_sec)
+
+            reciev_chat.setAttribute("class", "recived_chat")
+            recieve_timing_sec.innerHTML = hour + ":" + min
+
+            sender_chat_section.append(reciev_chat)
+            receiver_chat_section.append(sended_chat)
+        }
+
+    })
+</script>
+
+</html>

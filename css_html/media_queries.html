@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media queries</title>
+    <style>
+        .box{
+           background-color: red;
+            color: white;
+            /* margin: 2px; */
+            font-size: 22px;
+            text-align: center;
+            display: none;
+
+        }
+        /* you can set two elements in one time by set the maximum value of first  element of second element's maximum value */
+        /* this is like if else  */
+   
+        @media only screen and (max-width : 300px){           /*explainetion: if the screen size is maximum 500px then display block box1 else display none  */
+            #box1{
+                display:block ;
+                background-color: yellowgreen;
+            }
+        }
+        @media (min-width : 300px) and (max-width: 500px){  /*explainetion: if the screen size is minimum 300px to maximum  500px then display block box2 else display none  */
+            #box2{
+                display:block;
+                background-color: green;
+
+            }
+
+        }
+        @media (min-width : 500px) and (max-width: 800px){    /*explainetion: if the screen size is minimum 500px to maximum  800px then display block box3 else display none  */
+            #box3{
+                display:block;
+                background-color: yellow;
+                color: black;
+           
+
+            }
+
+        }
+        @media (min-width : 800px) and (max-width: 1200px){    /*explainetion: if the screen size is minimum 800px to maximum 1200px then display block box4 else display none  */
+            #box4{
+                display:block;
+                background-color: red;
+
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">mai ek iphone hoon</div>
+    <div class="box" id="box2">mai ek tablet hoon</div>
+    <div class="box" id="box3">mai ek computer hoon</div>
+    <div class="box" id="box4">mai ek widescreen computer hoon</div>
+</body>
+</html>

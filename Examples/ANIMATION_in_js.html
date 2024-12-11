@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation with js</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 10px;
+position: relative;
+        }
+
+        #btn-container{
+            position: absolute;
+            bottom: 50px;
+            right: 100px;
+        }
+        .btns{
+            padding:  5px 20px;
+            margin: 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+
+    </div>
+<div id="btn-container">
+    <button id="right" class="btns">Right</button>
+    <button id="left" class="btns">Left</button>
+</div>
+</body>
+<script>
+    let box = document.getElementById('box')
+    let a = 0
+    // let add;
+    // let subt;
+
+    let right_interval;
+    let left_interval;
+    let bottom_interval;
+    let top_interval;
+    let right = document.getElementById('right')
+    let left = document.getElementById('left')
+   
+    // function animation() {
+        //  addin ------------
+
+    //     function adding() {
+    //         a++
+    //         box.style.marginTop = a + "px"
+    //         box.style.marginLeft = a + "px"   
+    //         if(a == 100){
+    //            clearInterval(add) 
+    //            subt = setInterval(sub, 0.01)
+    //            box.style.background = 'red'
+    //         }        
+    //     }
+
+    //     // subtracting -------
+
+    //     function sub() {
+    //         a--
+    //         box.style.marginTop = a + "px"
+    //         box.style.marginLeft = a + "px"
+    //         if(a == 10){
+    //             clearInterval(subt) 
+    //            add = setInterval(adding, 0.01)
+    //            box.style.background = 'black'
+    //         }
+    //     }
+    // add = setInterval(adding, 0.01)
+    
+    // animation()
+
+// NEW ANIMATION BELOW ----------------------
+
+// right
+
+function right_move(){
+    a++
+    box.style.left = a +"px"
+
+    if(a == 1100){
+        clearInterval(right_interval)
+        a= 0
+        bottom_interval = setInterval(botto_move,5)
+    }
+}
+
+ right_interval =  setInterval(right_move, 5)
+
+
+// bottom
+
+function botto_move(){
+    a++
+    box.style.top = a+"px"
+    if(a == 400){
+ clearInterval(bottom_interval)
+    }
+}
+
+//  left 
+
+// function left_move(){
+//     a++
+//     box.style.bottom = a+"px"
+//     if(a == 1100){
+//         clearInterval(left_interval)
+//          a= 0
+//          top_interval = setInterval(top_move,5)
+//     }
+// }
+
+
+//  top
+
+</script>
+
+</html>
